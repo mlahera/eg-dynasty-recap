@@ -195,6 +195,34 @@
     border-color: var(--accent);
     font-weight: 600;
   }
+  .player-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .player-card:last-child { border-bottom: none; }
+  .player-photo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top center;
+    background: var(--track, var(--accent-soft));
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+  }
+  .player-info { flex: 1; min-width: 0; }
+  .player-name-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 0.9rem;
+  }
+  .player-name-line strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .player-meta { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
   .team-logo-wrap {
     flex-shrink: 0;
     width: 40px;
@@ -278,7 +306,7 @@
       <tr><td class="rank">10</td><td>Jaxson Eat My Dartbox</td><td>0-2</td><td class="num">.120</td><td class="num">175.7</td><td class="num">3.9K</td><td class="move-same">–</td></tr>
     </table>
     </div>
-    <p style="margin-top:12px; font-size:0.9rem; line-height:1.55;">Rest-of-season projections just entered the formula, and it already reshuffled the top 3: <strong>The DynaSteve</strong> jumps from #2 to #1 — Sleeper projects their roster for more points the rest of the way (4.3K) than Tucking DicK's (4.1K), even though Tucking DicK has the better record and points so far. <strong>Love on the Spectrum</strong> falls from #4 to #5 under the new weighting — their season-so-far production is still the league's best (352.6), but their ROS outlook (3.7K) is middle-of-the-pack, suggesting some regression ahead. First week, so no movement arrows yet.</p>
+    <p style="margin-top:12px; font-size:0.9rem; line-height:1.55;">First week, so no movement arrows yet — but the order already isn't just the standings. <strong>The DynaSteve</strong> tops the list even with Tucking DicK's better record and points so far, because Sleeper projects their roster for more points the rest of the way (4.3K vs. 4.1K). <strong>Love on the Spectrum</strong> sits mid-pack at #5 despite having the league's best season-so-far production (352.6) — their rest-of-season outlook (3.7K) is more middling, worth watching if that gap closes.</p>
   </section>
 
   <section>
@@ -307,17 +335,48 @@
 
   <section>
     <h2>Top Performances</h2>
-    <div class="table-scroll">
-    <table>
-      <tr><th>Player</th><th>Team</th><th>Pts</th></tr>
-      <tr><td>Caleb Williams</td><td>In Puka & Egbuka We Trust</td><td>37.26</td></tr>
-      <tr><td>Josh Allen</td><td>Love on the Spectrum</td><td>35.66</td></tr>
-      <tr><td>Derrick Henry</td><td>Tucking DicK</td><td>35.3</td></tr>
-      <tr><td>Kenneth Walker</td><td>Ashton Bottom Jeantys</td><td>34.1</td></tr>
-      <tr><td>Jahmyr Gibbs</td><td>Fuck RIT</td><td>33.6</td></tr>
-    </table>
+    <div class="player-card">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/11560.jpg" alt="Caleb Williams" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Caleb Williams</strong><span>37.26</span></div>
+        <div class="player-meta">In Puka & Egbuka We Trust</div>
+      </div>
     </div>
-    <p style="margin-top:14px; font-size:0.9rem; color:var(--muted);">Dud of the week: Sam Darnold (Jaxson Eat My Dartbox) — 0.52 points. Not the debut anyone wanted.</p>
+    <div class="player-card">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/4984.jpg" alt="Josh Allen" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Josh Allen</strong><span>35.66</span></div>
+        <div class="player-meta">Love on the Spectrum</div>
+      </div>
+    </div>
+    <div class="player-card">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/3198.jpg" alt="Derrick Henry" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Derrick Henry</strong><span>35.3</span></div>
+        <div class="player-meta">Tucking DicK</div>
+      </div>
+    </div>
+    <div class="player-card">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/8151.jpg" alt="Kenneth Walker" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Kenneth Walker</strong><span>34.1</span></div>
+        <div class="player-meta">Ashton Bottom Jeantys</div>
+      </div>
+    </div>
+    <div class="player-card">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/9221.jpg" alt="Jahmyr Gibbs" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Jahmyr Gibbs</strong><span>33.6</span></div>
+        <div class="player-meta">Fuck RIT</div>
+      </div>
+    </div>
+    <div class="player-card" style="margin-top:4px; padding-top:12px; border-top:1px dashed var(--border);">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/4943.jpg" alt="Sam Darnold" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Sam Darnold</strong> <span class="move-down">0.52</span></div>
+        <div class="player-meta">Jaxson Eat My Dartbox · dud of the week, not the debut anyone wanted</div>
+      </div>
+    </div>
   </section>
 
   <section>
@@ -334,7 +393,7 @@
     <h2>Fan Corner</h2>
 
     <div class="fan-group" style="--fan-color:#00338d">
-      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" alt="Buffalo Bills logo" width="28" height="28" loading="lazy"></div>
+      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" alt="Buffalo Bills logo" width="28" height="28"></div>
       <div class="fan-body">
         <div class="team-line"><span>Bills</span><span class="record">1-0</span></div>
         <div class="who">Tucking DicK</div>
@@ -343,7 +402,7 @@
     </div>
 
     <div class="fan-group" style="--fan-color:#aa0000">
-      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/sf.png" alt="San Francisco 49ers logo" width="28" height="28" loading="lazy"></div>
+      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/sf.png" alt="San Francisco 49ers logo" width="28" height="28"></div>
       <div class="fan-body">
         <div class="team-line"><span>49ers</span><span class="record">1-0</span></div>
         <div class="who">Tucking DicK</div>
@@ -352,7 +411,7 @@
     </div>
 
     <div class="fan-group" style="--fan-color:#002a5c">
-      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" alt="Dallas Cowboys logo" width="28" height="28" loading="lazy"></div>
+      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" alt="Dallas Cowboys logo" width="28" height="28"></div>
       <div class="fan-body">
         <div class="team-line"><span>Cowboys</span><span class="record">0-1</span></div>
         <div class="who">Fuck RIT</div>
@@ -361,7 +420,7 @@
     </div>
 
     <div class="fan-group" style="--fan-color:#004953">
-      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png" alt="New England Patriots logo" width="28" height="28" loading="lazy"></div>
+      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png" alt="New England Patriots logo" width="28" height="28"></div>
       <div class="fan-body">
         <div class="team-line"><span>Patriots</span><span class="record">0-1</span></div>
         <div class="who">Love on the Spectrum · The DynaSteve · Ashton Bottom Jeantys</div>
@@ -370,7 +429,7 @@
     </div>
 
     <div class="fan-group" style="--fan-color:#000000">
-      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Pittsburgh Steelers logo" width="28" height="28" loading="lazy"></div>
+      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Pittsburgh Steelers logo" width="28" height="28"></div>
       <div class="fan-body">
         <div class="team-line"><span>Steelers</span><span class="record">1-0</span></div>
         <div class="who">Vladimir Tuten</div>
@@ -379,7 +438,7 @@
     </div>
 
     <div class="fan-group" style="--fan-color:#06424d">
-      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" alt="Philadelphia Eagles logo" width="28" height="28" loading="lazy"></div>
+      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" alt="Philadelphia Eagles logo" width="28" height="28"></div>
       <div class="fan-body">
         <div class="team-line"><span>Eagles</span><span class="record">1-0</span></div>
         <div class="who">NeitherMoneyNorGoodPick</div>
@@ -388,7 +447,7 @@
     </div>
 
     <div class="fan-group" style="--fan-color:#003c7f">
-      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png" alt="New York Giants logo" width="28" height="28" loading="lazy"></div>
+      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png" alt="New York Giants logo" width="28" height="28"></div>
       <div class="fan-body">
         <div class="team-line"><span>Giants</span><span class="record">1-0</span></div>
         <div class="who">Jaxson Eat My Dartbox · In Puka & Egbuka We Trust · Dianna's DoubleDeez</div>
