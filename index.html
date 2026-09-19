@@ -108,16 +108,32 @@
   .recap p { margin: 0 0 12px; }
   .recap p:last-child { margin-bottom: 0; }
   .matchup {
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 1px solid var(--border);
   }
   .matchup:last-child { border-bottom: none; }
   .matchup .score { color: var(--muted); font-size: 0.85rem; }
-  .matchup .note { font-size: 0.88rem; margin-top: 3px; }
+  .matchup .note { font-size: 0.9rem; margin-top: 5px; line-height: 1.55; }
   .placeholder {
     color: var(--muted);
     font-style: italic;
   }
+  .fan-group {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .fan-group:last-child { border-bottom: none; }
+  .fan-group .team-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: 600;
+  }
+  .fan-group .record { color: var(--muted); font-weight: 500; font-size: 0.85rem; }
+  .fan-group .who { color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+  .fan-group .note { font-size: 0.9rem; margin-top: 5px; }
+  .fan-group .result-win { color: var(--up); font-weight: 600; }
+  .fan-group .result-loss { color: var(--down); font-weight: 600; }
   .past-weeks summary {
     cursor: pointer;
     font-weight: 600;
@@ -154,23 +170,23 @@
     <h2>This Week — Matchups</h2>
     <div class="matchup">
       <strong>Fuck RIT</strong> def. Dianna's DoubleDeez <span class="score">154.26 – 134.22</span>
-      <div class="note">Jahmyr Gibbs (33.6) and Christian Watson (32.7) did the heavy lifting. The commissioner's own team opens in last place — not exactly a honeymoon.</div>
+      <div class="note">Dianna's looked like the sharper build all day — over 100 of their 134 points were banked before the early Sunday window even closed, and for a while this had laugher written all over it. But RIT played it patient: modest Thursday production, a slow build across both Sunday windows, and enough left over after dark to run it down. Rough way for the commissioner to open a title defense — burn bright early, get caught by dinner.</div>
     </div>
     <div class="matchup">
       <strong>Tucking DicK</strong> def. Love on the Spectrum <span class="score">215.24 – 167.96</span>
-      <div class="note">Derrick Henry (35.3) anchored the league's highest score. Josh Allen (35.66) and D'Andre Swift (32.4) went off for the other side too — just not enough.</div>
+      <div class="note">Never really in doubt. Tucking DicK had nearly 100 points in the bank before the 4pm window even started, then let Monday Night Football (Derrick Henry, 35.3) pad the final margin for sport. Love on the Spectrum had a legitimately good day themselves — Allen and Swift both popped in the early window — they just spent all of it chasing a team that was already gone. Maybe stop complaining about tanking and start drafting like it.</div>
     </div>
     <div class="matchup">
       <strong>The DynaSteve</strong> def. Jaxson Eat My Dartbox <span class="score">203.1 – 105.88</span>
-      <div class="note">The week's biggest blowout — 97 points. Bijan Robinson led the reigning champs; the Dartbox roster looked every bit as stale as advertised.</div>
+      <div class="note">Dead on arrival. The reigning champ came out of Thursday night with 46 points already on the board and never let off, turning it into the week's most lopsided final margin. The Dartbox roster — old and about as active as a museum exhibit most weeks — had no version of this game where it wasn't a blowout by kickoff Sunday.</div>
     </div>
     <div class="matchup">
       <strong>Ashton Bottom Jeantys</strong> def. Vladimir Tuten <span class="score">171.22 – 148.98</span>
-      <div class="note">Kenneth Walker (34.1) paced the league's data guy to a real, numbers-backed statement win.</div>
+      <div class="note">The one game with a real pulse. Vlad built a legit lead through the early Sunday window — nearly 100 points banked, looking like the guy who finally wins with the roster instead of just the trade machine — but Ashton Bottom was sitting on a stacked Monday Night slate that hadn't kicked off yet. 44 points arrived after everyone else had already gone home for the week, and a would-be loss became a real, numbers-backed win. The spreadsheet said wait for Monday. The spreadsheet was right.</div>
     </div>
     <div class="matchup">
       <strong>In Puka & Egbuka We Trust</strong> def. NeitherMoneyNorGoodPick <span class="score">159.26 – 145.2</span>
-      <div class="note">Caleb Williams (37.26) put up the single best individual score of the week.</div>
+      <div class="note">Tight all day, decided late. NeitherMoney built a real floor through Sunday and even got a night-window boost of their own — this one felt winnable into the evening. But In Puka's freshly upgraded backfield (Aaron Jones arrived via trade this week) answered with its own Sunday night surge to pull ahead in the final window. The self-proclaimed savant will need to find that same finishing gear.</div>
     </div>
   </section>
 
@@ -184,16 +200,55 @@
       <tr><td>Kenneth Walker</td><td>Ashton Bottom Jeantys</td><td>34.1</td></tr>
       <tr><td>Jahmyr Gibbs</td><td>Fuck RIT</td><td>33.6</td></tr>
     </table>
-    <p style="margin-top:14px; font-size:0.9rem; color:var(--muted);">Dud of the week: Sam Darnold (Jaxson Eat My Dartbox) — 0.52 points.</p>
+    <p style="margin-top:14px; font-size:0.9rem; color:var(--muted);">Dud of the week: Sam Darnold (Jaxson Eat My Dartbox) — 0.52 points. About what you'd expect from a roster nobody's touched since Draft Day.</p>
   </section>
 
   <section>
     <h2>Notable Moves</h2>
     <div class="recap">
-      <p>Vladimir Tuten traded for Makai Lemon and Jason Myers, sending James Cook to In Puka & Egbuka We Trust — vintage Vlad, we'll see how lopsided this one turns out to be.</p>
-      <p>In Puka & Egbuka We Trust also added Aaron Jones via trade — stacking the backfield early.</p>
+      <p>Vladimir Tuten traded for Makai Lemon and Jason Myers, sending James Cook to In Puka & Egbuka We Trust — a Vlad deal that, for once, might not be a total giveaway. Jury's out.</p>
+      <p>In Puka & Egbuka We Trust also added Aaron Jones via trade — stacking the backfield the same week it paid off.</p>
       <p>Tucking DicK and Jaxson Eat My Dartbox swapped Xavier Worthy for DK Metcalf, with Justin Fields and Jalen Milroe changing hands too.</p>
       <p>NeitherMoneyNorGoodPick added Kimani Vidal via trade.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Fan Corner</h2>
+    <div class="fan-group">
+      <div class="team-line">Patriots <span class="record">0-1</span></div>
+      <div class="who">Love on the Spectrum · The DynaSteve · Ashton Bottom Jeantys</div>
+      <div class="note">Lost the Thursday night opener to Seattle, 10-13. Three fantasy rosters riding for New England this year — combined they went 2-1 in fantasy, so at least someone in that group is having a good week.</div>
+    </div>
+    <div class="fan-group">
+      <div class="team-line">Giants <span class="record">1-0</span></div>
+      <div class="who">Jaxson Eat My Dartbox · In Puka & Egbuka We Trust · Dianna's DoubleDeez</div>
+      <div class="note">Stole one on Monday night in Dallas, 28-20. Best real-life showing of any fan bloc in the league this week — pity it didn't rub off on two of the three fantasy rosters cheering for it.</div>
+    </div>
+    <div class="fan-group">
+      <div class="team-line">Bills <span class="record">1-0</span></div>
+      <div class="who">Tucking DicK</div>
+      <div class="note">Handled Houston without much drama.</div>
+    </div>
+    <div class="fan-group">
+      <div class="team-line">49ers <span class="record">1-0</span></div>
+      <div class="who">Tucking DicK</div>
+      <div class="note">Won the season-opening international game against the Rams. A perfect real-life week for the league's most confusing two-team fan — and the fantasy team backed it up too. Nothing to razz here, annoyingly.</div>
+    </div>
+    <div class="fan-group">
+      <div class="team-line">Cowboys <span class="record">0-1</span></div>
+      <div class="who">Fuck RIT</div>
+      <div class="note">Lost Monday night to the Giants. At least the fantasy team picked up the slack with a real win.</div>
+    </div>
+    <div class="fan-group">
+      <div class="team-line">Steelers <span class="record">1-0</span></div>
+      <div class="who">Vladimir Tuten</div>
+      <div class="note">Beat Atlanta — the week's only case of winning the real game and losing the fantasy one.</div>
+    </div>
+    <div class="fan-group">
+      <div class="team-line">Eagles <span class="record">1-0</span></div>
+      <div class="who">NeitherMoneyNorGoodPick</div>
+      <div class="note">Held off Washington. Small consolation after the fantasy loss.</div>
     </div>
   </section>
 
