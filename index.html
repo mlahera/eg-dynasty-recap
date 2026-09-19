@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EG Dynasty — Weekly Recap</title>
 <meta name="description" content="Weekly recap and power rankings for the EG Dynasty Sleeper league.">
+<!--
+  WEEKLY THEME NOTE (for whoever/whatever regenerates this page):
+  --week-color / --week-color-2 drive the hero banner gradient and the
+  body's background glow. Refresh them each week from the real NFL team
+  colors (ESPN's /teams/{abbr} endpoint, .color / .alternateColor) of
+  whichever fan_of team belongs to this week's #1 power-ranked fantasy
+  team — so the page's look actually tracks the standings instead of
+  being arbitrary. This week: Tucking DicK is #1, roots for the Bills,
+  so the theme is Bills navy -> Bills red.
+-->
 <style>
   :root {
     --bg: #f6f5f2;
@@ -17,6 +27,11 @@
     --up: #2e7d4f;
     --down: #b5482f;
     --same: #9a948c;
+    --week-color: #00338d;
+    --week-color-2: #d50a0a;
+    --week-glow: rgba(0, 51, 141, 0.16);
+    --yard-line: rgba(28, 27, 25, 0.05);
+    --logo-badge-bg: #ffffff;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -30,6 +45,8 @@
       --up: #6fcf97;
       --down: #e08a6c;
       --same: #736e68;
+      --week-glow: rgba(70, 120, 220, 0.14);
+      --yard-line: rgba(255, 255, 255, 0.05);
     }
   }
   :root[data-theme="dark"] {
@@ -43,11 +60,17 @@
     --up: #6fcf97;
     --down: #e08a6c;
     --same: #736e68;
+    --week-glow: rgba(70, 120, 220, 0.14);
+    --yard-line: rgba(255, 255, 255, 0.05);
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: var(--bg);
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(ellipse 900px 460px at 50% -12%, var(--week-glow) 0%, transparent 62%),
+      repeating-linear-gradient(180deg, transparent 0 38px, var(--yard-line) 38px 40px);
+    background-attachment: fixed, fixed;
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -57,17 +80,34 @@
     margin: 0 auto;
     padding: 32px 16px 80px;
   }
-  header {
-    margin-bottom: 28px;
+  .hero-banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    padding: 26px 24px 24px;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, var(--week-color) 0%, var(--week-color-2) 100%);
+    box-shadow: 0 8px 24px -8px rgba(0,0,0,0.35);
   }
-  header h1 {
+  .hero-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.10) 0 2px, transparent 2px 46px);
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+  .hero-banner h1 {
+    color: #fff;
     font-size: 1.6rem;
     margin: 0 0 4px;
     letter-spacing: -0.01em;
+    position: relative;
   }
-  header .meta {
-    color: var(--muted);
+  .hero-banner .meta {
+    color: rgba(255,255,255,0.88);
     font-size: 0.9rem;
+    position: relative;
   }
   section {
     background: var(--panel);
@@ -119,21 +159,43 @@
     font-style: italic;
   }
   .fan-group {
-    padding: 12px 0;
+    display: flex;
+    gap: 12px;
+    padding: 14px 4px;
     border-bottom: 1px solid var(--border);
+    border-left: 4px solid var(--fan-color, var(--border));
+    padding-left: 12px;
+    border-radius: 6px;
   }
   .fan-group:last-child { border-bottom: none; }
+  .team-logo-wrap {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--logo-badge-bg);
+    box-shadow: 0 0 0 1px var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .team-logo-wrap img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+  }
+  .fan-group .fan-body { flex: 1; min-width: 0; }
   .fan-group .team-line {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     font-weight: 600;
+    gap: 8px;
   }
-  .fan-group .record { color: var(--muted); font-weight: 500; font-size: 0.85rem; }
+  .fan-group .record { color: var(--muted); font-weight: 500; font-size: 0.85rem; white-space: nowrap; }
   .fan-group .who { color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
   .fan-group .note { font-size: 0.9rem; margin-top: 5px; }
-  .fan-group .result-win { color: var(--up); font-weight: 600; }
-  .fan-group .result-loss { color: var(--down); font-weight: 600; }
   .past-weeks summary {
     cursor: pointer;
     font-weight: 600;
@@ -161,10 +223,10 @@
 </head>
 <body>
 <div class="wrap">
-  <header>
+  <div class="hero-banner">
     <h1>🏈 EG Dynasty — Weekly Recap</h1>
     <div class="meta">10-team PPR Superflex dynasty · Week 1 · Updated every Tuesday morning</div>
-  </header>
+  </div>
 
   <section>
     <h2>This Week — Matchups</h2>
@@ -186,7 +248,7 @@
     </div>
     <div class="matchup">
       <strong>In Puka & Egbuka We Trust</strong> def. NeitherMoneyNorGoodPick <span class="score">159.26 – 145.2</span>
-      <div class="note">Tight all day, decided late. NeitherMoney built a real floor through Sunday and even got a night-window boost of their own — this one felt winnable into the evening. But In Puka's freshly upgraded backfield (Aaron Jones arrived via trade this week) answered with its own Sunday night surge to pull ahead in the final window. The self-proclaimed savant will need to find that same finishing gear.</div>
+      <div class="note">Tight all day, decided late. NeitherMoney built a real floor through Sunday and even got a night-window boost of their own — this one felt winnable into the evening. But In Puka's roster, freshly upgraded with Aaron Jones this week, answered with its own Sunday night surge to pull ahead in the final window. The self-proclaimed savant will need to find that same finishing gear.</div>
     </div>
   </section>
 
@@ -215,40 +277,68 @@
 
   <section>
     <h2>Fan Corner</h2>
-    <div class="fan-group">
-      <div class="team-line">Patriots <span class="record">0-1</span></div>
-      <div class="who">Love on the Spectrum · The DynaSteve · Ashton Bottom Jeantys</div>
-      <div class="note">Lost the Thursday night opener to Seattle, 10-13. Three fantasy rosters riding for New England this year — combined they went 2-1 in fantasy, so at least someone in that group is having a good week.</div>
+
+    <div class="fan-group" style="--fan-color:#00338d">
+      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" alt="Buffalo Bills logo" width="28" height="28" loading="lazy"></div>
+      <div class="fan-body">
+        <div class="team-line"><span>Bills</span><span class="record">1-0</span></div>
+        <div class="who">Tucking DicK</div>
+        <div class="note">Handled Houston without much drama.</div>
+      </div>
     </div>
-    <div class="fan-group">
-      <div class="team-line">Giants <span class="record">1-0</span></div>
-      <div class="who">Jaxson Eat My Dartbox · In Puka & Egbuka We Trust · Dianna's DoubleDeez</div>
-      <div class="note">Stole one on Monday night in Dallas, 28-20. Best real-life showing of any fan bloc in the league this week — pity it didn't rub off on two of the three fantasy rosters cheering for it.</div>
+
+    <div class="fan-group" style="--fan-color:#aa0000">
+      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/sf.png" alt="San Francisco 49ers logo" width="28" height="28" loading="lazy"></div>
+      <div class="fan-body">
+        <div class="team-line"><span>49ers</span><span class="record">1-0</span></div>
+        <div class="who">Tucking DicK</div>
+        <div class="note">Won the season-opening international game against the Rams. A perfect real-life week for the league's most confusing two-team fan — and the fantasy team backed it up too. Nothing to razz here, annoyingly.</div>
+      </div>
     </div>
-    <div class="fan-group">
-      <div class="team-line">Bills <span class="record">1-0</span></div>
-      <div class="who">Tucking DicK</div>
-      <div class="note">Handled Houston without much drama.</div>
+
+    <div class="fan-group" style="--fan-color:#002a5c">
+      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" alt="Dallas Cowboys logo" width="28" height="28" loading="lazy"></div>
+      <div class="fan-body">
+        <div class="team-line"><span>Cowboys</span><span class="record">0-1</span></div>
+        <div class="who">Fuck RIT</div>
+        <div class="note">Lost Monday night to the Giants. At least the fantasy team picked up the slack with a real win.</div>
+      </div>
     </div>
-    <div class="fan-group">
-      <div class="team-line">49ers <span class="record">1-0</span></div>
-      <div class="who">Tucking DicK</div>
-      <div class="note">Won the season-opening international game against the Rams. A perfect real-life week for the league's most confusing two-team fan — and the fantasy team backed it up too. Nothing to razz here, annoyingly.</div>
+
+    <div class="fan-group" style="--fan-color:#004953">
+      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png" alt="New England Patriots logo" width="28" height="28" loading="lazy"></div>
+      <div class="fan-body">
+        <div class="team-line"><span>Patriots</span><span class="record">0-1</span></div>
+        <div class="who">Love on the Spectrum · The DynaSteve · Ashton Bottom Jeantys</div>
+        <div class="note">Lost the Thursday night opener to Seattle, 10-13. Three fantasy rosters riding for New England this year — combined they went 2-1 in fantasy, so at least someone in that group is having a good week.</div>
+      </div>
     </div>
-    <div class="fan-group">
-      <div class="team-line">Cowboys <span class="record">0-1</span></div>
-      <div class="who">Fuck RIT</div>
-      <div class="note">Lost Monday night to the Giants. At least the fantasy team picked up the slack with a real win.</div>
+
+    <div class="fan-group" style="--fan-color:#000000">
+      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Pittsburgh Steelers logo" width="28" height="28" loading="lazy"></div>
+      <div class="fan-body">
+        <div class="team-line"><span>Steelers</span><span class="record">1-0</span></div>
+        <div class="who">Vladimir Tuten</div>
+        <div class="note">Beat Atlanta — the week's only case of winning the real game and losing the fantasy one.</div>
+      </div>
     </div>
-    <div class="fan-group">
-      <div class="team-line">Steelers <span class="record">1-0</span></div>
-      <div class="who">Vladimir Tuten</div>
-      <div class="note">Beat Atlanta — the week's only case of winning the real game and losing the fantasy one.</div>
+
+    <div class="fan-group" style="--fan-color:#06424d">
+      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" alt="Philadelphia Eagles logo" width="28" height="28" loading="lazy"></div>
+      <div class="fan-body">
+        <div class="team-line"><span>Eagles</span><span class="record">1-0</span></div>
+        <div class="who">NeitherMoneyNorGoodPick</div>
+        <div class="note">Held off Washington. Small consolation after the fantasy loss.</div>
+      </div>
     </div>
-    <div class="fan-group">
-      <div class="team-line">Eagles <span class="record">1-0</span></div>
-      <div class="who">NeitherMoneyNorGoodPick</div>
-      <div class="note">Held off Washington. Small consolation after the fantasy loss.</div>
+
+    <div class="fan-group" style="--fan-color:#003c7f">
+      <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png" alt="New York Giants logo" width="28" height="28" loading="lazy"></div>
+      <div class="fan-body">
+        <div class="team-line"><span>Giants</span><span class="record">1-0</span></div>
+        <div class="who">Jaxson Eat My Dartbox · In Puka & Egbuka We Trust · Dianna's DoubleDeez</div>
+        <div class="note">Stole one on Monday night in Dallas, 28-20. Best real-life showing of any fan bloc in the league this week — pity it didn't rub off on two of the three fantasy rosters cheering for it.</div>
+      </div>
     </div>
   </section>
 
