@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EG Dynasty — Weekly Recap</title>
+<meta name="description" content="Weekly recap and power rankings for the EG Dynasty Sleeper league.">
+<style>
+  :root {
+    --bg: #f6f5f2;
+    --panel: #ffffff;
+    --text: #1c1b19;
+    --muted: #6b6660;
+    --border: #e4e0da;
+    --accent: #b5482f;
+    --accent-soft: #f3e3dd;
+    --up: #2e7d4f;
+    --down: #b5482f;
+    --same: #9a948c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17161a;
+      --panel: #211f24;
+      --text: #ece9e4;
+      --muted: #9d9791;
+      --border: #35323a;
+      --accent: #e08a6c;
+      --accent-soft: #3a2b26;
+      --up: #6fcf97;
+      --down: #e08a6c;
+      --same: #736e68;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17161a;
+    --panel: #211f24;
+    --text: #ece9e4;
+    --muted: #9d9791;
+    --border: #35323a;
+    --accent: #e08a6c;
+    --accent-soft: #3a2b26;
+    --up: #6fcf97;
+    --down: #e08a6c;
+    --same: #736e68;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 16px 80px;
+  }
+  header {
+    margin-bottom: 28px;
+  }
+  header h1 {
+    font-size: 1.6rem;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  header .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  section {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 20px 22px;
+    margin-bottom: 20px;
+  }
+  section h2 {
+    font-size: 1.05rem;
+    margin: 0 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  th {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  tr:last-child td { border-bottom: none; }
+  .rank { font-weight: 700; color: var(--accent); width: 28px; }
+  .move-up { color: var(--up); font-weight: 600; }
+  .move-down { color: var(--down); font-weight: 600; }
+  .move-same { color: var(--same); }
+  .recap p { margin: 0 0 12px; }
+  .recap p:last-child { margin-bottom: 0; }
+  .matchup {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .matchup:last-child { border-bottom: none; }
+  .matchup .score { color: var(--muted); font-size: 0.85rem; }
+  .matchup .note { font-size: 0.88rem; margin-top: 3px; }
+  .placeholder {
+    color: var(--muted);
+    font-style: italic;
+  }
+  .past-weeks summary {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 4px 0;
+  }
+  .past-weeks-list {
+    margin-top: 10px;
+    padding-left: 0;
+    list-style: none;
+  }
+  .past-weeks-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .past-weeks-list li:last-child { border-bottom: none; }
+  footer {
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 8px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🏈 EG Dynasty — Weekly Recap</h1>
+    <div class="meta">10-team PPR Superflex dynasty · Week 1 · Updated every Tuesday morning</div>
+  </header>
+
+  <section>
+    <h2>This Week — Matchups</h2>
+    <div class="matchup">
+      <strong>Fuck RIT</strong> def. Dianna's DoubleDeez <span class="score">154.26 – 134.22</span>
+      <div class="note">Jahmyr Gibbs (33.6) and Christian Watson (32.7) did the heavy lifting. The commissioner's own team opens in last place — not exactly a honeymoon.</div>
+    </div>
+    <div class="matchup">
+      <strong>Tucking DicK</strong> def. Love on the Spectrum <span class="score">215.24 – 167.96</span>
+      <div class="note">Derrick Henry (35.3) anchored the league's highest score. Josh Allen (35.66) and D'Andre Swift (32.4) went off for the other side too — just not enough.</div>
+    </div>
+    <div class="matchup">
+      <strong>The DynaSteve</strong> def. Jaxson Eat My Dartbox <span class="score">203.1 – 105.88</span>
+      <div class="note">The week's biggest blowout — 97 points. Bijan Robinson led the reigning champs; the Dartbox roster looked every bit as stale as advertised.</div>
+    </div>
+    <div class="matchup">
+      <strong>Ashton Bottom Jeantys</strong> def. Vladimir Tuten <span class="score">171.22 – 148.98</span>
+      <div class="note">Kenneth Walker (34.1) paced the league's data guy to a real, numbers-backed statement win.</div>
+    </div>
+    <div class="matchup">
+      <strong>In Puka & Egbuka We Trust</strong> def. NeitherMoneyNorGoodPick <span class="score">159.26 – 145.2</span>
+      <div class="note">Caleb Williams (37.26) put up the single best individual score of the week.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Top Performances</h2>
+    <table>
+      <tr><th>Player</th><th>Team</th><th>Pts</th></tr>
+      <tr><td>Caleb Williams</td><td>In Puka & Egbuka We Trust</td><td>37.26</td></tr>
+      <tr><td>Josh Allen</td><td>Love on the Spectrum</td><td>35.66</td></tr>
+      <tr><td>Derrick Henry</td><td>Tucking DicK</td><td>35.3</td></tr>
+      <tr><td>Kenneth Walker</td><td>Ashton Bottom Jeantys</td><td>34.1</td></tr>
+      <tr><td>Jahmyr Gibbs</td><td>Fuck RIT</td><td>33.6</td></tr>
+    </table>
+    <p style="margin-top:14px; font-size:0.9rem; color:var(--muted);">Dud of the week: Sam Darnold (Jaxson Eat My Dartbox) — 0.52 points.</p>
+  </section>
+
+  <section>
+    <h2>Notable Moves</h2>
+    <div class="recap">
+      <p>Vladimir Tuten traded for Makai Lemon and Jason Myers, sending James Cook to In Puka & Egbuka We Trust — vintage Vlad, we'll see how lopsided this one turns out to be.</p>
+      <p>In Puka & Egbuka We Trust also added Aaron Jones via trade — stacking the backfield early.</p>
+      <p>Tucking DicK and Jaxson Eat My Dartbox swapped Xavier Worthy for DK Metcalf, with Justin Fields and Jalen Milroe changing hands too.</p>
+      <p>NeitherMoneyNorGoodPick added Kimani Vidal via trade.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Power Rankings</h2>
+    <table>
+      <tr><th>#</th><th>Team</th><th>Record</th><th>Move</th></tr>
+      <tr><td class="rank">1</td><td>Tucking DicK</td><td>2-0</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">2</td><td>The DynaSteve</td><td>2-0</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">3</td><td>Ashton Bottom Jeantys</td><td>2-0</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">4</td><td>In Puka & Egbuka We Trust</td><td>2-0</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">5</td><td>Fuck RIT</td><td>1-1</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">6</td><td>Love on the Spectrum</td><td>1-1</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">7</td><td>NeitherMoneyNorGoodPick</td><td>0-2</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">8</td><td>Vladimir Tuten</td><td>0-2</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">9</td><td>Dianna's DoubleDeez</td><td>0-2</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">10</td><td>Jaxson Eat My Dartbox</td><td>0-2</td><td class="move-same">–</td></tr>
+    </table>
+    <p style="margin-top:12px; font-size:0.85rem; color:var(--muted);">First week of the season — no prior ranking to move against yet.</p>
+  </section>
+
+  <section>
+    <details class="past-weeks">
+      <summary>Past Weeks</summary>
+      <ul class="past-weeks-list">
+        <li class="placeholder">This is Week 1 — history builds from here.</li>
+      </ul>
+    </details>
+  </section>
+
+  <footer>EG Dynasty League · Commissioner: Matt</footer>
+</div>
+</body>
+</html>
