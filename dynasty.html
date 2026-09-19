@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EG Dynasty — Dynasty Stats</title>
+<meta name="description" content="Rookie draft grades, roster age, championship windows, future picks, and schedule luck for the EG Dynasty Sleeper league.">
+<style>
+  :root {
+    --bg: #f6f5f2;
+    --panel: #ffffff;
+    --text: #1c1b19;
+    --muted: #6b6660;
+    --border: #e4e0da;
+    --accent: #b5482f;
+    --accent-soft: #f3e3dd;
+    --up: #2e7d4f;
+    --down: #b5482f;
+    --same: #9a948c;
+    --yard-line: rgba(28, 27, 25, 0.05);
+    --logo-badge-bg: #ffffff;
+    --track: #ece8e1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17161a;
+      --panel: #211f24;
+      --text: #ece9e4;
+      --muted: #9d9791;
+      --border: #35323a;
+      --accent: #e08a6c;
+      --accent-soft: #3a2b26;
+      --up: #6fcf97;
+      --down: #e08a6c;
+      --same: #736e68;
+      --yard-line: rgba(255, 255, 255, 0.05);
+      --track: #2b2930;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17161a;
+    --panel: #211f24;
+    --text: #ece9e4;
+    --muted: #9d9791;
+    --border: #35323a;
+    --accent: #e08a6c;
+    --accent-soft: #3a2b26;
+    --up: #6fcf97;
+    --down: #e08a6c;
+    --same: #736e68;
+    --yard-line: rgba(255, 255, 255, 0.05);
+    --track: #2b2930;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background-color: var(--bg);
+    background-image: repeating-linear-gradient(180deg, transparent 0 38px, var(--yard-line) 38px 40px);
+    background-attachment: fixed;
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 16px 80px; }
+  nav.top {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 20px;
+    font-size: 0.88rem;
+  }
+  nav.top a {
+    padding: 7px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  nav.top a.active {
+    color: #fff;
+    background: var(--accent);
+    border-color: var(--accent);
+    font-weight: 600;
+  }
+  header { margin-bottom: 24px; }
+  header h1 { font-size: 1.5rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  header .meta { color: var(--muted); font-size: 0.9rem; }
+  section {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 20px 22px;
+    margin-bottom: 20px;
+  }
+  section h2 { font-size: 1.05rem; margin: 0 0 4px; }
+  section .subtitle { color: var(--muted); font-size: 0.85rem; margin: 0 0 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.03em; }
+  tr:last-child td { border-bottom: none; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; }
+  .pos { color: var(--up); font-weight: 600; }
+  .neg { color: var(--down); font-weight: 600; }
+
+  .bar-row { display: flex; align-items: center; gap: 10px; padding: 6px 0; }
+  .bar-label { flex: 0 0 150px; font-size: 0.85rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .bar-track { flex: 1; height: 14px; background: var(--track); border-radius: 7px; position: relative; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 7px; background: linear-gradient(90deg, var(--accent-soft), var(--accent)); }
+  .bar-value { flex: 0 0 42px; text-align: right; font-size: 0.85rem; font-variant-numeric: tabular-nums; color: var(--muted); }
+
+  .luck-row { display: flex; align-items: center; gap: 10px; padding: 6px 0; }
+  .luck-label { flex: 0 0 150px; font-size: 0.85rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .luck-track { flex: 1; height: 14px; background: var(--track); border-radius: 7px; position: relative; }
+  .luck-mid { position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--border); }
+  .luck-fill { position: absolute; top: 0; height: 100%; }
+  .luck-fill.up { background: var(--up); border-radius: 0 7px 7px 0; left: 50%; }
+  .luck-fill.down { background: var(--down); border-radius: 7px 0 0 7px; right: 50%; }
+  .luck-value { flex: 0 0 46px; text-align: right; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+  .legend { display: flex; gap: 16px; font-size: 0.8rem; color: var(--muted); margin-top: 10px; }
+  .legend .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+
+  .window-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .window-card { border: 1px solid var(--border); border-radius: 10px; padding: 12px; }
+  .window-card .team { font-weight: 600; font-size: 0.88rem; margin-bottom: 6px; }
+  .chip { display: inline-block; padding: 3px 9px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; }
+  .chip.win-now { background: #fde3d1; color: #9a4a10; }
+  .chip.sustained { background: var(--accent-soft); color: var(--accent); }
+  .chip.rebuilding { background: #d9ecff; color: #2160a8; }
+  .chip.retooling { background: var(--track); color: var(--muted); }
+  .chip.stuck { background: #f6d9d9; color: #a12f2f; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .chip.win-now { background: #4a2c14; color: #f5b787; }
+    :root:not([data-theme="light"]) .chip.rebuilding { background: #1c3350; color: #8fc2ff; }
+    :root:not([data-theme="light"]) .chip.stuck { background: #4a2323; color: #f0a3a3; }
+  }
+  .window-card .stats { color: var(--muted); font-size: 0.8rem; margin-top: 6px; }
+
+  details.rc summary { cursor: pointer; font-weight: 600; padding: 6px 0; font-size: 0.88rem; }
+  details.rc table { margin-top: 10px; }
+  .standouts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .standouts h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted); margin: 0 0 8px; }
+  .standouts li { font-size: 0.88rem; padding: 4px 0; list-style: none; }
+  .standouts ul { margin: 0; padding: 0; }
+  @media (max-width: 480px) { .standouts { grid-template-columns: 1fr; } }
+
+  footer { color: var(--muted); font-size: 0.8rem; text-align: center; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="top">
+    <a href="index.html">This Week</a>
+    <a href="dynasty.html" class="active">Dynasty Stats</a>
+  </nav>
+
+  <header>
+    <h1>📊 Dynasty Stats</h1>
+    <div class="meta">The long game — rookie draft grades, roster age, contention windows, future picks, and schedule luck. Updated weekly, but these move slowly (except Schedule Luck).</div>
+  </header>
+
+  <section>
+    <h2>Championship Windows</h2>
+    <p class="subtitle">Blend of record, roster age, and future draft capital. Early season — labels are noisy through Week 1 and will settle as records mean more.</p>
+    <div class="window-grid">
+      <div class="window-card"><div class="team">Tucking DicK</div><span class="chip sustained">Sustained Contender</span><div class="stats">2-0 · age 26.8 · 13 future picks</div></div>
+      <div class="window-card"><div class="team">The DynaSteve</div><span class="chip sustained">Sustained Contender</span><div class="stats">2-0 · age 26.9 · 10 future picks</div></div>
+      <div class="window-card"><div class="team">Ashton Bottom Jeantys</div><span class="chip win-now">Win Now</span><div class="stats">2-0 · age 25.7 · 9 future picks</div></div>
+      <div class="window-card"><div class="team">In Puka & Egbuka We Trust</div><span class="chip win-now">Win Now</span><div class="stats">2-0 · age 25.3 · 9 future picks</div></div>
+      <div class="window-card"><div class="team">Fuck RIT</div><span class="chip win-now">Win Now</span><div class="stats">1-1 · age 28.7 · 9 future picks</div></div>
+      <div class="window-card"><div class="team">Love on the Spectrum</div><span class="chip sustained">Sustained Contender</span><div class="stats">1-1 · age 25.3 · 10 future picks</div></div>
+      <div class="window-card"><div class="team">NeitherMoneyNorGoodPick</div><span class="chip retooling">Retooling</span><div class="stats">0-2 · age 27.1 · 11 future picks</div></div>
+      <div class="window-card"><div class="team">Dianna's DoubleDeez</div><span class="chip rebuilding">Rebuilding</span><div class="stats">0-2 · age 25.4 · 10 future picks</div></div>
+      <div class="window-card"><div class="team">Vladimir Tuten</div><span class="chip rebuilding">Rebuilding</span><div class="stats">0-2 · age 26.2 · 12 future picks</div></div>
+      <div class="window-card"><div class="team">Jaxson Eat My Dartbox</div><span class="chip stuck">Stuck</span><div class="stats">0-2 · age 28.7 · 7 future picks</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Roster Age Curve</h2>
+    <p class="subtitle">Average age of each team's active roster (taxi squad excluded — that's the future, this is who's playing now).</p>
+    <div class="bar-row"><div class="bar-label">Love on the Spectrum</div><div class="bar-track"><div class="bar-fill" style="width:41%"></div></div><div class="bar-value">25.3</div></div>
+    <div class="bar-row"><div class="bar-label">In Puka & Egbuka We Trust</div><div class="bar-track"><div class="bar-fill" style="width:41%"></div></div><div class="bar-value">25.3</div></div>
+    <div class="bar-row"><div class="bar-label">Dianna's DoubleDeez</div><div class="bar-track"><div class="bar-fill" style="width:45%"></div></div><div class="bar-value">25.4</div></div>
+    <div class="bar-row"><div class="bar-label">Ashton Bottom Jeantys</div><div class="bar-track"><div class="bar-fill" style="width:53%"></div></div><div class="bar-value">25.7</div></div>
+    <div class="bar-row"><div class="bar-label">Vladimir Tuten</div><div class="bar-track"><div class="bar-fill" style="width:65%"></div></div><div class="bar-value">26.2</div></div>
+    <div class="bar-row"><div class="bar-label">Tucking DicK</div><div class="bar-track"><div class="bar-fill" style="width:80%"></div></div><div class="bar-value">26.8</div></div>
+    <div class="bar-row"><div class="bar-label">The DynaSteve</div><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div><div class="bar-value">26.9</div></div>
+    <div class="bar-row"><div class="bar-label">NeitherMoneyNorGoodPick</div><div class="bar-track"><div class="bar-fill" style="width:88%"></div></div><div class="bar-value">27.1</div></div>
+    <div class="bar-row"><div class="bar-label">Fuck RIT</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-value">28.7</div></div>
+    <div class="bar-row"><div class="bar-label">Jaxson Eat My Dartbox</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-value">28.7</div></div>
+  </section>
+
+  <section>
+    <h2>Rookie Draft Report Card</h2>
+    <p class="subtitle">Every rookie's fantasy points this season vs. where they were actually drafted. "Value" = draft slot minus performance rank among all 50 rookies drafted — positive means outperforming the pick, negative means underperforming it (still very early, most Round 3-5 rookies haven't seen the field yet).</p>
+    <div class="standouts">
+      <div>
+        <h3>Biggest Steals So Far</h3>
+        <ul>
+          <li><strong>Caleb Douglas</strong> (WR, pick 48, Ashton Bottom Jeantys) — 14.4 pts, <span class="pos">+46</span></li>
+          <li><strong>Kaelon Black</strong> (RB, pick 40, Dianna's DoubleDeez) — 8.0 pts, <span class="pos">+33</span></li>
+          <li><strong>Bryce Lance</strong> (WR, pick 42, Tucking DicK) — 7.2 pts, <span class="pos">+30</span></li>
+          <li><strong>Eli Raridon</strong> (TE, pick 38, Vladimir Tuten) — 7.2 pts, <span class="pos">+27</span></li>
+          <li><strong>Emmett Johnson</strong> (RB, pick 25, Fuck RIT) — 8.8 pts, <span class="pos">+19</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Biggest Reaches So Far</h3>
+        <ul>
+          <li><strong>Fernando Mendoza</strong> (QB, pick 2, Tucking DicK) — 0 pts, <span class="neg">-20</span></li>
+          <li><strong>Jordyn Tyson</strong> (WR, pick 3, Love on the Spectrum) — 0 pts, <span class="neg">-20</span></li>
+          <li><strong>Eli Stowers</strong> (TE, pick 9, Love on the Spectrum) — 0 pts, <span class="neg">-15</span></li>
+          <li><strong>Nicholas Singleton</strong> (RB, pick 10, The DynaSteve) — 0 pts, <span class="neg">-15</span></li>
+          <li><strong>Ty Simpson</strong> (QB, pick 12, Love on the Spectrum) — 0 pts, <span class="neg">-14</span></li>
+        </ul>
+      </div>
+    </div>
+    <details class="rc">
+      <summary>See all 50 picks</summary>
+      <table>
+        <tr><th>Pick</th><th>Player</th><th>Pos</th><th>Team</th><th class="num">Pts</th><th class="num">Value</th></tr>
+        <tr><td>1</td><td>Jeremiyah Love</td><td>RB</td><td>Love on the Spectrum</td><td class="num">13.0</td><td class="num neg">-3</td></tr>
+        <tr><td>2</td><td>Fernando Mendoza</td><td>QB</td><td>Tucking DicK</td><td class="num">0</td><td class="num neg">-20</td></tr>
+        <tr><td>3</td><td>Jordyn Tyson</td><td>WR</td><td>Love on the Spectrum</td><td class="num">0</td><td class="num neg">-20</td></tr>
+        <tr><td>4</td><td>Carnell Tate</td><td>WR</td><td>Dianna's DoubleDeez</td><td class="num">7.8</td><td class="num neg">-4</td></tr>
+        <tr><td>5</td><td>Jadarian Price</td><td>RB</td><td>Fuck RIT</td><td class="num">7.8</td><td class="num neg">-4</td></tr>
+        <tr><td>6</td><td>Makai Lemon</td><td>WR</td><td>In Puka & Egbuka We Trust</td><td class="num">2.5</td><td class="num neg">-12</td></tr>
+        <tr><td>7</td><td>KC Concepcion</td><td>WR</td><td>NeitherMoneyNorGoodPick</td><td class="num">7.8</td><td class="num neg">-3</td></tr>
+        <tr><td>8</td><td>Kenyon Sadiq</td><td>TE</td><td>Ashton Bottom Jeantys</td><td class="num">11.4</td><td class="num pos">+3</td></tr>
+        <tr><td>9</td><td>Eli Stowers</td><td>TE</td><td>Love on the Spectrum</td><td class="num">0</td><td class="num neg">-15</td></tr>
+        <tr><td>10</td><td>Nicholas Singleton</td><td>RB</td><td>The DynaSteve</td><td class="num">0</td><td class="num neg">-15</td></tr>
+        <tr><td>11</td><td>Chris Bell</td><td>WR</td><td>Love on the Spectrum</td><td class="num">3.5</td><td class="num neg">-6</td></tr>
+        <tr><td>12</td><td>Ty Simpson</td><td>QB</td><td>Love on the Spectrum</td><td class="num">0</td><td class="num neg">-14</td></tr>
+        <tr><td>13</td><td>Omar Cooper</td><td>WR</td><td>Jaxson Eat My Dartbox</td><td class="num">4.0</td><td class="num neg">-3</td></tr>
+        <tr><td>14</td><td>Jonah Coleman</td><td>RB</td><td>In Puka & Egbuka We Trust</td><td class="num">0</td><td class="num neg">-13</td></tr>
+        <tr><td>15</td><td>Carson Beck</td><td>QB</td><td>Fuck RIT</td><td class="num">0</td><td class="num neg">-13</td></tr>
+        <tr><td>16</td><td>Antonio Williams</td><td>WR</td><td>Dianna's DoubleDeez</td><td class="num">16.4</td><td class="num pos">+15</td></tr>
+        <tr><td>17</td><td>Denzel Boston</td><td>WR</td><td>NeitherMoneyNorGoodPick</td><td class="num">13.9</td><td class="num pos">+14</td></tr>
+        <tr><td>18</td><td>Germie Bernard</td><td>WR</td><td>Ashton Bottom Jeantys</td><td class="num">0</td><td class="num neg">-11</td></tr>
+        <tr><td>19</td><td>Zachariah Branch</td><td>WR</td><td>Vladimir Tuten</td><td class="num">0</td><td class="num neg">-11</td></tr>
+        <tr><td>20</td><td>Kaytron Allen</td><td>RB</td><td>The DynaSteve</td><td class="num">1.6</td><td class="num neg">-1</td></tr>
+        <tr><td>21</td><td>Skyler Bell</td><td>WR</td><td>Love on the Spectrum</td><td class="num">0</td><td class="num neg">-10</td></tr>
+        <tr><td>22</td><td>Ted Hurst</td><td>WR</td><td>Tucking DicK</td><td class="num">6.6</td><td class="num pos">+9</td></tr>
+        <tr><td>23</td><td>Elijah Sarratt</td><td>WR</td><td>Jaxson Eat My Dartbox</td><td class="num">0</td><td class="num neg">-9</td></tr>
+        <tr><td>24</td><td>De'Zhaun Stribling</td><td>WR</td><td>Dianna's DoubleDeez</td><td class="num">0</td><td class="num neg">-9</td></tr>
+        <tr><td>25</td><td>Emmett Johnson</td><td>RB</td><td>Fuck RIT</td><td class="num">8.8</td><td class="num pos">+19</td></tr>
+        <tr><td>26</td><td>Drew Allar</td><td>QB</td><td>Vladimir Tuten</td><td class="num">0</td><td class="num neg">-8</td></tr>
+        <tr><td>27</td><td>Ja'Kobi Lane</td><td>WR</td><td>The DynaSteve</td><td class="num">2.1</td><td class="num pos">+7</td></tr>
+        <tr><td>28</td><td>Chris Brazzell</td><td>WR</td><td>Ashton Bottom Jeantys</td><td class="num">0</td><td class="num neg">-7</td></tr>
+        <tr><td>29</td><td>Malachi Fields</td><td>WR</td><td>Vladimir Tuten</td><td class="num">4.5</td><td class="num pos">+15</td></tr>
+        <tr><td>30</td><td>Taylen Green</td><td>QB</td><td>The DynaSteve</td><td class="num">0</td><td class="num neg">-6</td></tr>
+        <tr><td>31</td><td>Mike Washington</td><td>RB</td><td>Ashton Bottom Jeantys</td><td class="num">4.1</td><td class="num pos">+16</td></tr>
+        <tr><td>32</td><td>Demond Claiborne</td><td>RB</td><td>Tucking DicK</td><td class="num">0</td><td class="num neg">-5</td></tr>
+        <tr><td>33</td><td>Max Klare</td><td>TE</td><td>Love on the Spectrum</td><td class="num">0</td><td class="num neg">-5</td></tr>
+        <tr><td>34</td><td>Oscar Delp</td><td>TE</td><td>Dianna's DoubleDeez</td><td class="num">0</td><td class="num neg">-5</td></tr>
+        <tr><td>35</td><td>Chris Rodriguez</td><td>RB</td><td>NeitherMoneyNorGoodPick</td><td class="num">2.3</td><td class="num pos">+16</td></tr>
+        <tr><td>36</td><td>Eli Heidenreich</td><td>RB</td><td>In Puka & Egbuka We Trust</td><td class="num">0</td><td class="num neg">-4</td></tr>
+        <tr><td>37</td><td>Brenen Thompson</td><td>WR</td><td>NeitherMoneyNorGoodPick</td><td class="num">0</td><td class="num neg">-4</td></tr>
+        <tr><td>38</td><td>Eli Raridon</td><td>TE</td><td>Vladimir Tuten</td><td class="num">7.2</td><td class="num pos">+27</td></tr>
+        <tr><td>39</td><td>Cade Klubnik</td><td>QB</td><td>Love on the Spectrum</td><td class="num">0</td><td class="num neg">-3</td></tr>
+        <tr><td>40</td><td>Kaelon Black</td><td>RB</td><td>Dianna's DoubleDeez</td><td class="num">8.0</td><td class="num pos">+33</td></tr>
+        <tr><td>41</td><td>Garrett Nussmeier</td><td>QB</td><td>Jaxson Eat My Dartbox</td><td class="num">0</td><td class="num neg">-2</td></tr>
+        <tr><td>42</td><td>Bryce Lance</td><td>WR</td><td>Tucking DicK</td><td class="num">7.2</td><td class="num pos">+30</td></tr>
+        <tr><td>43</td><td>LeQuint Allen</td><td>RB</td><td>Jaxson Eat My Dartbox</td><td class="num">0</td><td class="num neg">-1</td></tr>
+        <tr><td>44</td><td>Davis Mills</td><td>QB</td><td>Fuck RIT</td><td class="num">0</td><td class="num neg">-1</td></tr>
+        <tr><td>45</td><td>Jack Endries</td><td>TE</td><td>Fuck RIT</td><td class="num">0</td><td class="num neg">-1</td></tr>
+        <tr><td>46</td><td>Adam Randall</td><td>RB</td><td>In Puka & Egbuka We Trust</td><td class="num">0</td><td class="num neg">-1</td></tr>
+        <tr><td>47</td><td>Justin Joly</td><td>TE</td><td>Dianna's DoubleDeez</td><td class="num">0</td><td class="num neg">-1</td></tr>
+        <tr><td>48</td><td>Caleb Douglas</td><td>WR</td><td>Ashton Bottom Jeantys</td><td class="num">14.4</td><td class="num pos">+46</td></tr>
+        <tr><td>49</td><td>Zavion Thomas</td><td>WR</td><td>Vladimir Tuten</td><td class="num">0</td><td class="num">0</td></tr>
+        <tr><td>50</td><td>Deion Burks</td><td>WR</td><td>The DynaSteve</td><td class="num">0</td><td class="num">0</td></tr>
+      </table>
+    </details>
+  </section>
+
+  <section>
+    <h2>Rookie Draft Grade by Team</h2>
+    <p class="subtitle">Average value-over-slot across each team's whole rookie class.</p>
+    <table>
+      <tr><th>#</th><th>Team</th><th class="num">Picks</th><th class="num">Avg Value</th><th>Best Pick</th><th>Worst Pick</th></tr>
+      <tr><td>1</td><td>Ashton Bottom Jeantys</td><td class="num">5</td><td class="num pos">+9.4</td><td>Caleb Douglas</td><td>Germie Bernard</td></tr>
+      <tr><td>2</td><td>NeitherMoneyNorGoodPick</td><td class="num">4</td><td class="num pos">+5.8</td><td>Chris Rodriguez</td><td>Brenen Thompson</td></tr>
+      <tr><td>3</td><td>Dianna's DoubleDeez</td><td class="num">6</td><td class="num pos">+4.8</td><td>Kaelon Black</td><td>De'Zhaun Stribling</td></tr>
+      <tr><td>4</td><td>Vladimir Tuten</td><td class="num">5</td><td class="num pos">+4.6</td><td>Eli Raridon</td><td>Zachariah Branch</td></tr>
+      <tr><td>5</td><td>Tucking DicK</td><td class="num">4</td><td class="num pos">+3.5</td><td>Bryce Lance</td><td>Fernando Mendoza</td></tr>
+      <tr><td>6</td><td>Fuck RIT</td><td class="num">5</td><td class="num">0.0</td><td>Emmett Johnson</td><td>Carson Beck</td></tr>
+      <tr><td>7</td><td>The DynaSteve</td><td class="num">5</td><td class="num neg">-3.0</td><td>Ja'Kobi Lane</td><td>Nicholas Singleton</td></tr>
+      <tr><td>8</td><td>Jaxson Eat My Dartbox</td><td class="num">4</td><td class="num neg">-3.8</td><td>LeQuint Allen</td><td>Elijah Sarratt</td></tr>
+      <tr><td>9</td><td>In Puka & Egbuka We Trust</td><td class="num">4</td><td class="num neg">-7.5</td><td>Adam Randall</td><td>Jonah Coleman</td></tr>
+      <tr><td>10</td><td>Love on the Spectrum</td><td class="num">8</td><td class="num neg">-9.5</td><td>Jeremiyah Love</td><td>Jordyn Tyson</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Future Picks Ledger</h2>
+    <p class="subtitle">Who owns what for the 2027 and 2028 rookie drafts (5 rounds, 10 teams each = 10 picks per team by default; trades move them around).</p>
+    <table>
+      <tr><th>Team</th><th class="num">Owns</th><th class="num">Owes</th><th class="num">Net</th></tr>
+      <tr><td>Tucking DicK</td><td class="num">13</td><td class="num">1</td><td class="num pos">+3</td></tr>
+      <tr><td>Vladimir Tuten</td><td class="num">12</td><td class="num">3</td><td class="num pos">+2</td></tr>
+      <tr><td>NeitherMoneyNorGoodPick</td><td class="num">11</td><td class="num">1</td><td class="num pos">+1</td></tr>
+      <tr><td>Dianna's DoubleDeez</td><td class="num">10</td><td class="num">2</td><td class="num">0</td></tr>
+      <tr><td>Love on the Spectrum</td><td class="num">10</td><td class="num">2</td><td class="num">0</td></tr>
+      <tr><td>The DynaSteve</td><td class="num">10</td><td class="num">0</td><td class="num">0</td></tr>
+      <tr><td>Fuck RIT</td><td class="num">9</td><td class="num">1</td><td class="num neg">-1</td></tr>
+      <tr><td>Ashton Bottom Jeantys</td><td class="num">9</td><td class="num">1</td><td class="num neg">-1</td></tr>
+      <tr><td>In Puka & Egbuka We Trust</td><td class="num">9</td><td class="num">4</td><td class="num neg">-1</td></tr>
+      <tr><td>Jaxson Eat My Dartbox</td><td class="num">7</td><td class="num">3</td><td class="num neg">-3</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Schedule Luck Index</h2>
+    <p class="subtitle">Actual head-to-head wins vs. "all-play" expected wins (how many of the other 9 teams you'd have beaten with your score each week). Only 1 week in the books — this is noisy right now and gets more meaningful as the season goes.</p>
+    <div class="luck-row"><div class="luck-label">Fuck RIT</div><div class="luck-track"><div class="luck-mid"></div><div class="luck-fill up" style="width:28%"></div></div><div class="luck-value pos">+0.56</div></div>
+    <div class="luck-row"><div class="luck-label">In Puka & Egbuka We Trust</div><div class="luck-track"><div class="luck-mid"></div><div class="luck-fill up" style="width:22%"></div></div><div class="luck-value pos">+0.44</div></div>
+    <div class="luck-row"><div class="luck-label">Ashton Bottom Jeantys</div><div class="luck-track"><div class="luck-mid"></div><div class="luck-fill up" style="width:11%"></div></div><div class="luck-value pos">+0.22</div></div>
+    <div class="luck-row"><div class="luck-label">The DynaSteve</div><div class="luck-track"><div class="luck-mid"></div><div class="luck-fill up" style="width:5.5%"></div></div><div class="luck-value pos">+0.11</div></div>
+    <div class="luck-row"><div class="luck-label">Tucking DicK</div><div class="luck-track"><div class="luck-mid"></div></div><div class="luck-value">0.0</div></div>
+    <div class="luck-row"><div class="luck-label">Jaxson Eat My Dartbox</div><div class="luck-track"><div class="luck-mid"></div></div><div class="luck-value">0.0</div></div>
+    <div class="luck-row"><div class="luck-label">Dianna's DoubleDeez</div><div class="luck-track"><div class="luck-mid"></div><div class="luck-fill down" style="width:5.5%"></div></div><div class="luck-value neg">-0.11</div></div>
+    <div class="luck-row"><div class="luck-label">NeitherMoneyNorGoodPick</div><div class="luck-track"><div class="luck-mid"></div><div class="luck-fill down" style="width:11%"></div></div><div class="luck-value neg">-0.22</div></div>
+    <div class="luck-row"><div class="luck-label">Vladimir Tuten</div><div class="luck-track"><div class="luck-mid"></div><div class="luck-fill down" style="width:16.5%"></div></div><div class="luck-value neg">-0.33</div></div>
+    <div class="luck-row"><div class="luck-label">Love on the Spectrum</div><div class="luck-track"><div class="luck-mid"></div><div class="luck-fill down" style="width:33.5%"></div></div><div class="luck-value neg">-0.67</div></div>
+    <div class="legend"><span><span class="swatch" style="background:var(--up)"></span>Winning more than their scoring deserves</span><span><span class="swatch" style="background:var(--down)"></span>Losing despite scoring well enough to win</span></div>
+  </section>
+
+  <footer>EG Dynasty League · Commissioner: Matt · Updated alongside the weekly recap</footer>
+</div>
+</body>
+</html>
