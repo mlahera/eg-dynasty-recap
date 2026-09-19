@@ -11,7 +11,7 @@
     --panel: #ffffff;
     --text: #1c1b19;
     --muted: #6b6660;
-    --border: #e4e0da;
+    --border: #ddd7ce;
     --accent: #b5482f;
     --accent-soft: #f3e3dd;
     --up: #2e7d4f;
@@ -20,36 +20,57 @@
     --yard-line: rgba(28, 27, 25, 0.05);
     --logo-badge-bg: #ffffff;
     --track: #ece8e1;
+    --section-shadow: 0 1px 2px rgba(28, 27, 25, 0.04);
+    --acc-gold: #b5820f;
+    --acc-blue: #3567c9;
+    --acc-green: #23895a;
+    --acc-purple: #7c4fd6;
+    --acc-teal: #0f8f83;
+    --acc-orange: #c15a2a;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #17161a;
-      --panel: #211f24;
+      --bg: #100f13;
+      --panel: #232128;
       --text: #ece9e4;
-      --muted: #9d9791;
-      --border: #35323a;
+      --muted: #a8a29b;
+      --border: #403c46;
       --accent: #e08a6c;
       --accent-soft: #3a2b26;
       --up: #6fcf97;
       --down: #e08a6c;
-      --same: #736e68;
+      --same: #837d76;
       --yard-line: rgba(255, 255, 255, 0.05);
       --track: #2b2930;
+      --section-shadow: 0 4px 18px -8px rgba(0, 0, 0, 0.6);
+      --acc-gold: #e0ab3d;
+      --acc-blue: #75a2f5;
+      --acc-green: #5fcf8f;
+      --acc-purple: #b493f2;
+      --acc-teal: #4fcabb;
+      --acc-orange: #e08a5a;
     }
   }
   :root[data-theme="dark"] {
-    --bg: #17161a;
-    --panel: #211f24;
+    --bg: #100f13;
+    --panel: #232128;
     --text: #ece9e4;
-    --muted: #9d9791;
-    --border: #35323a;
+    --muted: #a8a29b;
+    --border: #403c46;
     --accent: #e08a6c;
     --accent-soft: #3a2b26;
     --up: #6fcf97;
     --down: #e08a6c;
-    --same: #736e68;
+    --same: #837d76;
     --yard-line: rgba(255, 255, 255, 0.05);
     --track: #2b2930;
+    --section-shadow: 0 4px 18px -8px rgba(0, 0, 0, 0.6);
+    --acc-gold: #e0ab3d;
+    --acc-blue: #75a2f5;
+    --acc-green: #5fcf8f;
+    --acc-purple: #b493f2;
+    --acc-teal: #4fcabb;
+    --acc-orange: #e08a5a;
   }
   * { box-sizing: border-box; }
   body {
@@ -81,17 +102,41 @@
     border-color: var(--accent);
     font-weight: 600;
   }
-  header { margin-bottom: 24px; }
-  header h1 { font-size: 1.5rem; margin: 0 0 4px; letter-spacing: -0.01em; }
-  header .meta { color: var(--muted); font-size: 0.9rem; }
+  .hero-banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    padding: 26px 24px 24px;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #1b2a4a 0%, #7a5a12 100%);
+    box-shadow: 0 8px 24px -8px rgba(0,0,0,0.35);
+  }
+  .hero-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.10) 0 2px, transparent 2px 46px);
+    mix-blend-mode: overlay;
+    pointer-events: none;
+  }
+  .hero-banner h1 { color: #fff; font-size: 1.5rem; margin: 0 0 4px; letter-spacing: -0.01em; position: relative; }
+  .hero-banner .meta { color: rgba(255,255,255,0.88); font-size: 0.9rem; position: relative; }
   section {
     background: var(--panel);
     border: 1px solid var(--border);
+    border-top: 3px solid var(--section-accent, var(--border));
     border-radius: 14px;
     padding: 20px 20px 22px;
     margin-bottom: 20px;
+    box-shadow: var(--section-shadow);
   }
-  section h2 { font-size: 1.05rem; margin: 0 0 4px; }
+  section.sec-gold { --section-accent: var(--acc-gold); }
+  section.sec-blue { --section-accent: var(--acc-blue); }
+  section.sec-green { --section-accent: var(--acc-green); }
+  section.sec-purple { --section-accent: var(--acc-purple); }
+  section.sec-teal { --section-accent: var(--acc-teal); }
+  section.sec-orange { --section-accent: var(--acc-orange); }
+  section h2 { font-size: 1.05rem; margin: 0 0 4px; color: var(--section-accent, var(--text)); }
   section .subtitle { color: var(--muted); font-size: 0.85rem; margin: 0 0 16px; }
   .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -2px; }
   table { width: 100%; border-collapse: collapse; font-size: 0.9rem; white-space: nowrap; }
@@ -183,13 +228,13 @@
     <a href="dynasty.html" class="active">Dynasty Stats</a>
   </nav>
 
-  <header>
+  <div class="hero-banner">
     <h1>📊 Dynasty Stats</h1>
     <div class="meta">The long game — rookie draft grades, roster age, contention windows, future picks, and schedule luck. Updated weekly, but these move slowly (except Schedule Luck).</div>
-  </header>
+  </div>
 
-  <section>
-    <h2>Championship Windows</h2>
+  <section class="sec-gold">
+    <h2>🏆 Championship Windows</h2>
     <p class="subtitle">Blend of record, roster age, and future draft capital. Early season — labels are noisy through Week 1 and will settle as records mean more.</p>
     <div class="window-grid">
       <div class="window-card"><div class="team">Tucking DicK</div><span class="chip sustained">Sustained Contender</span><div class="stats">2-0 · age 26.8 · 13 future picks</div></div>
@@ -205,8 +250,8 @@
     </div>
   </section>
 
-  <section>
-    <h2>Roster Age Curve</h2>
+  <section class="sec-teal">
+    <h2>📈 Roster Age Curve</h2>
     <p class="subtitle">Average age of each team's active roster (taxi squad excluded — that's the future, this is who's playing now).</p>
     <div class="bar-row"><div class="bar-label">Love on the Spectrum</div><div class="bar-track"><div class="bar-fill" style="width:41%"></div></div><div class="bar-value">25.3</div></div>
     <div class="bar-row"><div class="bar-label">In Puka & Egbuka We Trust</div><div class="bar-track"><div class="bar-fill" style="width:41%"></div></div><div class="bar-value">25.3</div></div>
@@ -220,8 +265,8 @@
     <div class="bar-row"><div class="bar-label">Jaxson Eat My Dartbox</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-value">28.7</div></div>
   </section>
 
-  <section>
-    <h2>Rookie Draft Report Card</h2>
+  <section class="sec-purple">
+    <h2>📝 Rookie Draft Report Card</h2>
     <p class="subtitle">Every rookie's fantasy points this season vs. where they were actually drafted. "Value" = draft slot minus performance rank among all 50 rookies drafted — positive means outperforming the pick, negative means underperforming it (still very early, most Round 3-5 rookies haven't seen the field yet).</p>
     <div class="standouts">
       <div>
@@ -362,8 +407,8 @@
     </details>
   </section>
 
-  <section>
-    <h2>Rookie Draft Grade by Team</h2>
+  <section class="sec-blue">
+    <h2>📊 Rookie Draft Grade by Team</h2>
     <p class="subtitle">Average value-over-slot across each team's whole rookie class. Swipe the table sideways to see Best/Worst Pick on narrow screens.</p>
     <div class="table-scroll">
     <table>
@@ -382,8 +427,8 @@
     </div>
   </section>
 
-  <section>
-    <h2>Future Picks Ledger</h2>
+  <section class="sec-green">
+    <h2>🔮 Future Picks Ledger</h2>
     <p class="subtitle">Who owns what for the 2027 and 2028 rookie drafts (5 rounds, 10 teams each = 10 picks per team by default; trades move them around).</p>
     <div class="table-scroll">
     <table>
@@ -402,8 +447,8 @@
     </div>
   </section>
 
-  <section>
-    <h2>Schedule Luck Index</h2>
+  <section class="sec-orange">
+    <h2>🍀 Schedule Luck Index</h2>
     <p class="subtitle">Actual head-to-head wins vs. "all-play" expected wins (how many of the other 9 teams you'd have beaten with your score each week). Only 1 week in the books — this is noisy right now and gets more meaningful as the season goes.</p>
     <div class="luck-row"><div class="luck-label">Fuck RIT</div><div class="luck-track"><div class="luck-mid"></div><div class="luck-fill up" style="width:28%"></div></div><div class="luck-value pos">+0.56</div></div>
     <div class="luck-row"><div class="luck-label">In Puka & Egbuka We Trust</div><div class="luck-track"><div class="luck-mid"></div><div class="luck-fill up" style="width:22%"></div></div><div class="luck-value pos">+0.44</div></div>

@@ -21,7 +21,7 @@
     --panel: #ffffff;
     --text: #1c1b19;
     --muted: #6b6660;
-    --border: #e4e0da;
+    --border: #ddd7ce;
     --accent: #b5482f;
     --accent-soft: #f3e3dd;
     --up: #2e7d4f;
@@ -32,36 +32,57 @@
     --week-glow: rgba(0, 51, 141, 0.16);
     --yard-line: rgba(28, 27, 25, 0.05);
     --logo-badge-bg: #ffffff;
+    --section-shadow: 0 1px 2px rgba(28, 27, 25, 0.04);
+    --acc-gold: #b5820f;
+    --acc-blue: #3567c9;
+    --acc-green: #23895a;
+    --acc-purple: #7c4fd6;
+    --acc-teal: #0f8f83;
+    --acc-gold-tint: rgba(181, 130, 15, 0.08);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #17161a;
-      --panel: #211f24;
+      --bg: #100f13;
+      --panel: #232128;
       --text: #ece9e4;
-      --muted: #9d9791;
-      --border: #35323a;
+      --muted: #a8a29b;
+      --border: #403c46;
       --accent: #e08a6c;
       --accent-soft: #3a2b26;
       --up: #6fcf97;
       --down: #e08a6c;
-      --same: #736e68;
-      --week-glow: rgba(70, 120, 220, 0.14);
+      --same: #837d76;
+      --week-glow: rgba(70, 120, 220, 0.18);
       --yard-line: rgba(255, 255, 255, 0.05);
+      --section-shadow: 0 4px 18px -8px rgba(0, 0, 0, 0.6);
+      --acc-gold: #e0ab3d;
+      --acc-blue: #75a2f5;
+      --acc-green: #5fcf8f;
+      --acc-purple: #b493f2;
+      --acc-teal: #4fcabb;
+      --acc-gold-tint: rgba(224, 171, 61, 0.14);
     }
   }
   :root[data-theme="dark"] {
-    --bg: #17161a;
-    --panel: #211f24;
+    --bg: #100f13;
+    --panel: #232128;
     --text: #ece9e4;
-    --muted: #9d9791;
-    --border: #35323a;
+    --muted: #a8a29b;
+    --border: #403c46;
     --accent: #e08a6c;
     --accent-soft: #3a2b26;
     --up: #6fcf97;
     --down: #e08a6c;
-    --same: #736e68;
-    --week-glow: rgba(70, 120, 220, 0.14);
+    --same: #837d76;
+    --week-glow: rgba(70, 120, 220, 0.18);
     --yard-line: rgba(255, 255, 255, 0.05);
+    --section-shadow: 0 4px 18px -8px rgba(0, 0, 0, 0.6);
+    --acc-gold: #e0ab3d;
+    --acc-blue: #75a2f5;
+    --acc-green: #5fcf8f;
+    --acc-purple: #b493f2;
+    --acc-teal: #4fcabb;
+    --acc-gold-tint: rgba(224, 171, 61, 0.14);
   }
   * { box-sizing: border-box; }
   body {
@@ -112,17 +133,26 @@
   section {
     background: var(--panel);
     border: 1px solid var(--border);
+    border-top: 3px solid var(--section-accent, var(--border));
     border-radius: 14px;
     padding: 20px 20px 22px;
     margin-bottom: 20px;
+    box-shadow: var(--section-shadow);
   }
+  section.sec-gold { --section-accent: var(--acc-gold); }
+  section.sec-blue { --section-accent: var(--acc-blue); }
+  section.sec-green { --section-accent: var(--acc-green); }
+  section.sec-purple { --section-accent: var(--acc-purple); }
+  section.sec-teal { --section-accent: var(--acc-teal); }
   section h2 {
     font-size: 1.05rem;
     margin: 0 0 14px;
     display: flex;
     align-items: center;
     gap: 8px;
+    color: var(--section-accent, var(--text));
   }
+  tr.top-rank td { background: var(--acc-gold-tint); font-weight: 700; }
   .table-scroll {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -288,13 +318,13 @@
     <div class="meta">10-team PPR Superflex dynasty · Week 1 · Updated every Tuesday morning</div>
   </div>
 
-  <section>
-    <h2>Power Rankings</h2>
+  <section class="sec-gold">
+    <h2>🏆 Power Rankings</h2>
     <p class="subtitle" style="margin:0 0 14px;">A "who wins the season" ranking: record and points scored (results so far) blended with roster production (this season's output, started or not) and rest-of-season projections (Sleeper's own updated projections for every rostered player, summed through the week-17 championship). Not a dynasty/rebuild ranking — see the Dynasty Stats tab for that.</p>
     <div class="table-scroll">
     <table>
       <tr><th>#</th><th>Team</th><th>Record</th><th class="num">Score</th><th class="num">Roster Pts</th><th class="num">ROS Proj</th><th>Move</th></tr>
-      <tr><td class="rank">1</td><td>The DynaSteve</td><td>2-0</td><td class="num">.903</td><td class="num">302.9</td><td class="num">4.3K</td><td class="move-same">–</td></tr>
+      <tr class="top-rank"><td class="rank">1</td><td>The DynaSteve</td><td>2-0</td><td class="num">.903</td><td class="num">302.9</td><td class="num">4.3K</td><td class="move-same">–</td></tr>
       <tr><td class="rank">2</td><td>Ashton Bottom Jeantys</td><td>2-0</td><td class="num">.864</td><td class="num">313.0</td><td class="num">4.3K</td><td class="move-same">–</td></tr>
       <tr><td class="rank">3</td><td>Tucking DicK</td><td>2-0</td><td class="num">.858</td><td class="num">320.9</td><td class="num">4.1K</td><td class="move-same">–</td></tr>
       <tr><td class="rank">4</td><td>In Puka & Egbuka We Trust</td><td>2-0</td><td class="num">.691</td><td class="num">253.4</td><td class="num">4.2K</td><td class="move-same">–</td></tr>
@@ -309,8 +339,8 @@
     <p style="margin-top:12px; font-size:0.9rem; line-height:1.55;">First week, so no movement arrows yet — but the order already isn't just the standings. <strong>The DynaSteve</strong> tops the list even with Tucking DicK's better record and points so far, because Sleeper projects their roster for more points the rest of the way (4.3K vs. 4.1K). <strong>Love on the Spectrum</strong> sits mid-pack at #5 despite having the league's best season-so-far production (352.6) — their rest-of-season outlook (3.7K) is more middling, worth watching if that gap closes.</p>
   </section>
 
-  <section>
-    <h2>This Week — Matchups</h2>
+  <section class="sec-blue">
+    <h2>⚔️ This Week — Matchups</h2>
     <div class="matchup">
       <strong>Fuck RIT</strong> def. Dianna's DoubleDeez <span class="score">154.26 – 134.22</span>
       <div class="note">Dianna's looked like the sharper build all day — over 100 of their 134 points were banked before the early Sunday window even closed, and for a while this had laugher written all over it. But RIT played it patient: modest Thursday production, a slow build across both Sunday windows, and enough left over after dark to run it down. Rough way for the commissioner to open a title defense — burn bright early, get caught by dinner.</div>
@@ -333,8 +363,8 @@
     </div>
   </section>
 
-  <section>
-    <h2>Top Performances</h2>
+  <section class="sec-green">
+    <h2>🔥 Top Performances</h2>
     <div class="player-card">
       <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/11560.jpg" alt="Caleb Williams" onerror="this.style.visibility='hidden'">
       <div class="player-info">
@@ -379,8 +409,8 @@
     </div>
   </section>
 
-  <section>
-    <h2>Notable Moves</h2>
+  <section class="sec-purple">
+    <h2>🔄 Notable Moves</h2>
     <div class="recap">
       <p>Vladimir Tuten turned James Cook and a 2027 4th into Makai Lemon, Jason Myers, AND In Puka & Egbuka We Trust's 2027 1st and 3rd-round picks — one of Vlad's famously lopsided offers actually landed, and for once he's not the one who got fleeced.</p>
       <p>NeitherMoneyNorGoodPick sold Aaron Jones to In Puka & Egbuka We Trust for a 2028 3rd-round pick — selling proven production for future capital, exactly what a retooling roster should be doing.</p>
@@ -389,8 +419,8 @@
     </div>
   </section>
 
-  <section>
-    <h2>Fan Corner</h2>
+  <section class="sec-teal">
+    <h2>📺 Fan Corner</h2>
 
     <div class="fan-group" style="--fan-color:#00338d">
       <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" alt="Buffalo Bills logo" width="28" height="28"></div>
