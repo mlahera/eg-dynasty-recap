@@ -123,11 +123,19 @@
     align-items: center;
     gap: 8px;
   }
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -2px;
+  }
   table {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.92rem;
+    white-space: nowrap;
   }
+  th:first-child, td:first-child { padding-left: 2px; }
+  th:last-child, td:last-child { padding-right: 2px; }
   th, td {
     text-align: left;
     padding: 9px 6px;
@@ -278,6 +286,7 @@
 
   <section>
     <h2>Top Performances</h2>
+    <div class="table-scroll">
     <table>
       <tr><th>Player</th><th>Team</th><th>Pts</th></tr>
       <tr><td>Caleb Williams</td><td>In Puka & Egbuka We Trust</td><td>37.26</td></tr>
@@ -286,6 +295,7 @@
       <tr><td>Kenneth Walker</td><td>Ashton Bottom Jeantys</td><td>34.1</td></tr>
       <tr><td>Jahmyr Gibbs</td><td>Fuck RIT</td><td>33.6</td></tr>
     </table>
+    </div>
     <p style="margin-top:14px; font-size:0.9rem; color:var(--muted);">Dud of the week: Sam Darnold (Jaxson Eat My Dartbox) — 0.52 points. Not the debut anyone wanted.</p>
   </section>
 
@@ -368,6 +378,7 @@
 
   <section>
     <h2>Power Rankings</h2>
+    <div class="table-scroll">
     <table>
       <tr><th>#</th><th>Team</th><th>Record</th><th>Move</th></tr>
       <tr><td class="rank">1</td><td>Tucking DicK</td><td>2-0</td><td class="move-same">–</td></tr>
@@ -381,6 +392,7 @@
       <tr><td class="rank">9</td><td>Dianna's DoubleDeez</td><td>0-2</td><td class="move-same">–</td></tr>
       <tr><td class="rank">10</td><td>Jaxson Eat My Dartbox</td><td>0-2</td><td class="move-same">–</td></tr>
     </table>
+    </div>
     <p style="margin-top:12px; font-size:0.85rem; color:var(--muted);">First week of the season — no prior ranking to move against yet.</p>
   </section>
 

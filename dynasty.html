@@ -93,7 +93,10 @@
   }
   section h2 { font-size: 1.05rem; margin: 0 0 4px; }
   section .subtitle { color: var(--muted); font-size: 0.85rem; margin: 0 0 16px; }
-  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -2px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; white-space: nowrap; }
+  th:first-child, td:first-child { padding-left: 2px; }
+  th:last-child, td:last-child { padding-right: 2px; }
   th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border); }
   th { color: var(--muted); font-weight: 600; font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.03em; }
   tr:last-child td { border-bottom: none; }
@@ -217,6 +220,8 @@
     </div>
     <details class="rc">
       <summary>See all 50 picks</summary>
+      <p class="subtitle" style="margin:6px 0 0;">Swipe sideways on narrow screens to see every column.</p>
+      <div class="table-scroll">
       <table>
         <tr><th>Pick</th><th>Player</th><th>Pos</th><th>Team</th><th class="num">Pts</th><th class="num">Value</th></tr>
         <tr><td>1</td><td>Jeremiyah Love</td><td>RB</td><td>Love on the Spectrum</td><td class="num">13.0</td><td class="num neg">-3</td></tr>
@@ -270,12 +275,14 @@
         <tr><td>49</td><td>Zavion Thomas</td><td>WR</td><td>Vladimir Tuten</td><td class="num">0</td><td class="num">0</td></tr>
         <tr><td>50</td><td>Deion Burks</td><td>WR</td><td>The DynaSteve</td><td class="num">0</td><td class="num">0</td></tr>
       </table>
+      </div>
     </details>
   </section>
 
   <section>
     <h2>Rookie Draft Grade by Team</h2>
-    <p class="subtitle">Average value-over-slot across each team's whole rookie class.</p>
+    <p class="subtitle">Average value-over-slot across each team's whole rookie class. Swipe the table sideways to see Best/Worst Pick on narrow screens.</p>
+    <div class="table-scroll">
     <table>
       <tr><th>#</th><th>Team</th><th class="num">Picks</th><th class="num">Avg Value</th><th>Best Pick</th><th>Worst Pick</th></tr>
       <tr><td class="rank">1</td><td>Ashton Bottom Jeantys</td><td class="num">5</td><td class="num pos">+9.4</td><td>Caleb Douglas</td><td>Germie Bernard</td></tr>
@@ -289,11 +296,13 @@
       <tr><td class="rank">9</td><td>In Puka & Egbuka We Trust</td><td class="num">4</td><td class="num neg">-7.5</td><td>Adam Randall</td><td>Jonah Coleman</td></tr>
       <tr><td class="rank">10</td><td>Love on the Spectrum</td><td class="num">8</td><td class="num neg">-9.5</td><td>Jeremiyah Love</td><td>Jordyn Tyson</td></tr>
     </table>
+    </div>
   </section>
 
   <section>
     <h2>Future Picks Ledger</h2>
     <p class="subtitle">Who owns what for the 2027 and 2028 rookie drafts (5 rounds, 10 teams each = 10 picks per team by default; trades move them around).</p>
+    <div class="table-scroll">
     <table>
       <tr><th>Team</th><th class="num">Owns</th><th class="num">Owes</th><th class="num">Net</th></tr>
       <tr><td>Tucking DicK</td><td class="num">13</td><td class="num">1</td><td class="num pos">+3</td></tr>
@@ -307,6 +316,7 @@
       <tr><td>In Puka & Egbuka We Trust</td><td class="num">9</td><td class="num">4</td><td class="num neg">-1</td></tr>
       <tr><td>Jaxson Eat My Dartbox</td><td class="num">7</td><td class="num">3</td><td class="num neg">-3</td></tr>
     </table>
+    </div>
   </section>
 
   <section>
