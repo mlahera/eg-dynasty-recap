@@ -253,6 +253,39 @@
   }
   .player-name-line strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .player-meta { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+  .rank-chart-card { margin-top: 16px; padding-top: 16px; border-top: 1px dashed var(--border); }
+  .rank-chart-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted); margin: 0 0 4px; }
+  .rank-chart-subtitle { font-size: 0.82rem; color: var(--muted); margin: 0 0 12px; }
+  .rank-chart { display: flex; align-items: flex-start; font-size: 0.76rem; position: relative; }
+  .rank-chart .rc-labels { flex: 0 0 122px; position: relative; }
+  .rank-chart .rc-labels.rc-left .rc-label { text-align: right; padding-right: 8px; }
+  .rank-chart .rc-labels.rc-right .rc-label { text-align: left; padding-left: 8px; }
+  .rank-chart .rc-label {
+    position: absolute; left: 0; right: 0;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    color: var(--muted); transition: color 0.15s, font-weight 0.15s, opacity 0.15s;
+    cursor: pointer;
+  }
+  .rank-chart .rc-plot-wrap { flex: 0 0 auto; padding: 0 8px; }
+  .rank-chart svg { display: block; overflow: visible; }
+  .rank-chart .rc-gridline { stroke: var(--border); stroke-width: 1; }
+  .rank-chart .rc-line { fill: none; stroke: var(--same); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.15s, opacity 0.15s, stroke-width 0.15s; }
+  .rank-chart .rc-hit { fill: none; stroke: transparent; stroke-width: 16; cursor: pointer; }
+  .rank-chart .rc-dot { fill: var(--same); stroke: var(--panel); stroke-width: 2; transition: fill 0.15s, opacity 0.15s; cursor: pointer; }
+  .rank-chart .rc-weeklabel { fill: var(--muted); font-size: 10px; }
+  .rank-chart.has-active .rc-label:not(.is-active) { opacity: 0.35; }
+  .rank-chart.has-active .rc-line:not(.is-active) { opacity: 0.18; }
+  .rank-chart.has-active .rc-dot:not(.is-active) { opacity: 0.18; }
+  .rank-chart .rc-label.is-active { color: var(--accent); font-weight: 700; opacity: 1; }
+  .rank-chart .rc-line.is-active { stroke: var(--accent); stroke-width: 2.5; opacity: 1; }
+  .rank-chart .rc-dot.is-active { fill: var(--accent); opacity: 1; }
+  .rank-chart .rc-tooltip {
+    position: absolute; pointer-events: none; background: var(--panel); border: 1px solid var(--border);
+    border-radius: 6px; padding: 4px 8px; font-size: 0.72rem; box-shadow: 0 4px 12px -4px rgba(0,0,0,0.3);
+    transform: translate(-50%, -125%); white-space: nowrap; opacity: 0; transition: opacity 0.1s; z-index: 5;
+    color: var(--text);
+  }
+  .rank-chart .rc-tooltip.show { opacity: 1; }
   .team-logo-wrap {
     flex-shrink: 0;
     width: 40px;
@@ -337,6 +370,71 @@
     </table>
     </div>
     <p style="margin-top:12px; font-size:0.9rem; line-height:1.55;">First week, so no movement arrows yet — but the order already isn't just the standings. <strong>The DynaSteve</strong> tops the list even with Tucking DicK's better record and points so far, because Sleeper projects their roster for more points the rest of the way (4.3K vs. 4.1K). <strong>Love on the Spectrum</strong> sits mid-pack at #5 despite having the league's best season-so-far production (352.6) — their rest-of-season outlook (3.7K) is more middling, worth watching if that gap closes.</p>
+<div class="rank-chart-card">
+  <p class="rank-chart-title">Power Ranking — Season Start</p>
+  <p class="rank-chart-subtitle">One week in the books — this fills in and starts tracking movement from next week on.</p>
+  <div class="rank-chart" data-chart="power-rank-history">
+    
+    <div class="rc-plot-wrap">
+      <svg viewBox="0 0 120.0 338" width="120.0" height="338" style="min-width:120.0px;">
+        <line class="rc-gridline" x1="0" y1="21.0" x2="120.0" y2="21.0"/>
+<line class="rc-gridline" x1="0" y1="51.0" x2="120.0" y2="51.0"/>
+<line class="rc-gridline" x1="0" y1="81.0" x2="120.0" y2="81.0"/>
+<line class="rc-gridline" x1="0" y1="111.0" x2="120.0" y2="111.0"/>
+<line class="rc-gridline" x1="0" y1="141.0" x2="120.0" y2="141.0"/>
+<line class="rc-gridline" x1="0" y1="171.0" x2="120.0" y2="171.0"/>
+<line class="rc-gridline" x1="0" y1="201.0" x2="120.0" y2="201.0"/>
+<line class="rc-gridline" x1="0" y1="231.0" x2="120.0" y2="231.0"/>
+<line class="rc-gridline" x1="0" y1="261.0" x2="120.0" y2="261.0"/>
+<line class="rc-gridline" x1="0" y1="291.0" x2="120.0" y2="291.0"/>
+<text class="rc-weeklabel" x="60.0" y="329" text-anchor="middle">Wk 1</text>
+<path class="rc-hit" data-team-key="the-dynasteve" d="M60.0,21.0"/>
+<path class="rc-line" data-team-key="the-dynasteve" d="M60.0,21.0"/>
+<circle class="rc-dot" data-team-key="the-dynasteve" data-team="The DynaSteve" data-rank="1" data-week="1" cx="60.0" cy="21.0" r="4.5"/>
+<path class="rc-hit" data-team-key="ashton-bottom-jeantys" d="M60.0,51.0"/>
+<path class="rc-line" data-team-key="ashton-bottom-jeantys" d="M60.0,51.0"/>
+<circle class="rc-dot" data-team-key="ashton-bottom-jeantys" data-team="Ashton Bottom Jeantys" data-rank="2" data-week="1" cx="60.0" cy="51.0" r="4.5"/>
+<path class="rc-hit" data-team-key="tucking-dick" d="M60.0,81.0"/>
+<path class="rc-line" data-team-key="tucking-dick" d="M60.0,81.0"/>
+<circle class="rc-dot" data-team-key="tucking-dick" data-team="Tucking DicK" data-rank="3" data-week="1" cx="60.0" cy="81.0" r="4.5"/>
+<path class="rc-hit" data-team-key="in-puka-egbuka-we-trust" d="M60.0,111.0"/>
+<path class="rc-line" data-team-key="in-puka-egbuka-we-trust" d="M60.0,111.0"/>
+<circle class="rc-dot" data-team-key="in-puka-egbuka-we-trust" data-team="In Puka &amp; Egbuka We Trust" data-rank="4" data-week="1" cx="60.0" cy="111.0" r="4.5"/>
+<path class="rc-hit" data-team-key="love-on-the-spectrum" d="M60.0,141.0"/>
+<path class="rc-line" data-team-key="love-on-the-spectrum" d="M60.0,141.0"/>
+<circle class="rc-dot" data-team-key="love-on-the-spectrum" data-team="Love on the Spectrum" data-rank="5" data-week="1" cx="60.0" cy="141.0" r="4.5"/>
+<path class="rc-hit" data-team-key="neithermoneynorgoodpick" d="M60.0,171.0"/>
+<path class="rc-line" data-team-key="neithermoneynorgoodpick" d="M60.0,171.0"/>
+<circle class="rc-dot" data-team-key="neithermoneynorgoodpick" data-team="NeitherMoneyNorGoodPick" data-rank="6" data-week="1" cx="60.0" cy="171.0" r="4.5"/>
+<path class="rc-hit" data-team-key="fuck-rit" d="M60.0,201.0"/>
+<path class="rc-line" data-team-key="fuck-rit" d="M60.0,201.0"/>
+<circle class="rc-dot" data-team-key="fuck-rit" data-team="Fuck RIT" data-rank="7" data-week="1" cx="60.0" cy="201.0" r="4.5"/>
+<path class="rc-hit" data-team-key="vladimir-tuten" d="M60.0,231.0"/>
+<path class="rc-line" data-team-key="vladimir-tuten" d="M60.0,231.0"/>
+<circle class="rc-dot" data-team-key="vladimir-tuten" data-team="Vladimir Tuten" data-rank="8" data-week="1" cx="60.0" cy="231.0" r="4.5"/>
+<path class="rc-hit" data-team-key="dianna-s-doubledeez" d="M60.0,261.0"/>
+<path class="rc-line" data-team-key="dianna-s-doubledeez" d="M60.0,261.0"/>
+<circle class="rc-dot" data-team-key="dianna-s-doubledeez" data-team="Dianna&#x27;s DoubleDeez" data-rank="9" data-week="1" cx="60.0" cy="261.0" r="4.5"/>
+<path class="rc-hit" data-team-key="jaxson-eat-my-dartbox" d="M60.0,291.0"/>
+<path class="rc-line" data-team-key="jaxson-eat-my-dartbox" d="M60.0,291.0"/>
+<circle class="rc-dot" data-team-key="jaxson-eat-my-dartbox" data-team="Jaxson Eat My Dartbox" data-rank="10" data-week="1" cx="60.0" cy="291.0" r="4.5"/>
+      </svg>
+    </div>
+    <div class="rc-labels rc-right" style="height:312px;">
+      <div class="rc-label" data-team-key="the-dynasteve" tabindex="0" style="top:6px;height:30px;line-height:30px;" title="The DynaSteve">The DynaSteve</div>
+<div class="rc-label" data-team-key="ashton-bottom-jeantys" tabindex="0" style="top:36px;height:30px;line-height:30px;" title="Ashton Bottom Jeantys">Ashton Bottom Jeantys</div>
+<div class="rc-label" data-team-key="tucking-dick" tabindex="0" style="top:66px;height:30px;line-height:30px;" title="Tucking DicK">Tucking DicK</div>
+<div class="rc-label" data-team-key="in-puka-egbuka-we-trust" tabindex="0" style="top:96px;height:30px;line-height:30px;" title="In Puka &amp; Egbuka We Trust">In Puka &amp; Egbuka We Trust</div>
+<div class="rc-label" data-team-key="love-on-the-spectrum" tabindex="0" style="top:126px;height:30px;line-height:30px;" title="Love on the Spectrum">Love on the Spectrum</div>
+<div class="rc-label" data-team-key="neithermoneynorgoodpick" tabindex="0" style="top:156px;height:30px;line-height:30px;" title="NeitherMoneyNorGoodPick">NeitherMoneyNorGoodPick</div>
+<div class="rc-label" data-team-key="fuck-rit" tabindex="0" style="top:186px;height:30px;line-height:30px;" title="Fuck RIT">Fuck RIT</div>
+<div class="rc-label" data-team-key="vladimir-tuten" tabindex="0" style="top:216px;height:30px;line-height:30px;" title="Vladimir Tuten">Vladimir Tuten</div>
+<div class="rc-label" data-team-key="dianna-s-doubledeez" tabindex="0" style="top:246px;height:30px;line-height:30px;" title="Dianna&#x27;s DoubleDeez">Dianna&#x27;s DoubleDeez</div>
+<div class="rc-label" data-team-key="jaxson-eat-my-dartbox" tabindex="0" style="top:276px;height:30px;line-height:30px;" title="Jaxson Eat My Dartbox">Jaxson Eat My Dartbox</div>
+    </div>
+    <div class="rc-tooltip"></div>
+  </div>
+</div>
   </section>
 
   <section class="sec-blue">
@@ -498,5 +596,62 @@
 
   <footer>EG Dynasty League · Commissioner: Matt</footer>
 </div>
+<script>
+(function () {
+  document.querySelectorAll('.rank-chart[data-chart]').forEach(function (chart) {
+    function setActive(key) {
+      chart.classList.toggle('has-active', !!key);
+      chart.querySelectorAll('[data-team-key]').forEach(function (el) {
+        el.classList.toggle('is-active', !!key && el.getAttribute('data-team-key') === key);
+      });
+    }
+    chart.querySelectorAll('[data-team-key]').forEach(function (el) {
+      el.addEventListener('pointerenter', function () {
+        if (!chart.classList.contains('rc-pinned')) setActive(el.getAttribute('data-team-key'));
+      });
+      el.addEventListener('pointerleave', function () {
+        if (!chart.classList.contains('rc-pinned')) setActive(null);
+      });
+      el.addEventListener('focus', function () { setActive(el.getAttribute('data-team-key')); });
+      el.addEventListener('blur', function () { if (!chart.classList.contains('rc-pinned')) setActive(null); });
+      el.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var key = el.getAttribute('data-team-key');
+        var isPinnedToThis = chart.classList.contains('rc-pinned') && el.classList.contains('is-active');
+        if (isPinnedToThis) {
+          chart.classList.remove('rc-pinned');
+          setActive(null);
+        } else {
+          chart.classList.add('rc-pinned');
+          setActive(key);
+        }
+      });
+    });
+    document.addEventListener('click', function () {
+      if (chart.classList.contains('rc-pinned')) {
+        chart.classList.remove('rc-pinned');
+        setActive(null);
+      }
+    });
+    var tooltip = chart.querySelector('.rc-tooltip');
+    if (tooltip) {
+      chart.querySelectorAll('.rc-dot').forEach(function (dot) {
+        dot.addEventListener('pointerenter', function () {
+          var team = dot.getAttribute('data-team');
+          var rank = dot.getAttribute('data-rank');
+          var week = dot.getAttribute('data-week');
+          tooltip.textContent = team + ' — #' + rank + ' (Week ' + week + ')';
+          var r = dot.getBoundingClientRect();
+          var cr = chart.getBoundingClientRect();
+          tooltip.style.left = (r.left - cr.left + r.width / 2) + 'px';
+          tooltip.style.top = (r.top - cr.top) + 'px';
+          tooltip.classList.add('show');
+        });
+        dot.addEventListener('pointerleave', function () { tooltip.classList.remove('show'); });
+      });
+    }
+  });
+})();
+</script>
 </body>
 </html>
