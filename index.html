@@ -12,8 +12,8 @@
   colors (ESPN's /teams/{abbr} endpoint, .color / .alternateColor) of
   whichever fan_of team belongs to this week's #1 power-ranked fantasy
   team — so the page's look actually tracks the standings instead of
-  being arbitrary. This week: Tucking DicK is #1, roots for the Bills,
-  so the theme is Bills navy -> Bills red.
+  being arbitrary. This week: The DynaSteve is #1, roots for the
+  Patriots, so the theme is Patriots navy -> Patriots red.
 -->
 <style>
   :root {
@@ -27,9 +27,9 @@
     --up: #2e7d4f;
     --down: #b5482f;
     --same: #9a948c;
-    --week-color: #00338d;
-    --week-color-2: #d50a0a;
-    --week-glow: rgba(0, 51, 141, 0.16);
+    --week-color: #002a5c;
+    --week-color-2: #c60c30;
+    --week-glow: rgba(0, 42, 92, 0.16);
     --yard-line: rgba(28, 27, 25, 0.05);
     --logo-badge-bg: #ffffff;
     --section-shadow: 0 1px 2px rgba(28, 27, 25, 0.04);
@@ -348,7 +348,7 @@
 
   <div class="hero-banner">
     <h1>🏈 EG Dynasty — Weekly Recap</h1>
-    <div class="meta">10-team PPR Superflex dynasty · Week 1 · Updated every Tuesday morning</div>
+    <div class="meta">10-team PPR Superflex dynasty · Week 2 · Updated every Tuesday morning</div>
   </div>
 
   <section class="sec-gold">
@@ -357,70 +357,24 @@
     <div class="table-scroll">
     <table>
       <tr><th>#</th><th>Team</th><th>Record</th><th class="num">Score</th><th class="num">Roster Pts</th><th class="num">ROS Proj</th><th>Move</th></tr>
-      <tr class="top-rank"><td class="rank">1</td><td>The DynaSteve</td><td>2-0</td><td class="num">.903</td><td class="num">302.9</td><td class="num">4.3K</td><td class="move-same">–</td></tr>
-      <tr><td class="rank">2</td><td>Ashton Bottom Jeantys</td><td>2-0</td><td class="num">.864</td><td class="num">313.0</td><td class="num">4.3K</td><td class="move-same">–</td></tr>
-      <tr><td class="rank">3</td><td>Tucking DicK</td><td>2-0</td><td class="num">.858</td><td class="num">320.9</td><td class="num">4.1K</td><td class="move-same">–</td></tr>
-      <tr><td class="rank">4</td><td>In Puka & Egbuka We Trust</td><td>2-0</td><td class="num">.691</td><td class="num">253.4</td><td class="num">4.2K</td><td class="move-same">–</td></tr>
-      <tr><td class="rank">5</td><td>Love on the Spectrum</td><td>1-1</td><td class="num">.507</td><td class="num">352.6</td><td class="num">3.7K</td><td class="move-same">–</td></tr>
-      <tr><td class="rank">6</td><td>NeitherMoneyNorGoodPick</td><td>0-2</td><td class="num">.440</td><td class="num">316.9</td><td class="num">4.0K</td><td class="move-same">–</td></tr>
-      <tr><td class="rank">7</td><td>Fuck RIT</td><td>1-1</td><td class="num">.386</td><td class="num">297.6</td><td class="num">3.6K</td><td class="move-same">–</td></tr>
-      <tr><td class="rank">8</td><td>Vladimir Tuten</td><td>0-2</td><td class="num">.288</td><td class="num">261.5</td><td class="num">3.8K</td><td class="move-same">–</td></tr>
-      <tr><td class="rank">9</td><td>Dianna's DoubleDeez</td><td>0-2</td><td class="num">.207</td><td class="num">277.6</td><td class="num">3.6K</td><td class="move-same">–</td></tr>
-      <tr><td class="rank">10</td><td>Jaxson Eat My Dartbox</td><td>0-2</td><td class="num">.120</td><td class="num">175.7</td><td class="num">3.9K</td><td class="move-same">–</td></tr>
+      <tr class="top-rank"><td class="rank">1</td><td>The DynaSteve</td><td>4-0</td><td class="num">1.000</td><td class="num">651.9</td><td class="num">4.2K</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">2</td><td>Ashton Bottom Jeantys</td><td>3-1</td><td class="num">.683</td><td class="num">536.4</td><td class="num">4.1K</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">3</td><td>Tucking DicK</td><td>3-1</td><td class="num">.608</td><td class="num">528.0</td><td class="num">3.9K</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">4</td><td>NeitherMoneyNorGoodPick</td><td>2-2</td><td class="num">.502</td><td class="num">559.5</td><td class="num">3.8K</td><td class="move-up">▲2</td></tr>
+      <tr><td class="rank">5</td><td>In Puka & Egbuka We Trust</td><td>2-2</td><td class="num">.480</td><td class="num">487.2</td><td class="num">4.0K</td><td class="move-down">▼1</td></tr>
+      <tr><td class="rank">6</td><td>Fuck RIT</td><td>3-1</td><td class="num">.400</td><td class="num">491.2</td><td class="num">3.5K</td><td class="move-up">▲1</td></tr>
+      <tr><td class="rank">7</td><td>Love on the Spectrum</td><td>2-2</td><td class="num">.342</td><td class="num">484.7</td><td class="num">3.5K</td><td class="move-down">▼2</td></tr>
+      <tr><td class="rank">8</td><td>Vladimir Tuten</td><td>1-3</td><td class="num">.278</td><td class="num">484.7</td><td class="num">3.7K</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">9</td><td>Dianna's DoubleDeez</td><td>0-4</td><td class="num">.098</td><td class="num">473.6</td><td class="num">3.5K</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">10</td><td>Jaxson Eat My Dartbox</td><td>0-4</td><td class="num">.031</td><td class="num">397.8</td><td class="num">3.5K</td><td class="move-same">–</td></tr>
     </table>
     </div>
-    <p style="margin-top:12px; font-size:0.9rem; line-height:1.55;">First week, so no movement arrows yet — but the order already isn't just the standings. <strong>The DynaSteve</strong> tops the list even with Tucking DicK's better record and points so far, because Sleeper projects their roster for more points the rest of the way (4.3K vs. 4.1K). <strong>Love on the Spectrum</strong> sits mid-pack at #5 despite having the league's best season-so-far production (352.6) — their rest-of-season outlook (3.7K) is more middling, worth watching if that gap closes.</p>
+    <p style="margin-top:12px; font-size:0.9rem; line-height:1.55;"><strong>The DynaSteve</strong> is a perfect 4-0 (with the league's average-score bonus win factored in) and maxes out the formula this week — best record, second-best production, and a top-two rest-of-season outlook, no real argument against #1. The two biggest movers both come from the middle of the pack: <strong>NeitherMoneyNorGoodPick</strong> jumps to #4 (▲2) on the back of the week's second-best roster production (559.5) even at a middling 2-2, while <strong>Love on the Spectrum</strong> slides to #7 (▼2) — their record and production are both average, and a cooling rest-of-season outlook (3.5K) doesn't give them much of a boost anymore.</p>
 <div class="rank-chart-card">
-  <p class="rank-chart-title">Power Ranking — Season Start</p>
-  <p class="rank-chart-subtitle">One week in the books — this fills in and starts tracking movement from next week on.</p>
+  <p class="rank-chart-title">Power Ranking — Week by Week</p>
+  
   <div class="rank-chart" data-chart="power-rank-history">
-    
-    <div class="rc-plot-wrap">
-      <svg viewBox="0 0 120.0 338" width="120.0" height="338" style="min-width:120.0px;">
-        <line class="rc-gridline" x1="0" y1="21.0" x2="120.0" y2="21.0"/>
-<line class="rc-gridline" x1="0" y1="51.0" x2="120.0" y2="51.0"/>
-<line class="rc-gridline" x1="0" y1="81.0" x2="120.0" y2="81.0"/>
-<line class="rc-gridline" x1="0" y1="111.0" x2="120.0" y2="111.0"/>
-<line class="rc-gridline" x1="0" y1="141.0" x2="120.0" y2="141.0"/>
-<line class="rc-gridline" x1="0" y1="171.0" x2="120.0" y2="171.0"/>
-<line class="rc-gridline" x1="0" y1="201.0" x2="120.0" y2="201.0"/>
-<line class="rc-gridline" x1="0" y1="231.0" x2="120.0" y2="231.0"/>
-<line class="rc-gridline" x1="0" y1="261.0" x2="120.0" y2="261.0"/>
-<line class="rc-gridline" x1="0" y1="291.0" x2="120.0" y2="291.0"/>
-<text class="rc-weeklabel" x="60.0" y="329" text-anchor="middle">Wk 1</text>
-<path class="rc-hit" data-team-key="the-dynasteve" d="M60.0,21.0"/>
-<path class="rc-line" data-team-key="the-dynasteve" d="M60.0,21.0"/>
-<circle class="rc-dot" data-team-key="the-dynasteve" data-team="The DynaSteve" data-rank="1" data-week="1" cx="60.0" cy="21.0" r="4.5"/>
-<path class="rc-hit" data-team-key="ashton-bottom-jeantys" d="M60.0,51.0"/>
-<path class="rc-line" data-team-key="ashton-bottom-jeantys" d="M60.0,51.0"/>
-<circle class="rc-dot" data-team-key="ashton-bottom-jeantys" data-team="Ashton Bottom Jeantys" data-rank="2" data-week="1" cx="60.0" cy="51.0" r="4.5"/>
-<path class="rc-hit" data-team-key="tucking-dick" d="M60.0,81.0"/>
-<path class="rc-line" data-team-key="tucking-dick" d="M60.0,81.0"/>
-<circle class="rc-dot" data-team-key="tucking-dick" data-team="Tucking DicK" data-rank="3" data-week="1" cx="60.0" cy="81.0" r="4.5"/>
-<path class="rc-hit" data-team-key="in-puka-egbuka-we-trust" d="M60.0,111.0"/>
-<path class="rc-line" data-team-key="in-puka-egbuka-we-trust" d="M60.0,111.0"/>
-<circle class="rc-dot" data-team-key="in-puka-egbuka-we-trust" data-team="In Puka &amp; Egbuka We Trust" data-rank="4" data-week="1" cx="60.0" cy="111.0" r="4.5"/>
-<path class="rc-hit" data-team-key="love-on-the-spectrum" d="M60.0,141.0"/>
-<path class="rc-line" data-team-key="love-on-the-spectrum" d="M60.0,141.0"/>
-<circle class="rc-dot" data-team-key="love-on-the-spectrum" data-team="Love on the Spectrum" data-rank="5" data-week="1" cx="60.0" cy="141.0" r="4.5"/>
-<path class="rc-hit" data-team-key="neithermoneynorgoodpick" d="M60.0,171.0"/>
-<path class="rc-line" data-team-key="neithermoneynorgoodpick" d="M60.0,171.0"/>
-<circle class="rc-dot" data-team-key="neithermoneynorgoodpick" data-team="NeitherMoneyNorGoodPick" data-rank="6" data-week="1" cx="60.0" cy="171.0" r="4.5"/>
-<path class="rc-hit" data-team-key="fuck-rit" d="M60.0,201.0"/>
-<path class="rc-line" data-team-key="fuck-rit" d="M60.0,201.0"/>
-<circle class="rc-dot" data-team-key="fuck-rit" data-team="Fuck RIT" data-rank="7" data-week="1" cx="60.0" cy="201.0" r="4.5"/>
-<path class="rc-hit" data-team-key="vladimir-tuten" d="M60.0,231.0"/>
-<path class="rc-line" data-team-key="vladimir-tuten" d="M60.0,231.0"/>
-<circle class="rc-dot" data-team-key="vladimir-tuten" data-team="Vladimir Tuten" data-rank="8" data-week="1" cx="60.0" cy="231.0" r="4.5"/>
-<path class="rc-hit" data-team-key="dianna-s-doubledeez" d="M60.0,261.0"/>
-<path class="rc-line" data-team-key="dianna-s-doubledeez" d="M60.0,261.0"/>
-<circle class="rc-dot" data-team-key="dianna-s-doubledeez" data-team="Dianna&#x27;s DoubleDeez" data-rank="9" data-week="1" cx="60.0" cy="261.0" r="4.5"/>
-<path class="rc-hit" data-team-key="jaxson-eat-my-dartbox" d="M60.0,291.0"/>
-<path class="rc-line" data-team-key="jaxson-eat-my-dartbox" d="M60.0,291.0"/>
-<circle class="rc-dot" data-team-key="jaxson-eat-my-dartbox" data-team="Jaxson Eat My Dartbox" data-rank="10" data-week="1" cx="60.0" cy="291.0" r="4.5"/>
-      </svg>
-    </div>
-    <div class="rc-labels rc-right" style="height:312px;">
+    <div class="rc-labels rc-left" style="height:312px;">
       <div class="rc-label" data-team-key="the-dynasteve" tabindex="0" style="top:6px;height:30px;line-height:30px;" title="The DynaSteve">The DynaSteve</div>
 <div class="rc-label" data-team-key="ashton-bottom-jeantys" tabindex="0" style="top:36px;height:30px;line-height:30px;" title="Ashton Bottom Jeantys">Ashton Bottom Jeantys</div>
 <div class="rc-label" data-team-key="tucking-dick" tabindex="0" style="top:66px;height:30px;line-height:30px;" title="Tucking DicK">Tucking DicK</div>
@@ -431,6 +385,78 @@
 <div class="rc-label" data-team-key="vladimir-tuten" tabindex="0" style="top:216px;height:30px;line-height:30px;" title="Vladimir Tuten">Vladimir Tuten</div>
 <div class="rc-label" data-team-key="dianna-s-doubledeez" tabindex="0" style="top:246px;height:30px;line-height:30px;" title="Dianna&#x27;s DoubleDeez">Dianna&#x27;s DoubleDeez</div>
 <div class="rc-label" data-team-key="jaxson-eat-my-dartbox" tabindex="0" style="top:276px;height:30px;line-height:30px;" title="Jaxson Eat My Dartbox">Jaxson Eat My Dartbox</div>
+<div class="rc-label" data-team-key="dianna-s-doubledeez" tabindex="0" style="top:246px;height:30px;line-height:30px;" title="Dianna’s DoubleDeez">Dianna’s DoubleDeez</div>
+    </div>
+    <div class="rc-plot-wrap">
+      <svg viewBox="0 0 76.0 338" width="76.0" height="338" style="min-width:76.0px;">
+        <line class="rc-gridline" x1="0" y1="21.0" x2="76.0" y2="21.0"/>
+<line class="rc-gridline" x1="0" y1="51.0" x2="76.0" y2="51.0"/>
+<line class="rc-gridline" x1="0" y1="81.0" x2="76.0" y2="81.0"/>
+<line class="rc-gridline" x1="0" y1="111.0" x2="76.0" y2="111.0"/>
+<line class="rc-gridline" x1="0" y1="141.0" x2="76.0" y2="141.0"/>
+<line class="rc-gridline" x1="0" y1="171.0" x2="76.0" y2="171.0"/>
+<line class="rc-gridline" x1="0" y1="201.0" x2="76.0" y2="201.0"/>
+<line class="rc-gridline" x1="0" y1="231.0" x2="76.0" y2="231.0"/>
+<line class="rc-gridline" x1="0" y1="261.0" x2="76.0" y2="261.0"/>
+<line class="rc-gridline" x1="0" y1="291.0" x2="76.0" y2="291.0"/>
+<text class="rc-weeklabel" x="0.0" y="329" text-anchor="middle">Wk 1</text>
+<text class="rc-weeklabel" x="76.0" y="329" text-anchor="middle">Wk 2</text>
+<path class="rc-hit" data-team-key="the-dynasteve" d="M0.0,21.0 L76.0,21.0"/>
+<path class="rc-line" data-team-key="the-dynasteve" d="M0.0,21.0 L76.0,21.0"/>
+<circle class="rc-dot" data-team-key="the-dynasteve" data-team="The DynaSteve" data-rank="1" data-week="1" cx="0.0" cy="21.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="the-dynasteve" data-team="The DynaSteve" data-rank="1" data-week="2" cx="76.0" cy="21.0" r="4.5"/>
+<path class="rc-hit" data-team-key="ashton-bottom-jeantys" d="M0.0,51.0 L76.0,51.0"/>
+<path class="rc-line" data-team-key="ashton-bottom-jeantys" d="M0.0,51.0 L76.0,51.0"/>
+<circle class="rc-dot" data-team-key="ashton-bottom-jeantys" data-team="Ashton Bottom Jeantys" data-rank="2" data-week="1" cx="0.0" cy="51.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="ashton-bottom-jeantys" data-team="Ashton Bottom Jeantys" data-rank="2" data-week="2" cx="76.0" cy="51.0" r="4.5"/>
+<path class="rc-hit" data-team-key="tucking-dick" d="M0.0,81.0 L76.0,81.0"/>
+<path class="rc-line" data-team-key="tucking-dick" d="M0.0,81.0 L76.0,81.0"/>
+<circle class="rc-dot" data-team-key="tucking-dick" data-team="Tucking DicK" data-rank="3" data-week="1" cx="0.0" cy="81.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="tucking-dick" data-team="Tucking DicK" data-rank="3" data-week="2" cx="76.0" cy="81.0" r="4.5"/>
+<path class="rc-hit" data-team-key="in-puka-egbuka-we-trust" d="M0.0,111.0 L76.0,141.0"/>
+<path class="rc-line" data-team-key="in-puka-egbuka-we-trust" d="M0.0,111.0 L76.0,141.0"/>
+<circle class="rc-dot" data-team-key="in-puka-egbuka-we-trust" data-team="In Puka &amp; Egbuka We Trust" data-rank="4" data-week="1" cx="0.0" cy="111.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="in-puka-egbuka-we-trust" data-team="In Puka &amp; Egbuka We Trust" data-rank="5" data-week="2" cx="76.0" cy="141.0" r="4.5"/>
+<path class="rc-hit" data-team-key="love-on-the-spectrum" d="M0.0,141.0 L76.0,201.0"/>
+<path class="rc-line" data-team-key="love-on-the-spectrum" d="M0.0,141.0 L76.0,201.0"/>
+<circle class="rc-dot" data-team-key="love-on-the-spectrum" data-team="Love on the Spectrum" data-rank="5" data-week="1" cx="0.0" cy="141.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="love-on-the-spectrum" data-team="Love on the Spectrum" data-rank="7" data-week="2" cx="76.0" cy="201.0" r="4.5"/>
+<path class="rc-hit" data-team-key="neithermoneynorgoodpick" d="M0.0,171.0 L76.0,111.0"/>
+<path class="rc-line" data-team-key="neithermoneynorgoodpick" d="M0.0,171.0 L76.0,111.0"/>
+<circle class="rc-dot" data-team-key="neithermoneynorgoodpick" data-team="NeitherMoneyNorGoodPick" data-rank="6" data-week="1" cx="0.0" cy="171.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="neithermoneynorgoodpick" data-team="NeitherMoneyNorGoodPick" data-rank="4" data-week="2" cx="76.0" cy="111.0" r="4.5"/>
+<path class="rc-hit" data-team-key="fuck-rit" d="M0.0,201.0 L76.0,171.0"/>
+<path class="rc-line" data-team-key="fuck-rit" d="M0.0,201.0 L76.0,171.0"/>
+<circle class="rc-dot" data-team-key="fuck-rit" data-team="Fuck RIT" data-rank="7" data-week="1" cx="0.0" cy="201.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="fuck-rit" data-team="Fuck RIT" data-rank="6" data-week="2" cx="76.0" cy="171.0" r="4.5"/>
+<path class="rc-hit" data-team-key="vladimir-tuten" d="M0.0,231.0 L76.0,231.0"/>
+<path class="rc-line" data-team-key="vladimir-tuten" d="M0.0,231.0 L76.0,231.0"/>
+<circle class="rc-dot" data-team-key="vladimir-tuten" data-team="Vladimir Tuten" data-rank="8" data-week="1" cx="0.0" cy="231.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="vladimir-tuten" data-team="Vladimir Tuten" data-rank="8" data-week="2" cx="76.0" cy="231.0" r="4.5"/>
+<path class="rc-hit" data-team-key="dianna-s-doubledeez" d="M0.0,261.0"/>
+<path class="rc-line" data-team-key="dianna-s-doubledeez" d="M0.0,261.0"/>
+<circle class="rc-dot" data-team-key="dianna-s-doubledeez" data-team="Dianna&#x27;s DoubleDeez" data-rank="9" data-week="1" cx="0.0" cy="261.0" r="4.5"/>
+<path class="rc-hit" data-team-key="jaxson-eat-my-dartbox" d="M0.0,291.0 L76.0,291.0"/>
+<path class="rc-line" data-team-key="jaxson-eat-my-dartbox" d="M0.0,291.0 L76.0,291.0"/>
+<circle class="rc-dot" data-team-key="jaxson-eat-my-dartbox" data-team="Jaxson Eat My Dartbox" data-rank="10" data-week="1" cx="0.0" cy="291.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="jaxson-eat-my-dartbox" data-team="Jaxson Eat My Dartbox" data-rank="10" data-week="2" cx="76.0" cy="291.0" r="4.5"/>
+<path class="rc-hit" data-team-key="dianna-s-doubledeez" d="M76.0,261.0"/>
+<path class="rc-line" data-team-key="dianna-s-doubledeez" d="M76.0,261.0"/>
+<circle class="rc-dot" data-team-key="dianna-s-doubledeez" data-team="Dianna’s DoubleDeez" data-rank="9" data-week="2" cx="76.0" cy="261.0" r="4.5"/>
+      </svg>
+    </div>
+    <div class="rc-labels rc-right" style="height:312px;">
+      <div class="rc-label" data-team-key="the-dynasteve" tabindex="0" style="top:6px;height:30px;line-height:30px;" title="The DynaSteve">The DynaSteve</div>
+<div class="rc-label" data-team-key="ashton-bottom-jeantys" tabindex="0" style="top:36px;height:30px;line-height:30px;" title="Ashton Bottom Jeantys">Ashton Bottom Jeantys</div>
+<div class="rc-label" data-team-key="tucking-dick" tabindex="0" style="top:66px;height:30px;line-height:30px;" title="Tucking DicK">Tucking DicK</div>
+<div class="rc-label" data-team-key="in-puka-egbuka-we-trust" tabindex="0" style="top:126px;height:30px;line-height:30px;" title="In Puka &amp; Egbuka We Trust">In Puka &amp; Egbuka We Trust</div>
+<div class="rc-label" data-team-key="love-on-the-spectrum" tabindex="0" style="top:186px;height:30px;line-height:30px;" title="Love on the Spectrum">Love on the Spectrum</div>
+<div class="rc-label" data-team-key="neithermoneynorgoodpick" tabindex="0" style="top:96px;height:30px;line-height:30px;" title="NeitherMoneyNorGoodPick">NeitherMoneyNorGoodPick</div>
+<div class="rc-label" data-team-key="fuck-rit" tabindex="0" style="top:156px;height:30px;line-height:30px;" title="Fuck RIT">Fuck RIT</div>
+<div class="rc-label" data-team-key="vladimir-tuten" tabindex="0" style="top:216px;height:30px;line-height:30px;" title="Vladimir Tuten">Vladimir Tuten</div>
+<div class="rc-label" data-team-key="dianna-s-doubledeez" tabindex="0" style="top:246px;height:30px;line-height:30px;" title="Dianna&#x27;s DoubleDeez">Dianna&#x27;s DoubleDeez</div>
+<div class="rc-label" data-team-key="jaxson-eat-my-dartbox" tabindex="0" style="top:276px;height:30px;line-height:30px;" title="Jaxson Eat My Dartbox">Jaxson Eat My Dartbox</div>
+<div class="rc-label" data-team-key="dianna-s-doubledeez" tabindex="0" style="top:246px;height:30px;line-height:30px;" title="Dianna’s DoubleDeez">Dianna’s DoubleDeez</div>
     </div>
     <div class="rc-tooltip"></div>
   </div>
@@ -440,69 +466,69 @@
   <section class="sec-blue">
     <h2>⚔️ This Week — Matchups</h2>
     <div class="matchup">
-      <strong>Fuck RIT</strong> def. Dianna's DoubleDeez <span class="score">154.26 – 134.22</span>
-      <div class="note">Dianna's looked like the sharper build all day — over 100 of their 134 points were banked before the early Sunday window even closed, and for a while this had laugher written all over it. But RIT played it patient: modest Thursday production, a slow build across both Sunday windows, and enough left over after dark to run it down. Rough way for the commissioner to open a title defense — burn bright early, get caught by dinner.</div>
+      <strong>Fuck RIT</strong> def. Love on the Spectrum <span class="score">193.98 – 167.8</span>
+      <div class="note">Love actually had the bigger Thursday (85.8 to RIT's 53.1) behind a 40-burger from Josh Allen, and carried that lead through the early Sunday window too — up nearly 43 points at one point. Then the whole thing flipped in the late window alone: CeeDee Lamb led a 80-point Sunday-afternoon explosion for RIT while Love's late slate went cold (11.1), and a comfortable lead turned into a 26-point loss without either team playing a single snap after 4pm.</div>
     </div>
     <div class="matchup">
-      <strong>Tucking DicK</strong> def. Love on the Spectrum <span class="score">215.24 – 167.96</span>
-      <div class="note">Never really in doubt. Tucking DicK had nearly 100 points in the bank before the 4pm window even started, then let Monday Night Football (Patrick Mahomes and the Chiefs D) pad the final margin for sport. Love on the Spectrum had a legitimately good day themselves — Allen and Swift both popped in the early window — they just spent all of it chasing a team that was already gone.</div>
+      <strong>Tucking DicK</strong> def. Dianna's DoubleDeez <span class="score">130.78 – 115.46</span>
+      <div class="note">Dianna's actually put up the single biggest window of the game — 86.2 points in the early Sunday slate, the most either team scored anywhere. But Tucking DicK's own early output (81.8) kept it close, and Patrick Mahomes' Sunday night (28.98) was the difference-maker, pushing them ahead before Dianna's Monday piece (Cam Skattebo, 9.5) had a chance to answer. Fourth straight loss for the commissioner.</div>
     </div>
     <div class="matchup">
-      <strong>The DynaSteve</strong> def. Jaxson Eat My Dartbox <span class="score">203.1 – 105.88</span>
-      <div class="note">Dead on arrival. The reigning champ came out of Thursday night with 46 points already on the board and never let off, turning it into the week's most lopsided final margin. Dartbox just didn't have the firepower to keep pace this week — no version of this one was close by kickoff Sunday.</div>
+      <strong>Vladimir Tuten</strong> def. Jaxson Eat My Dartbox <span class="score">131.44 – 123.86</span>
+      <div class="note">Built almost entirely in one window — Vlad's Sunday early slate alone (102.4, Rashod Bateman and Chris Olave both going off) nearly doubled Jaxson's early output (52.9). Jaxson actually won the rest of the day outright, outscoring Vlad 71.0 to 29.1 across the late and night windows, but the early hole was too deep to climb out of.</div>
     </div>
     <div class="matchup">
-      <strong>Ashton Bottom Jeantys</strong> def. Vladimir Tuten <span class="score">171.22 – 148.98</span>
-      <div class="note">The week's family feud — these two are actual brothers, so bragging rights carry a little extra weight. Vlad built a legit lead through the early Sunday window — nearly 100 points banked — but Ashton Bottom was sitting on a stacked Monday Night slate that hadn't kicked off yet. 44 points arrived after everyone else had already gone home for the week, and a would-be loss became a real, numbers-backed win. Round one to the numbers guy.</div>
+      <strong>The DynaSteve</strong> def. In Puka & Egbuka We Trust <span class="score">222.46 – 118.72</span>
+      <div class="note">Biggest margin of the week, and it wasn't close by Sunday afternoon — DynaSteve's late window alone (94.8, Jaxon Smith-Njigba's 42.5 leading the way) outscored In Puka's entire day to that point. Then a Monday Night Rams stack — Kyren Williams, Davante Adams, and Matthew Stafford, all in the same game — combined for 82.2 more points to bury it. In Puka never had an answer for a roster hitting on every window.</div>
     </div>
     <div class="matchup">
-      <strong>In Puka & Egbuka We Trust</strong> def. NeitherMoneyNorGoodPick <span class="score">159.26 – 145.2</span>
-      <div class="note">Tight all day, decided late. NeitherMoney built a real floor through Sunday and even got a night-window boost of their own — this one felt winnable into the evening. But In Puka's roster, freshly upgraded with Aaron Jones this week, answered with its own Sunday night surge to pull ahead in the final window.</div>
+      <strong>NeitherMoneyNorGoodPick</strong> def. Ashton Bottom Jeantys <span class="score">166.62 – 152.38</span>
+      <div class="note">The week's family feud, part two. NeitherMoney built the whole margin early — Amon-Ra St. Brown's Thursday (35.2) plus a solid early Sunday (49.7) had them well ahead before Ashton Bottom even got going. Ashton mounted a real charge — Jonathan Taylor and Kenneth Walker combined for 65.3 points in the Sunday night window, the single biggest window either team put up all day — but the deficit built across the rest of Sunday held up by 14.24.</div>
     </div>
   </section>
 
   <section class="sec-green">
     <h2>🔥 Top Performances</h2>
     <div class="player-card">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/11560.jpg" alt="Caleb Williams" onerror="this.style.visibility='hidden'">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/9488.jpg" alt="Jaxon Smith-Njigba" onerror="this.style.visibility='hidden'">
       <div class="player-info">
-        <div class="player-name-line"><strong>Caleb Williams</strong><span>37.26</span></div>
-        <div class="player-meta">In Puka & Egbuka We Trust</div>
+        <div class="player-name-line"><strong>Jaxon Smith-Njigba</strong><span>42.5</span></div>
+        <div class="player-meta">The DynaSteve</div>
       </div>
     </div>
     <div class="player-card">
       <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/4984.jpg" alt="Josh Allen" onerror="this.style.visibility='hidden'">
       <div class="player-info">
-        <div class="player-name-line"><strong>Josh Allen</strong><span>35.66</span></div>
+        <div class="player-name-line"><strong>Josh Allen</strong><span>40.82</span></div>
         <div class="player-meta">Love on the Spectrum</div>
       </div>
     </div>
     <div class="player-card">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/3198.jpg" alt="Derrick Henry" onerror="this.style.visibility='hidden'">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/2133.jpg" alt="Davante Adams" onerror="this.style.visibility='hidden'">
       <div class="player-info">
-        <div class="player-name-line"><strong>Derrick Henry</strong><span>35.3</span></div>
-        <div class="player-meta">Tucking DicK</div>
+        <div class="player-name-line"><strong>Davante Adams</strong><span>39.5</span></div>
+        <div class="player-meta">The DynaSteve</div>
       </div>
     </div>
     <div class="player-card">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/8151.jpg" alt="Kenneth Walker" onerror="this.style.visibility='hidden'">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/6786.jpg" alt="CeeDee Lamb" onerror="this.style.visibility='hidden'">
       <div class="player-info">
-        <div class="player-name-line"><strong>Kenneth Walker</strong><span>34.1</span></div>
-        <div class="player-meta">Ashton Bottom Jeantys</div>
-      </div>
-    </div>
-    <div class="player-card">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/9221.jpg" alt="Jahmyr Gibbs" onerror="this.style.visibility='hidden'">
-      <div class="player-info">
-        <div class="player-name-line"><strong>Jahmyr Gibbs</strong><span>33.6</span></div>
+        <div class="player-name-line"><strong>CeeDee Lamb</strong><span>35.3</span></div>
         <div class="player-meta">Fuck RIT</div>
       </div>
     </div>
-    <div class="player-card" style="margin-top:4px; padding-top:12px; border-top:1px dashed var(--border);">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/4943.jpg" alt="Sam Darnold" onerror="this.style.visibility='hidden'">
+    <div class="player-card">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/7547.jpg" alt="Amon-Ra St. Brown" onerror="this.style.visibility='hidden'">
       <div class="player-info">
-        <div class="player-name-line"><strong>Sam Darnold</strong> <span class="move-down">0.52</span></div>
-        <div class="player-meta">Jaxson Eat My Dartbox · dud of the week, not the debut anyone wanted</div>
+        <div class="player-name-line"><strong>Amon-Ra St. Brown</strong><span>35.2</span></div>
+        <div class="player-meta">NeitherMoneyNorGoodPick</div>
+      </div>
+    </div>
+    <div class="player-card" style="margin-top:4px; padding-top:12px; border-top:1px dashed var(--border);">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/4983.jpg" alt="DJ Moore" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>DJ Moore</strong> <span class="move-down">-0.1</span></div>
+        <div class="player-meta">The DynaSteve · dud of the week, buried in a blowout win</div>
       </div>
     </div>
   </section>
@@ -510,10 +536,8 @@
   <section class="sec-purple">
     <h2>🔄 Notable Moves</h2>
     <div class="recap">
-      <p>Vladimir Tuten turned James Cook and a 2027 4th into Makai Lemon, Jason Myers, AND In Puka & Egbuka We Trust's 2027 1st and 3rd-round picks — one of Vlad's famously lopsided offers actually landed, and for once he's not the one who got fleeced.</p>
-      <p>NeitherMoneyNorGoodPick sold Aaron Jones to In Puka & Egbuka We Trust for a 2028 3rd-round pick — selling proven production for future capital, exactly what a retooling roster should be doing.</p>
-      <p>Tucking DicK turned DK Metcalf into Xavier Worthy plus a 2027 4th and a 2028 3rd from Jaxson Eat My Dartbox — the league's most pick-rich team just got richer.</p>
-      <p>NeitherMoneyNorGoodPick paid Tucking DicK $10 FAAB for Kimani Vidal.</p>
+      <p>Love on the Spectrum and Vladimir Tuten swapped tight ends — Dalton Kincaid to Love, Roman Wilson to Vlad — with Love also sending Vlad a 2027 2nd-round pick to sweeten it. A real trade this time, not one of Vlad's usual lopsided offers.</p>
+      <p>A quiet week otherwise on the waiver front: Dianna's DoubleDeez cycled through a few depth adds (Xavier Hutchinson, Devin Singletary), Vladimir Tuten swapped out Sean Tucker and Kendre Miller for Emari Demercado and DeMario Douglas, and In Puka & Egbuka We Trust added Darnell Mooney off waivers.</p>
     </div>
   </section>
 
@@ -523,63 +547,63 @@
     <div class="fan-group" style="--fan-color:#00338d">
       <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" alt="Buffalo Bills logo" width="28" height="28"></div>
       <div class="fan-body">
-        <div class="team-line"><span>Bills</span><span class="record">1-0</span></div>
+        <div class="team-line"><span>Bills</span><span class="record">2-0</span></div>
         <div class="who">Tucking DicK</div>
-        <div class="note">Handled Houston without much drama.</div>
+        <div class="note">Outlasted Detroit 41-31 in a shootout. Real win, fantasy win too this week — clean sweep.</div>
       </div>
     </div>
 
     <div class="fan-group" style="--fan-color:#aa0000">
       <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/sf.png" alt="San Francisco 49ers logo" width="28" height="28"></div>
       <div class="fan-body">
-        <div class="team-line"><span>49ers</span><span class="record">1-0</span></div>
+        <div class="team-line"><span>49ers</span><span class="record">2-0</span></div>
         <div class="who">Tucking DicK</div>
-        <div class="note">Won the season-opening international game against the Rams. A perfect real-life week for the league's most confusing two-team fan — and the fantasy team backed it up too. Nothing to razz here, annoyingly.</div>
+        <div class="note">Handled Miami 35-13. Another real win to go with the fantasy win — the league's most confusing two-team fan is off to a perfect start on both fronts.</div>
       </div>
     </div>
 
     <div class="fan-group" style="--fan-color:#002a5c">
       <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" alt="Dallas Cowboys logo" width="28" height="28"></div>
       <div class="fan-body">
-        <div class="team-line"><span>Cowboys</span><span class="record">0-1</span></div>
+        <div class="team-line"><span>Cowboys</span><span class="record">1-1</span></div>
         <div class="who">Fuck RIT</div>
-        <div class="note">Lost Monday night to the Giants. At least the fantasy team picked up the slack with a real win.</div>
+        <div class="note">Beat Washington 37-20. Real win, fantasy win — a good week all around after last week's split result.</div>
       </div>
     </div>
 
     <div class="fan-group" style="--fan-color:#004953">
       <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png" alt="New England Patriots logo" width="28" height="28"></div>
       <div class="fan-body">
-        <div class="team-line"><span>Patriots</span><span class="record">0-1</span></div>
+        <div class="team-line"><span>Patriots</span><span class="record">1-1</span></div>
         <div class="who">Love on the Spectrum · The DynaSteve · Ashton Bottom Jeantys</div>
-        <div class="note">Lost the Thursday night opener to Seattle, 10-13. Three fantasy rosters riding for New England this year — combined they went 2-1 in fantasy, so at least someone in that group is having a good week.</div>
+        <div class="note">Beat Pittsburgh 20-3. Split result for this fan bloc, though — The DynaSteve's fantasy team is red-hot at 4-0, while Love on the Spectrum and Ashton Bottom Jeantys both lost their fantasy matchups this week.</div>
       </div>
     </div>
 
     <div class="fan-group" style="--fan-color:#000000">
       <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Pittsburgh Steelers logo" width="28" height="28"></div>
       <div class="fan-body">
-        <div class="team-line"><span>Steelers</span><span class="record">1-0</span></div>
+        <div class="team-line"><span>Steelers</span><span class="record">1-1</span></div>
         <div class="who">Vladimir Tuten</div>
-        <div class="note">Beat Atlanta — the week's only case of winning the real game and losing the fantasy one.</div>
+        <div class="note">Lost to New England 3-20 — a rough one. At least the fantasy team found a way to win this week.</div>
       </div>
     </div>
 
     <div class="fan-group" style="--fan-color:#06424d">
       <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" alt="Philadelphia Eagles logo" width="28" height="28"></div>
       <div class="fan-body">
-        <div class="team-line"><span>Eagles</span><span class="record">1-0</span></div>
+        <div class="team-line"><span>Eagles</span><span class="record">2-0</span></div>
         <div class="who">NeitherMoneyNorGoodPick</div>
-        <div class="note">Held off Washington. Small consolation after the fantasy loss.</div>
+        <div class="note">Beat Tennessee 24-20. Real win and a fantasy win this week — nice bounce-back after dropping their opener.</div>
       </div>
     </div>
 
     <div class="fan-group" style="--fan-color:#003c7f">
       <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png" alt="New York Giants logo" width="28" height="28"></div>
       <div class="fan-body">
-        <div class="team-line"><span>Giants</span><span class="record">1-0</span></div>
+        <div class="team-line"><span>Giants</span><span class="record">1-1</span></div>
         <div class="who">Jaxson Eat My Dartbox · In Puka & Egbuka We Trust · Dianna's DoubleDeez</div>
-        <div class="note">Stole one on Monday night in Dallas, 28-20. Best real-life showing of any fan bloc in the league this week — pity it didn't rub off on two of the three fantasy rosters cheering for it.</div>
+        <div class="note">Blown out by the Rams, 6-28. A miserable week all around for this fan bloc — all three fantasy rosters cheering for the Giants also lost their fantasy matchups.</div>
       </div>
     </div>
   </section>
@@ -589,7 +613,7 @@
     <details class="past-weeks">
       <summary>Past Weeks</summary>
       <ul class="past-weeks-list">
-        <li class="placeholder">This is Week 1 — history builds from here.</li>
+        <li><a href="#" onclick="return false;">Week 1</a> — The DynaSteve debuts at #1; biggest blowout: DynaSteve over Jaxson Eat My Dartbox</li>
       </ul>
     </details>
   </section>
