@@ -186,11 +186,16 @@
   .recap p { margin: 0 0 12px; }
   .recap p:last-child { margin-bottom: 0; }
   .matchup {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
     padding: 12px 0;
     border-bottom: 1px solid var(--border);
   }
   .matchup:last-child { border-bottom: none; }
+  .matchup-body { flex: 1; min-width: 0; }
   .matchup .score { color: var(--muted); font-size: 0.85rem; }
+  .matchup-topscorer { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
   .matchup .note { font-size: 0.9rem; margin-top: 5px; line-height: 1.55; }
   .placeholder {
     color: var(--muted);
@@ -466,24 +471,44 @@
   <section class="sec-blue">
     <h2>⚔️ This Week — Matchups</h2>
     <div class="matchup">
-      <strong>Fuck RIT</strong> def. Tucking DicK <span class="score">186.48 – 163.72</span>
-      <div class="note">Tucking DicK actually led into the late window — a combined Thursday-plus-early-Sunday haul of 110.72 put them ahead of RIT's 97.76. But RIT's own late slate (76.22, Jahmyr Gibbs' 41.4 doing the heavy lifting) blew past Tucking's late output (53.0) and flipped the game. Tougher news for the winners: De'Von Achane, RIT's other core back, barely got on the field before exiting Sunday's game — 1.7 points on the day, later confirmed as a torn ACL that ends his season (see Notable Moves).</div>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/9221.jpg" alt="Jahmyr Gibbs" onerror="this.style.visibility='hidden'">
+      <div class="matchup-body">
+        <div><strong>Fuck RIT</strong> def. Tucking DicK <span class="score">186.48 – 163.72</span></div>
+        <div class="matchup-topscorer">Jahmyr Gibbs · 41.4 pts (Fuck RIT)</div>
+        <div class="note">Tucking DicK actually led into the late window — a combined Thursday-plus-early-Sunday haul of 110.72 put them ahead of RIT's 97.76. But RIT's own late slate (76.22, Jahmyr Gibbs' 41.4 doing the heavy lifting) blew past Tucking's late output (53.0) and flipped the game. Tougher news for the winners: De'Von Achane, RIT's other core back, barely got on the field before exiting Sunday's game — 1.7 points on the day, later confirmed as a torn ACL that ends his season (see Notable Moves).</div>
+      </div>
     </div>
     <div class="matchup">
-      <strong>Dianna's DoubleDeez</strong> def. Love on the Spectrum <span class="score">180.18 – 127.9</span>
-      <div class="note">Dianna's had this one from the jump — a monster Drake London Thursday (28.4) plus the week's best early-Sunday window on either side (98.28), while Love's own Thursday piece mustered just 1.0. First game for a fresh pickup, too: Keenan Allen, added off waivers Saturday, went 6 catches for 63 yards and a touchdown (18.3 fantasy points) right out of the gate for his new team (see Notable Moves).</div>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/8112.jpg" alt="Drake London" onerror="this.style.visibility='hidden'">
+      <div class="matchup-body">
+        <div><strong>Dianna's DoubleDeez</strong> def. Love on the Spectrum <span class="score">180.18 – 127.9</span></div>
+        <div class="matchup-topscorer">Drake London · 28.4 pts (Dianna's DoubleDeez)</div>
+        <div class="note">Dianna's had this one from the jump — a monster Drake London Thursday (28.4) plus the week's best early-Sunday window on either side (98.28), while Love's own Thursday piece mustered just 1.0. First game for a fresh pickup, too: Keenan Allen, added off waivers Saturday, went 6 catches for 63 yards and a touchdown (18.3 fantasy points) right out of the gate for his new team (see Notable Moves).</div>
+      </div>
     </div>
     <div class="matchup">
-      <strong>Jaxson Eat My Dartbox</strong> def. Ashton Bottom Jeantys <span class="score">171.64 – 153.24</span>
-      <div class="note">A tight early window (122.74 to 117.14) that Jaxson never let slip — Sam Darnold's 27.66 paced the day, and a small Monday add-on (9.0) sealed it. Worth celebrating on its own, but there's backstory: Jaxson and Love on the Spectrum have been going back and forth in the league group chat all week, with Love sending over a string of lopsided trade offers and telling anyone who'd listen that Jaxson's team is bad.</div>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/4943.jpg" alt="Sam Darnold" onerror="this.style.visibility='hidden'">
+      <div class="matchup-body">
+        <div><strong>Jaxson Eat My Dartbox</strong> def. Ashton Bottom Jeantys <span class="score">171.64 – 153.24</span></div>
+        <div class="matchup-topscorer">Sam Darnold · 27.66 pts (Jaxson Eat My Dartbox)</div>
+        <div class="note">A tight early window (122.74 to 117.14) that Jaxson never let slip — Sam Darnold's 27.66 paced the day, and a small Monday add-on (9.0) sealed it. Worth celebrating on its own, but there's backstory: Jaxson and Love on the Spectrum have been going back and forth in the league group chat all week, with Love sending over a string of lopsided trade offers and telling anyone who'd listen that Jaxson's team is bad.</div>
+      </div>
     </div>
     <div class="matchup">
-      <strong>The DynaSteve</strong> def. NeitherMoneyNorGoodPick <span class="score">226.04 – 102.98</span>
-      <div class="note">Biggest margin of the week by a mile. NeitherMoney never had a chance — their own Thursday defense put them in a hole before the weekend even started (Green Bay bled -7.0), and DynaSteve hit on every window that followed (Jaxon Smith-Njigba's 35.36 leading a 73-point early Sunday, then 63.4 more Sunday night). Silver lining for NeitherMoney: real-world news landed this week that could matter more than one bad scoreline — J.J. McCarthy, sitting on their bench, was traded from Minnesota to the Giants for a 2027 5th-round pick after New York lost starter Jaxson Dart to a season-ending injury (see Notable Moves).</div>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/9488.jpg" alt="Jaxon Smith-Njigba" onerror="this.style.visibility='hidden'">
+      <div class="matchup-body">
+        <div><strong>The DynaSteve</strong> def. NeitherMoneyNorGoodPick <span class="score">226.04 – 102.98</span></div>
+        <div class="matchup-topscorer">Jaxon Smith-Njigba · 35.36 pts (The DynaSteve)</div>
+        <div class="note">Biggest margin of the week by a mile. NeitherMoney never had a chance — their own Thursday defense put them in a hole before the weekend even started (Green Bay bled -7.0), and DynaSteve hit on every window that followed (Jaxon Smith-Njigba's 35.36 leading a 73-point early Sunday, then 63.4 more Sunday night). Silver lining for NeitherMoney: real-world news landed this week that could matter more than one bad scoreline — J.J. McCarthy, sitting on their bench, was traded from Minnesota to the Giants for a 2027 5th-round pick after New York lost starter Jaxson Dart to a season-ending injury (see Notable Moves).</div>
+      </div>
     </div>
     <div class="matchup">
-      <strong>Vladimir Tuten</strong> def. In Puka & Egbuka We Trust <span class="score">176.22 – 151.64</span>
-      <div class="note">Close through the early window (41.1 to 45.8) and the Monday piece (18.52 to 19.8), but Vlad's Sunday afternoon — 116.6, Brock Bowers' 27.6 leading the way — nearly doubled In Puka's own late output and made the difference. One name that didn't even make Vlad's starting lineup: Roman Wilson, who caught a 38-yard touchdown from Aaron Rodgers to open the scoring in Pittsburgh's win over Cincinnati and led the Steelers in targets. He's still buried on the bench for the fantasy team that owns him.</div>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/11604.jpg" alt="Brock Bowers" onerror="this.style.visibility='hidden'">
+      <div class="matchup-body">
+        <div><strong>Vladimir Tuten</strong> def. In Puka & Egbuka We Trust <span class="score">176.22 – 151.64</span></div>
+        <div class="matchup-topscorer">Brock Bowers · 27.6 pts (Vladimir Tuten)</div>
+        <div class="note">Close through the early window (41.1 to 45.8) and the Monday piece (18.52 to 19.8), but Vlad's Sunday afternoon — 116.6, Brock Bowers' 27.6 leading the way — nearly doubled In Puka's own late output and made the difference. One name that didn't even make Vlad's starting lineup: Roman Wilson, who caught a 38-yard touchdown from Aaron Rodgers to open the scoring in Pittsburgh's win over Cincinnati and led the Steelers in targets. He's still buried on the bench for the fantasy team that owns him.</div>
+      </div>
     </div>
   </section>
 
@@ -535,10 +560,28 @@
 
   <section class="sec-purple">
     <h2>🔄 Notable Moves</h2>
-    <div class="recap">
-      <p>Dianna's DoubleDeez won the Keenan Allen sweepstakes this week — NeitherMoneyNorGoodPick cut him loose Thursday, and both Dianna's and Vladimir Tuten filed waiver claims for him Saturday afternoon; Dianna's claim won out (Devin Singletary was the corresponding drop). Keenan Allen — long known around this league as "the DWI guy" — delivered immediately: 6 catches, 63 yards, and a touchdown in the Colts' 19-17 win over Houston.</p>
-      <p>Real-world news worth flagging: J.J. McCarthy, stashed on NeitherMoneyNorGoodPick's bench, was traded from the Vikings to the Giants this week (for a 2027 5th-round pick) after New York lost starter Jaxson Dart to a season-ending knee injury. He opens as Jameis Winston's backup, but it's a real path to snaps for a young dynasty QB that wasn't walking into one in Minnesota.</p>
-      <p>Tougher real-world news for Fuck RIT: De'Von Achane, who managed only 1.7 points before leaving Sunday's game early, was confirmed afterward to have torn his ACL against the Chiefs and will miss the rest of the season — a real hit to the dynasty value of a roster currently sitting at #4 in the Power Rankings.</p>
+    <div class="player-card">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/1479.jpg" alt="Keenan Allen" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Keenan Allen</strong><span>Waiver Add</span></div>
+        <div class="player-meta">Dianna's DoubleDeez · beat out a same-day claim from Vladimir Tuten after NeitherMoneyNorGoodPick cut him loose · "the DWI guy" delivered immediately, 6/63/1 in the Colts' win over Houston</div>
+      </div>
+    </div>
+    <div class="player-card">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/11565.jpg" alt="J.J. McCarthy" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>J.J. McCarthy</strong><span>Real-World News</span></div>
+        <div class="player-meta">NeitherMoneyNorGoodPick's bench stash · traded from the Vikings to the Giants (2027 5th) after Jaxson Dart's season-ending injury · opens as Jameis Winston's backup, but a real path to snaps</div>
+      </div>
+    </div>
+    <div class="player-card">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/9226.jpg" alt="De'Von Achane" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>De'Von Achane</strong><span>Injury</span></div>
+        <div class="player-meta">Fuck RIT's RB2 · torn ACL against the Chiefs, out for the season · a real hit to a roster currently sitting at #4 in the Power Rankings</div>
+      </div>
+    </div>
+    <div class="recap" style="margin-top:12px;">
       <p>Otherwise a quiet week on the wire: Tucking DicK added Demarcus Robinson, Vladimir Tuten continued shuffling their bench (dropped Isiah Pacheco, added Matt Gay and Kendrick Bourne), Ashton Bottom Jeantys swapped out both their kicker (Harrison Mevis for Spencer Shrader) and a bench back (Mason Taylor for Emari Demercado), and Jaxson Eat My Dartbox added Isaiah Williams.</p>
     </div>
   </section>
