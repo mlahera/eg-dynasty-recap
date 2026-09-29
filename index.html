@@ -254,6 +254,7 @@
   .player-name-line strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .player-meta { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
   .rank-chart-card { margin-top: 16px; padding-top: 16px; border-top: 1px dashed var(--border); }
+  .rank-chart-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 0 -2px; }
   .rank-chart-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted); margin: 0 0 4px; }
   .rank-chart-subtitle { font-size: 0.82rem; color: var(--muted); margin: 0 0 12px; }
   .rank-chart { display: flex; align-items: flex-start; font-size: 0.76rem; position: relative; }
@@ -373,6 +374,7 @@
 <div class="rank-chart-card">
   <p class="rank-chart-title">Power Ranking — Week by Week</p>
   
+  <div class="rank-chart-scroll">
   <div class="rank-chart" data-chart="power-rank-history">
     <div class="rc-labels rc-left" style="height:312px;">
       <div class="rc-label" data-team-key="the-dynasteve" tabindex="0" style="top:6px;height:30px;line-height:30px;" title="The DynaSteve">The DynaSteve</div>
@@ -456,6 +458,7 @@
 <div class="rc-label" data-team-key="jaxson-eat-my-dartbox" tabindex="0" style="top:276px;height:30px;line-height:30px;" title="Jaxson Eat My Dartbox">Jaxson Eat My Dartbox</div>
     </div>
     <div class="rc-tooltip"></div>
+  </div>
   </div>
 </div>
   </section>
