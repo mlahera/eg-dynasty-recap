@@ -144,6 +144,10 @@
   section.sec-green { --section-accent: var(--acc-green); }
   section.sec-purple { --section-accent: var(--acc-purple); }
   section.sec-teal { --section-accent: var(--acc-teal); }
+  section.sec-up { --section-accent: var(--up); }
+  section.sec-down { --section-accent: var(--down); }
+  .ww-row { align-items: center; }
+  .ww-rank { flex: 0 0 1.4em; text-align: right; font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; }
   section h2 {
     font-size: 1.05rem;
     margin: 0 0 14px;
@@ -343,9 +347,6 @@
     text-align: center;
     margin-top: 8px;
   }
-  .lede-week h2 { margin-top: 0; }
-  .lede-week .recap p { margin: 0 0 10px; line-height: 1.6; }
-  .lede-week .recap p:last-child { margin-bottom: 0; }
 </style>
 </head>
 <body>
@@ -357,17 +358,8 @@
 
   <div class="hero-banner">
     <h1>🏈 EG Dynasty — Weekly Recap</h1>
-    <div class="meta">10-team PPR Superflex dynasty · Week 6 · Updated every Tuesday morning</div>
+    <div class="meta">10-team PPR Superflex dynasty · Week 7 · Updated every Tuesday morning</div>
   </div>
-
-  <section class="lede-week">
-    <h2>🚨 The League Starts Picking Sides</h2>
-    <div class="recap">
-      <p>Six weeks in, people are starting to choose sides. The DynaSteve, Love on the Spectrum and Fuck RIT spent the week buying. Ryan (the artist formerly known as Vladimir Tuten, now <strong>Bowers Deep in Ass Jr.</strong>) and Wimmer spent it selling, and on Sunday neither of them bothered filling out a full lineup. The prize is Jeremiah Smith at 1.01.</p>
-      <p>Here's the catch. A bad record only gets you into the toilet bowl, and the 1.01 goes to whoever loses that. Joe already wrote the playbook last year: start a defense that's going to go negative, take the L, collect the pick. So you can tank for ten weeks and still get out-tanked in December. And every week you tank is a week you're not in the running for top-scorer money. Is it worth it? It's up to you 🤷🏻‍♂️</p>
-      <p>For the record, tanking is allowed under the league rules, so nobody's breaking anything. There's been a little talk about whether a draft lottery would've been the way to go, but the league already voted on that in last year's proposals.</p>
-    </div>
-  </section>
 
   <section class="sec-gold">
     <h2>🏆 Power Rankings</h2>
@@ -375,19 +367,19 @@
     <div class="table-scroll">
     <table>
       <tr><th>#</th><th>Team</th><th>Record</th><th class="num">Score</th><th class="num">Roster Pts</th><th class="num">ROS Proj</th><th>Move</th></tr>
-      <tr class="top-rank"><td class="rank">1</td><td>The DynaSteve</td><td>11-1</td><td class="num">1.000</td><td class="num">1850.9</td><td class="num">3.3K</td><td class="move-same">–</td></tr>
-      <tr><td class="rank">2</td><td>Ashton Bottom Jeantys</td><td>9-3</td><td class="num">.773</td><td class="num">1683.5</td><td class="num">3.1K</td><td class="move-same">–</td></tr>
-      <tr><td class="rank">3</td><td>Fuck RIT</td><td>9-3</td><td class="num">.562</td><td class="num">1494.7</td><td class="num">2.7K</td><td class="move-up">▲1</td></tr>
-      <tr><td class="rank">4</td><td>Love on the Spectrum</td><td>6-6</td><td class="num">.527</td><td class="num">1560.1</td><td class="num">2.9K</td><td class="move-up">▲4</td></tr>
-      <tr><td class="rank">5</td><td>Dianna's DoubleDeez</td><td>6-6</td><td class="num">.452</td><td class="num">1549.2</td><td class="num">2.8K</td><td class="move-up">▲2</td></tr>
-      <tr><td class="rank">6</td><td>Tucking DicK</td><td>3-9</td><td class="num">.424</td><td class="num">1568.6</td><td class="num">2.9K</td><td class="move-down">▼1</td></tr>
-      <tr><td class="rank">7</td><td>In Puka & Egbuka We Trust</td><td>5-7</td><td class="num">.419</td><td class="num">1475.0</td><td class="num">2.8K</td><td class="move-down">▼1</td></tr>
-      <tr><td class="rank">8</td><td>NeitherMoneyNorGoodPick</td><td>6-6</td><td class="num">.413</td><td class="num">1528.7</td><td class="num">2.7K</td><td class="move-down">▼5</td></tr>
-      <tr><td class="rank">9</td><td>Jaxson Eat My Dartbox</td><td>2-10</td><td class="num">.092</td><td class="num">1272.4</td><td class="num">2.5K</td><td class="move-up">▲1</td></tr>
-      <tr><td class="rank">10</td><td>Bowers Deep in Ass Jr.</td><td>3-9</td><td class="num">.039</td><td class="num">1297.9</td><td class="num">2.2K</td><td class="move-down">▼1</td></tr>
+      <tr class="top-rank"><td class="rank">1</td><td>The DynaSteve</td><td>13-1</td><td class="num">1.000</td><td class="num">2106.5</td><td class="num">3.0K</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">2</td><td>Ashton Bottom Jeantys</td><td>9-5</td><td class="num">.739</td><td class="num">1923.4</td><td class="num">2.8K</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">3</td><td>Fuck RIT</td><td>11-3</td><td class="num">.630</td><td class="num">1822.5</td><td class="num">2.4K</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">4</td><td>In Puka & Egbuka We Trust</td><td>7-7</td><td class="num">.548</td><td class="num">1771.3</td><td class="num">2.6K</td><td class="move-up">▲3</td></tr>
+      <tr><td class="rank">5</td><td>NeitherMoneyNorGoodPick</td><td>8-6</td><td class="num">.529</td><td class="num">1807.8</td><td class="num">2.6K</td><td class="move-up">▲3</td></tr>
+      <tr><td class="rank">6</td><td>Dianna's DoubleDeez</td><td>7-7</td><td class="num">.508</td><td class="num">1825.3</td><td class="num">2.5K</td><td class="move-down">▼1</td></tr>
+      <tr><td class="rank">7</td><td>Diddy Loves Coke</td><td>6-8</td><td class="num">.504</td><td class="num">1739.5</td><td class="num">2.7K</td><td class="move-down">▼3</td></tr>
+      <tr><td class="rank">8</td><td>Tucking DicK</td><td>4-10</td><td class="num">.385</td><td class="num">1697.9</td><td class="num">2.5K</td><td class="move-down">▼2</td></tr>
+      <tr><td class="rank">9</td><td>Jaxson Eat My Dartbox</td><td>2-12</td><td class="num">.049</td><td class="num">1439.8</td><td class="num">2.2K</td><td class="move-same">–</td></tr>
+      <tr><td class="rank">10</td><td>Bowers Deep in Ass Jr.</td><td>3-11</td><td class="num">.023</td><td class="num">1423.3</td><td class="num">2.1K</td><td class="move-same">–</td></tr>
     </table>
     </div>
-    <p style="margin-top:12px; font-size:0.9rem; line-height:1.55;"><strong>The DynaSteve</strong> is 11-1 and traded for Christian McCaffrey and Josh Jacobs anyway. Neither was in their lineup this week; the deal went through Monday afternoon. The big mover is <strong>Love on the Spectrum</strong>, up four spots to #4. That jump is the formula reacting to a roster that now has A.J. Brown, Chris Olave, Bucky Irving and Jalen Coker on it, not to Love's 6-6 record. <strong>NeitherMoneyNorGoodPick</strong> won and still fell five spots to #8, mostly on a big drop in projected rest-of-season points. Spots 5 through 8 are separated by about four hundredths of a point, so treat that middle group as a tie. At the bottom, Ryan's sell-off left <strong>Bowers Deep in Ass Jr.</strong> with the league's worst rest-of-season projection by almost 300 points, which bumps Wimmer up to 9th. Wimmer still has the worst actual record at 2-10.</p>
+    <p style="margin-top:12px; font-size:0.9rem; line-height:1.55;">Nothing changes at the top. <strong>The DynaSteve</strong> is 13-1, and Christian McCaffrey scored 22.0 in his first game for them. The middle is a pileup: #4 <strong>In Puka & Egbuka We Trust</strong> and #7 <strong>Diddy Loves Coke</strong> are .044 apart. In Puka and <strong>NeitherMoneyNorGoodPick</strong> both climbed three spots on wins. Diddy went 0-2 and gave back three of the four spots the trades bought last week. The bottom two started zero players between them, and the formula noticed: Jaxson Eat My Dartbox and Bowers Deep in Ass Jr. are both under .050, and #8 Tucking DicK is way up at .385.</p>
 <div class="rank-chart-card">
   <p class="rank-chart-title">Power Ranking — Week by Week</p>
   
@@ -398,7 +390,7 @@
 <div class="rc-label" data-team-key="ashton-bottom-jeantys" tabindex="0" style="top:36px;height:30px;line-height:30px;" title="Ashton Bottom Jeantys">Ashton Bottom Jeantys</div>
 <div class="rc-label" data-team-key="tucking-dick" tabindex="0" style="top:66px;height:30px;line-height:30px;" title="Tucking DicK">Tucking DicK</div>
 <div class="rc-label" data-team-key="in-puka-egbuka-we-trust" tabindex="0" style="top:96px;height:30px;line-height:30px;" title="In Puka &amp; Egbuka We Trust">In Puka &amp; Egbuka We Trust</div>
-<div class="rc-label" data-team-key="love-on-the-spectrum" tabindex="0" style="top:126px;height:30px;line-height:30px;" title="Love on the Spectrum">Love on the Spectrum</div>
+<div class="rc-label" data-team-key="diddy-loves-coke" tabindex="0" style="top:126px;height:30px;line-height:30px;" title="Diddy Loves Coke">Diddy Loves Coke</div>
 <div class="rc-label" data-team-key="neithermoneynorgoodpick" tabindex="0" style="top:156px;height:30px;line-height:30px;" title="NeitherMoneyNorGoodPick">NeitherMoneyNorGoodPick</div>
 <div class="rc-label" data-team-key="fuck-rit" tabindex="0" style="top:186px;height:30px;line-height:30px;" title="Fuck RIT">Fuck RIT</div>
 <div class="rc-label" data-team-key="bowers-deep-in-ass-jr" tabindex="0" style="top:216px;height:30px;line-height:30px;" title="Bowers Deep in Ass Jr.">Bowers Deep in Ass Jr.</div>
@@ -406,105 +398,116 @@
 <div class="rc-label" data-team-key="jaxson-eat-my-dartbox" tabindex="0" style="top:276px;height:30px;line-height:30px;" title="Jaxson Eat My Dartbox">Jaxson Eat My Dartbox</div>
     </div>
     <div class="rc-plot-wrap">
-      <svg viewBox="0 0 380.0 338" width="380.0" height="338" style="min-width:380.0px;">
+      <svg viewBox="0 0 456.0 338" width="456.0" height="338" style="min-width:456.0px;">
         <text class="rc-weeklabel" x="0.0" y="329" text-anchor="middle">Wk 1</text>
 <text class="rc-weeklabel" x="76.0" y="329" text-anchor="middle">Wk 2</text>
 <text class="rc-weeklabel" x="152.0" y="329" text-anchor="middle">Wk 3</text>
 <text class="rc-weeklabel" x="228.0" y="329" text-anchor="middle">Wk 4</text>
 <text class="rc-weeklabel" x="304.0" y="329" text-anchor="middle">Wk 5</text>
 <text class="rc-weeklabel" x="380.0" y="329" text-anchor="middle">Wk 6</text>
-<path class="rc-hit" data-team-key="the-dynasteve" d="M0.0,21.0 L76.0,21.0 L152.0,21.0 L228.0,21.0 L304.0,21.0 L380.0,21.0"/>
-<path class="rc-line" data-team-key="the-dynasteve" d="M0.0,21.0 L76.0,21.0 L152.0,21.0 L228.0,21.0 L304.0,21.0 L380.0,21.0"/>
+<text class="rc-weeklabel" x="456.0" y="329" text-anchor="middle">Wk 7</text>
+<path class="rc-hit" data-team-key="the-dynasteve" d="M0.0,21.0 L76.0,21.0 L152.0,21.0 L228.0,21.0 L304.0,21.0 L380.0,21.0 L456.0,21.0"/>
+<path class="rc-line" data-team-key="the-dynasteve" d="M0.0,21.0 L76.0,21.0 L152.0,21.0 L228.0,21.0 L304.0,21.0 L380.0,21.0 L456.0,21.0"/>
 <circle class="rc-dot" data-team-key="the-dynasteve" data-team="The DynaSteve" data-rank="1" data-week="1" cx="0.0" cy="21.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="the-dynasteve" data-team="The DynaSteve" data-rank="1" data-week="2" cx="76.0" cy="21.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="the-dynasteve" data-team="The DynaSteve" data-rank="1" data-week="3" cx="152.0" cy="21.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="the-dynasteve" data-team="The DynaSteve" data-rank="1" data-week="4" cx="228.0" cy="21.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="the-dynasteve" data-team="The DynaSteve" data-rank="1" data-week="5" cx="304.0" cy="21.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="the-dynasteve" data-team="The DynaSteve" data-rank="1" data-week="6" cx="380.0" cy="21.0" r="4.5"/>
-<path class="rc-hit" data-team-key="ashton-bottom-jeantys" d="M0.0,51.0 L76.0,51.0 L152.0,51.0 L228.0,51.0 L304.0,51.0 L380.0,51.0"/>
-<path class="rc-line" data-team-key="ashton-bottom-jeantys" d="M0.0,51.0 L76.0,51.0 L152.0,51.0 L228.0,51.0 L304.0,51.0 L380.0,51.0"/>
+<circle class="rc-dot" data-team-key="the-dynasteve" data-team="The DynaSteve" data-rank="1" data-week="7" cx="456.0" cy="21.0" r="4.5"/>
+<path class="rc-hit" data-team-key="ashton-bottom-jeantys" d="M0.0,51.0 L76.0,51.0 L152.0,51.0 L228.0,51.0 L304.0,51.0 L380.0,51.0 L456.0,51.0"/>
+<path class="rc-line" data-team-key="ashton-bottom-jeantys" d="M0.0,51.0 L76.0,51.0 L152.0,51.0 L228.0,51.0 L304.0,51.0 L380.0,51.0 L456.0,51.0"/>
 <circle class="rc-dot" data-team-key="ashton-bottom-jeantys" data-team="Ashton Bottom Jeantys" data-rank="2" data-week="1" cx="0.0" cy="51.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="ashton-bottom-jeantys" data-team="Ashton Bottom Jeantys" data-rank="2" data-week="2" cx="76.0" cy="51.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="ashton-bottom-jeantys" data-team="Ashton Bottom Jeantys" data-rank="2" data-week="3" cx="152.0" cy="51.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="ashton-bottom-jeantys" data-team="Ashton Bottom Jeantys" data-rank="2" data-week="4" cx="228.0" cy="51.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="ashton-bottom-jeantys" data-team="Ashton Bottom Jeantys" data-rank="2" data-week="5" cx="304.0" cy="51.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="ashton-bottom-jeantys" data-team="Ashton Bottom Jeantys" data-rank="2" data-week="6" cx="380.0" cy="51.0" r="4.5"/>
-<path class="rc-hit" data-team-key="tucking-dick" d="M0.0,81.0 L76.0,81.0 L152.0,81.0 L228.0,141.0 L304.0,141.0 L380.0,171.0"/>
-<path class="rc-line" data-team-key="tucking-dick" d="M0.0,81.0 L76.0,81.0 L152.0,81.0 L228.0,141.0 L304.0,141.0 L380.0,171.0"/>
+<circle class="rc-dot" data-team-key="ashton-bottom-jeantys" data-team="Ashton Bottom Jeantys" data-rank="2" data-week="7" cx="456.0" cy="51.0" r="4.5"/>
+<path class="rc-hit" data-team-key="tucking-dick" d="M0.0,81.0 L76.0,81.0 L152.0,81.0 L228.0,141.0 L304.0,141.0 L380.0,171.0 L456.0,231.0"/>
+<path class="rc-line" data-team-key="tucking-dick" d="M0.0,81.0 L76.0,81.0 L152.0,81.0 L228.0,141.0 L304.0,141.0 L380.0,171.0 L456.0,231.0"/>
 <circle class="rc-dot" data-team-key="tucking-dick" data-team="Tucking DicK" data-rank="3" data-week="1" cx="0.0" cy="81.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="tucking-dick" data-team="Tucking DicK" data-rank="3" data-week="2" cx="76.0" cy="81.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="tucking-dick" data-team="Tucking DicK" data-rank="3" data-week="3" cx="152.0" cy="81.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="tucking-dick" data-team="Tucking DicK" data-rank="5" data-week="4" cx="228.0" cy="141.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="tucking-dick" data-team="Tucking DicK" data-rank="5" data-week="5" cx="304.0" cy="141.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="tucking-dick" data-team="Tucking DicK" data-rank="6" data-week="6" cx="380.0" cy="171.0" r="4.5"/>
-<path class="rc-hit" data-team-key="in-puka-egbuka-we-trust" d="M0.0,111.0 L76.0,141.0 L152.0,201.0 L228.0,231.0 L304.0,171.0 L380.0,201.0"/>
-<path class="rc-line" data-team-key="in-puka-egbuka-we-trust" d="M0.0,111.0 L76.0,141.0 L152.0,201.0 L228.0,231.0 L304.0,171.0 L380.0,201.0"/>
+<circle class="rc-dot" data-team-key="tucking-dick" data-team="Tucking DicK" data-rank="8" data-week="7" cx="456.0" cy="231.0" r="4.5"/>
+<path class="rc-hit" data-team-key="in-puka-egbuka-we-trust" d="M0.0,111.0 L76.0,141.0 L152.0,201.0 L228.0,231.0 L304.0,171.0 L380.0,201.0 L456.0,111.0"/>
+<path class="rc-line" data-team-key="in-puka-egbuka-we-trust" d="M0.0,111.0 L76.0,141.0 L152.0,201.0 L228.0,231.0 L304.0,171.0 L380.0,201.0 L456.0,111.0"/>
 <circle class="rc-dot" data-team-key="in-puka-egbuka-we-trust" data-team="In Puka &amp; Egbuka We Trust" data-rank="4" data-week="1" cx="0.0" cy="111.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="in-puka-egbuka-we-trust" data-team="In Puka &amp; Egbuka We Trust" data-rank="5" data-week="2" cx="76.0" cy="141.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="in-puka-egbuka-we-trust" data-team="In Puka &amp; Egbuka We Trust" data-rank="7" data-week="3" cx="152.0" cy="201.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="in-puka-egbuka-we-trust" data-team="In Puka &amp; Egbuka We Trust" data-rank="8" data-week="4" cx="228.0" cy="231.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="in-puka-egbuka-we-trust" data-team="In Puka &amp; Egbuka We Trust" data-rank="6" data-week="5" cx="304.0" cy="171.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="in-puka-egbuka-we-trust" data-team="In Puka &amp; Egbuka We Trust" data-rank="7" data-week="6" cx="380.0" cy="201.0" r="4.5"/>
-<path class="rc-hit" data-team-key="love-on-the-spectrum" d="M0.0,141.0 L76.0,201.0 L152.0,261.0 L228.0,291.0 L304.0,231.0 L380.0,111.0"/>
-<path class="rc-line" data-team-key="love-on-the-spectrum" d="M0.0,141.0 L76.0,201.0 L152.0,261.0 L228.0,291.0 L304.0,231.0 L380.0,111.0"/>
-<circle class="rc-dot" data-team-key="love-on-the-spectrum" data-team="Love on the Spectrum" data-rank="5" data-week="1" cx="0.0" cy="141.0" r="4.5"/>
-<circle class="rc-dot" data-team-key="love-on-the-spectrum" data-team="Love on the Spectrum" data-rank="7" data-week="2" cx="76.0" cy="201.0" r="4.5"/>
-<circle class="rc-dot" data-team-key="love-on-the-spectrum" data-team="Love on the Spectrum" data-rank="9" data-week="3" cx="152.0" cy="261.0" r="4.5"/>
-<circle class="rc-dot" data-team-key="love-on-the-spectrum" data-team="Love on the Spectrum" data-rank="10" data-week="4" cx="228.0" cy="291.0" r="4.5"/>
-<circle class="rc-dot" data-team-key="love-on-the-spectrum" data-team="Love on the Spectrum" data-rank="8" data-week="5" cx="304.0" cy="231.0" r="4.5"/>
-<circle class="rc-dot" data-team-key="love-on-the-spectrum" data-team="Love on the Spectrum" data-rank="4" data-week="6" cx="380.0" cy="111.0" r="4.5"/>
-<path class="rc-hit" data-team-key="neithermoneynorgoodpick" d="M0.0,171.0 L76.0,111.0 L152.0,171.0 L228.0,111.0 L304.0,81.0 L380.0,231.0"/>
-<path class="rc-line" data-team-key="neithermoneynorgoodpick" d="M0.0,171.0 L76.0,111.0 L152.0,171.0 L228.0,111.0 L304.0,81.0 L380.0,231.0"/>
+<circle class="rc-dot" data-team-key="in-puka-egbuka-we-trust" data-team="In Puka &amp; Egbuka We Trust" data-rank="4" data-week="7" cx="456.0" cy="111.0" r="4.5"/>
+<path class="rc-hit" data-team-key="diddy-loves-coke" d="M0.0,141.0 L76.0,201.0 L152.0,261.0 L228.0,291.0 L304.0,231.0 L380.0,111.0 L456.0,201.0"/>
+<path class="rc-line" data-team-key="diddy-loves-coke" d="M0.0,141.0 L76.0,201.0 L152.0,261.0 L228.0,291.0 L304.0,231.0 L380.0,111.0 L456.0,201.0"/>
+<circle class="rc-dot" data-team-key="diddy-loves-coke" data-team="Diddy Loves Coke" data-rank="5" data-week="1" cx="0.0" cy="141.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="diddy-loves-coke" data-team="Diddy Loves Coke" data-rank="7" data-week="2" cx="76.0" cy="201.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="diddy-loves-coke" data-team="Diddy Loves Coke" data-rank="9" data-week="3" cx="152.0" cy="261.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="diddy-loves-coke" data-team="Diddy Loves Coke" data-rank="10" data-week="4" cx="228.0" cy="291.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="diddy-loves-coke" data-team="Diddy Loves Coke" data-rank="8" data-week="5" cx="304.0" cy="231.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="diddy-loves-coke" data-team="Diddy Loves Coke" data-rank="4" data-week="6" cx="380.0" cy="111.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="diddy-loves-coke" data-team="Diddy Loves Coke" data-rank="7" data-week="7" cx="456.0" cy="201.0" r="4.5"/>
+<path class="rc-hit" data-team-key="neithermoneynorgoodpick" d="M0.0,171.0 L76.0,111.0 L152.0,171.0 L228.0,111.0 L304.0,81.0 L380.0,231.0 L456.0,141.0"/>
+<path class="rc-line" data-team-key="neithermoneynorgoodpick" d="M0.0,171.0 L76.0,111.0 L152.0,171.0 L228.0,111.0 L304.0,81.0 L380.0,231.0 L456.0,141.0"/>
 <circle class="rc-dot" data-team-key="neithermoneynorgoodpick" data-team="NeitherMoneyNorGoodPick" data-rank="6" data-week="1" cx="0.0" cy="171.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="neithermoneynorgoodpick" data-team="NeitherMoneyNorGoodPick" data-rank="4" data-week="2" cx="76.0" cy="111.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="neithermoneynorgoodpick" data-team="NeitherMoneyNorGoodPick" data-rank="6" data-week="3" cx="152.0" cy="171.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="neithermoneynorgoodpick" data-team="NeitherMoneyNorGoodPick" data-rank="4" data-week="4" cx="228.0" cy="111.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="neithermoneynorgoodpick" data-team="NeitherMoneyNorGoodPick" data-rank="3" data-week="5" cx="304.0" cy="81.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="neithermoneynorgoodpick" data-team="NeitherMoneyNorGoodPick" data-rank="8" data-week="6" cx="380.0" cy="231.0" r="4.5"/>
-<path class="rc-hit" data-team-key="fuck-rit" d="M0.0,201.0 L76.0,171.0 L152.0,111.0 L228.0,81.0 L304.0,111.0 L380.0,81.0"/>
-<path class="rc-line" data-team-key="fuck-rit" d="M0.0,201.0 L76.0,171.0 L152.0,111.0 L228.0,81.0 L304.0,111.0 L380.0,81.0"/>
+<circle class="rc-dot" data-team-key="neithermoneynorgoodpick" data-team="NeitherMoneyNorGoodPick" data-rank="5" data-week="7" cx="456.0" cy="141.0" r="4.5"/>
+<path class="rc-hit" data-team-key="fuck-rit" d="M0.0,201.0 L76.0,171.0 L152.0,111.0 L228.0,81.0 L304.0,111.0 L380.0,81.0 L456.0,81.0"/>
+<path class="rc-line" data-team-key="fuck-rit" d="M0.0,201.0 L76.0,171.0 L152.0,111.0 L228.0,81.0 L304.0,111.0 L380.0,81.0 L456.0,81.0"/>
 <circle class="rc-dot" data-team-key="fuck-rit" data-team="Fuck RIT" data-rank="7" data-week="1" cx="0.0" cy="201.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="fuck-rit" data-team="Fuck RIT" data-rank="6" data-week="2" cx="76.0" cy="171.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="fuck-rit" data-team="Fuck RIT" data-rank="4" data-week="3" cx="152.0" cy="111.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="fuck-rit" data-team="Fuck RIT" data-rank="3" data-week="4" cx="228.0" cy="81.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="fuck-rit" data-team="Fuck RIT" data-rank="4" data-week="5" cx="304.0" cy="111.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="fuck-rit" data-team="Fuck RIT" data-rank="3" data-week="6" cx="380.0" cy="81.0" r="4.5"/>
-<path class="rc-hit" data-team-key="bowers-deep-in-ass-jr" d="M0.0,231.0 L76.0,231.0 L152.0,141.0 L228.0,201.0 L304.0,261.0 L380.0,291.0"/>
-<path class="rc-line" data-team-key="bowers-deep-in-ass-jr" d="M0.0,231.0 L76.0,231.0 L152.0,141.0 L228.0,201.0 L304.0,261.0 L380.0,291.0"/>
+<circle class="rc-dot" data-team-key="fuck-rit" data-team="Fuck RIT" data-rank="3" data-week="7" cx="456.0" cy="81.0" r="4.5"/>
+<path class="rc-hit" data-team-key="bowers-deep-in-ass-jr" d="M0.0,231.0 L76.0,231.0 L152.0,141.0 L228.0,201.0 L304.0,261.0 L380.0,291.0 L456.0,291.0"/>
+<path class="rc-line" data-team-key="bowers-deep-in-ass-jr" d="M0.0,231.0 L76.0,231.0 L152.0,141.0 L228.0,201.0 L304.0,261.0 L380.0,291.0 L456.0,291.0"/>
 <circle class="rc-dot" data-team-key="bowers-deep-in-ass-jr" data-team="Bowers Deep in Ass Jr." data-rank="8" data-week="1" cx="0.0" cy="231.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="bowers-deep-in-ass-jr" data-team="Bowers Deep in Ass Jr." data-rank="8" data-week="2" cx="76.0" cy="231.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="bowers-deep-in-ass-jr" data-team="Bowers Deep in Ass Jr." data-rank="5" data-week="3" cx="152.0" cy="141.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="bowers-deep-in-ass-jr" data-team="Bowers Deep in Ass Jr." data-rank="7" data-week="4" cx="228.0" cy="201.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="bowers-deep-in-ass-jr" data-team="Bowers Deep in Ass Jr." data-rank="9" data-week="5" cx="304.0" cy="261.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="bowers-deep-in-ass-jr" data-team="Bowers Deep in Ass Jr." data-rank="10" data-week="6" cx="380.0" cy="291.0" r="4.5"/>
-<path class="rc-hit" data-team-key="dianna-s-doubledeez" d="M0.0,261.0 L76.0,261.0 L152.0,231.0 L228.0,171.0 L304.0,201.0 L380.0,141.0"/>
-<path class="rc-line" data-team-key="dianna-s-doubledeez" d="M0.0,261.0 L76.0,261.0 L152.0,231.0 L228.0,171.0 L304.0,201.0 L380.0,141.0"/>
+<circle class="rc-dot" data-team-key="bowers-deep-in-ass-jr" data-team="Bowers Deep in Ass Jr." data-rank="10" data-week="7" cx="456.0" cy="291.0" r="4.5"/>
+<path class="rc-hit" data-team-key="dianna-s-doubledeez" d="M0.0,261.0 L76.0,261.0 L152.0,231.0 L228.0,171.0 L304.0,201.0 L380.0,141.0 L456.0,171.0"/>
+<path class="rc-line" data-team-key="dianna-s-doubledeez" d="M0.0,261.0 L76.0,261.0 L152.0,231.0 L228.0,171.0 L304.0,201.0 L380.0,141.0 L456.0,171.0"/>
 <circle class="rc-dot" data-team-key="dianna-s-doubledeez" data-team="Dianna&#x27;s DoubleDeez" data-rank="9" data-week="1" cx="0.0" cy="261.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="dianna-s-doubledeez" data-team="Dianna&#x27;s DoubleDeez" data-rank="9" data-week="2" cx="76.0" cy="261.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="dianna-s-doubledeez" data-team="Dianna&#x27;s DoubleDeez" data-rank="8" data-week="3" cx="152.0" cy="231.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="dianna-s-doubledeez" data-team="Dianna&#x27;s DoubleDeez" data-rank="6" data-week="4" cx="228.0" cy="171.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="dianna-s-doubledeez" data-team="Dianna&#x27;s DoubleDeez" data-rank="7" data-week="5" cx="304.0" cy="201.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="dianna-s-doubledeez" data-team="Dianna&#x27;s DoubleDeez" data-rank="5" data-week="6" cx="380.0" cy="141.0" r="4.5"/>
-<path class="rc-hit" data-team-key="jaxson-eat-my-dartbox" d="M0.0,291.0 L76.0,291.0 L152.0,291.0 L228.0,261.0 L304.0,291.0 L380.0,261.0"/>
-<path class="rc-line" data-team-key="jaxson-eat-my-dartbox" d="M0.0,291.0 L76.0,291.0 L152.0,291.0 L228.0,261.0 L304.0,291.0 L380.0,261.0"/>
+<circle class="rc-dot" data-team-key="dianna-s-doubledeez" data-team="Dianna&#x27;s DoubleDeez" data-rank="6" data-week="7" cx="456.0" cy="171.0" r="4.5"/>
+<path class="rc-hit" data-team-key="jaxson-eat-my-dartbox" d="M0.0,291.0 L76.0,291.0 L152.0,291.0 L228.0,261.0 L304.0,291.0 L380.0,261.0 L456.0,261.0"/>
+<path class="rc-line" data-team-key="jaxson-eat-my-dartbox" d="M0.0,291.0 L76.0,291.0 L152.0,291.0 L228.0,261.0 L304.0,291.0 L380.0,261.0 L456.0,261.0"/>
 <circle class="rc-dot" data-team-key="jaxson-eat-my-dartbox" data-team="Jaxson Eat My Dartbox" data-rank="10" data-week="1" cx="0.0" cy="291.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="jaxson-eat-my-dartbox" data-team="Jaxson Eat My Dartbox" data-rank="10" data-week="2" cx="76.0" cy="291.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="jaxson-eat-my-dartbox" data-team="Jaxson Eat My Dartbox" data-rank="10" data-week="3" cx="152.0" cy="291.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="jaxson-eat-my-dartbox" data-team="Jaxson Eat My Dartbox" data-rank="9" data-week="4" cx="228.0" cy="261.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="jaxson-eat-my-dartbox" data-team="Jaxson Eat My Dartbox" data-rank="10" data-week="5" cx="304.0" cy="291.0" r="4.5"/>
 <circle class="rc-dot" data-team-key="jaxson-eat-my-dartbox" data-team="Jaxson Eat My Dartbox" data-rank="9" data-week="6" cx="380.0" cy="261.0" r="4.5"/>
+<circle class="rc-dot" data-team-key="jaxson-eat-my-dartbox" data-team="Jaxson Eat My Dartbox" data-rank="9" data-week="7" cx="456.0" cy="261.0" r="4.5"/>
       </svg>
     </div>
     <div class="rc-labels rc-right" style="height:312px;">
       <div class="rc-label" data-team-key="the-dynasteve" tabindex="0" style="top:6px;height:30px;line-height:30px;" title="The DynaSteve">The DynaSteve</div>
 <div class="rc-label" data-team-key="ashton-bottom-jeantys" tabindex="0" style="top:36px;height:30px;line-height:30px;" title="Ashton Bottom Jeantys">Ashton Bottom Jeantys</div>
-<div class="rc-label" data-team-key="tucking-dick" tabindex="0" style="top:156px;height:30px;line-height:30px;" title="Tucking DicK">Tucking DicK</div>
-<div class="rc-label" data-team-key="in-puka-egbuka-we-trust" tabindex="0" style="top:186px;height:30px;line-height:30px;" title="In Puka &amp; Egbuka We Trust">In Puka &amp; Egbuka We Trust</div>
-<div class="rc-label" data-team-key="love-on-the-spectrum" tabindex="0" style="top:96px;height:30px;line-height:30px;" title="Love on the Spectrum">Love on the Spectrum</div>
-<div class="rc-label" data-team-key="neithermoneynorgoodpick" tabindex="0" style="top:216px;height:30px;line-height:30px;" title="NeitherMoneyNorGoodPick">NeitherMoneyNorGoodPick</div>
+<div class="rc-label" data-team-key="tucking-dick" tabindex="0" style="top:216px;height:30px;line-height:30px;" title="Tucking DicK">Tucking DicK</div>
+<div class="rc-label" data-team-key="in-puka-egbuka-we-trust" tabindex="0" style="top:96px;height:30px;line-height:30px;" title="In Puka &amp; Egbuka We Trust">In Puka &amp; Egbuka We Trust</div>
+<div class="rc-label" data-team-key="diddy-loves-coke" tabindex="0" style="top:186px;height:30px;line-height:30px;" title="Diddy Loves Coke">Diddy Loves Coke</div>
+<div class="rc-label" data-team-key="neithermoneynorgoodpick" tabindex="0" style="top:126px;height:30px;line-height:30px;" title="NeitherMoneyNorGoodPick">NeitherMoneyNorGoodPick</div>
 <div class="rc-label" data-team-key="fuck-rit" tabindex="0" style="top:66px;height:30px;line-height:30px;" title="Fuck RIT">Fuck RIT</div>
 <div class="rc-label" data-team-key="bowers-deep-in-ass-jr" tabindex="0" style="top:276px;height:30px;line-height:30px;" title="Bowers Deep in Ass Jr.">Bowers Deep in Ass Jr.</div>
-<div class="rc-label" data-team-key="dianna-s-doubledeez" tabindex="0" style="top:126px;height:30px;line-height:30px;" title="Dianna&#x27;s DoubleDeez">Dianna&#x27;s DoubleDeez</div>
+<div class="rc-label" data-team-key="dianna-s-doubledeez" tabindex="0" style="top:156px;height:30px;line-height:30px;" title="Dianna&#x27;s DoubleDeez">Dianna&#x27;s DoubleDeez</div>
 <div class="rc-label" data-team-key="jaxson-eat-my-dartbox" tabindex="0" style="top:246px;height:30px;line-height:30px;" title="Jaxson Eat My Dartbox">Jaxson Eat My Dartbox</div>
     </div>
     <div class="rc-tooltip"></div>
@@ -516,43 +519,43 @@
   <section class="sec-blue">
     <h2>⚔️ This Week — Matchups</h2>
     <div class="matchup">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/7525.jpg" alt="DeVonta Smith" onerror="this.style.visibility='hidden'">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/5967.jpg" alt="Tony Pollard" onerror="this.style.visibility='hidden'">
       <div class="matchup-body">
-        <div><strong>Fuck RIT</strong> def. Bowers Deep in Ass Jr. <span class="score">120.68 – 7</span></div>
-        <div class="matchup-topscorer">DeVonta Smith · 20.5 pts (Fuck RIT)</div>
-        <div class="note">Ryan started Shedeur Sanders, his kicker, and nobody else. Ten empty slots. Jason Myers kicked for 7 on Thursday night and that was the whole team. Fuck RIT didn't need much: their defense finished at -2 and they still won by 113. This is what a committed tank looks like.</div>
+        <div><strong>Fuck RIT</strong> def. Ashton Bottom Jeantys <span class="score">199.12 – 138.2</span></div>
+        <div class="matchup-topscorer">Tony Pollard · 36.5 pts (Fuck RIT)</div>
+        <div class="note">These two traded last week, and they met right away. Javonte Williams put up 21.5 for Fuck RIT. Tetairoa McMillan put up 8.0 for Ashton. Add Tony Pollard's 36.5 and 26 points from the Tampa defense Nick picked up on Wednesday, and it was over early. Fuck RIT is 11-3.</div>
       </div>
     </div>
     <div class="matchup">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/8151.jpg" alt="Kenneth Walker" onerror="this.style.visibility='hidden'">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/9997.jpg" alt="Zay Flowers" onerror="this.style.visibility='hidden'">
       <div class="matchup-body">
-        <div><strong>Ashton Bottom Jeantys</strong> def. Dianna's DoubleDeez <span class="score">213.74 – 143.98</span></div>
-        <div class="matchup-topscorer">Kenneth Walker · 27.9 pts (Ashton Bottom Jeantys)</div>
-        <div class="note">Ashton started two quarterbacks and got 51 out of them (Trevor Lawrence 27.34, Drake Maye 23.8), then added 27.9 from Kenneth Walker for the week's high score. Tetairoa McMillan put up 14.6 in his first game since coming over from Fuck RIT. The commissioner made ten roster moves this week and lost by 70.</div>
+        <div><strong>In Puka & Egbuka We Trust</strong> def. Dianna's DoubleDeez <span class="score">191.1 – 159.34</span></div>
+        <div class="matchup-topscorer">Zay Flowers · 27.7 pts (Dianna's DoubleDeez)</div>
+        <div class="note">Zay Flowers was the best player in this game and it didn't matter. In Puka had six starters score 20 or more, led by Trey McBride's 27.1. Quinshon Judkins, who put up a zero in last week's 1.82-point loss, came back with 23.4. One week late.</div>
       </div>
     </div>
     <div class="matchup">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/11632.jpg" alt="Malik Nabers" onerror="this.style.visibility='hidden'">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/11563.jpg" alt="Bo Nix" onerror="this.style.visibility='hidden'">
       <div class="matchup-body">
-        <div><strong>Love on the Spectrum</strong> def. In Puka & Egbuka We Trust <span class="score">162.04 – 160.22</span></div>
-        <div class="matchup-topscorer">Malik Nabers · 28.5 pts (In Puka & Egbuka We Trust)</div>
-        <div class="note">Love spent all week trading and it paid off right away. Jalen Coker (acquired Thursday) scored 15.7 and Chris Olave (acquired Saturday) scored 14.3. Love won by 1.82. On the other side, In Puka started Quinshon Judkins, who scored zero, and got 1 point from Brandon Aubrey. Malik Nabers' 28.5 deserved better.</div>
+        <div><strong>NeitherMoneyNorGoodPick</strong> def. Diddy Loves Coke <span class="score">142.38 – 130.44</span></div>
+        <div class="matchup-topscorer">Bo Nix · 26.28 pts (NeitherMoneyNorGoodPick)</div>
+        <div class="note">Diddy went all in last week with three trades, one of them with Will. This week Will beat him. Jalen Coker, the receiver Diddy paid a 2028 first for, scored 1.9 against the team that traded him. Diddy also lost the median game, so the first week of the all-in era went 0-2. Bucky Irving (24.0) was the one new piece that showed up.</div>
+      </div>
+    </div>
+    <div class="matchup">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/11576.jpg" alt="Braelon Allen" onerror="this.style.visibility='hidden'">
+      <div class="matchup-body">
+        <div><strong>Tucking DicK</strong> def. Jaxson Eat My Dartbox <span class="score">124.26 – 0</span></div>
+        <div class="matchup-topscorer">Braelon Allen · 19.4 pts (Tucking DicK)</div>
+        <div class="note">Wimmer didn't start anybody. Twelve empty slots, zero points. Joe needed 0.01 to win and got 124.26, led by Braelon Allen's 19.4. Joe did put a defense in the lineup this time (Kansas City, 0 points), which after last week counts as progress.</div>
       </div>
     </div>
     <div class="matchup">
       <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/9488.jpg" alt="Jaxon Smith-Njigba" onerror="this.style.visibility='hidden'">
       <div class="matchup-body">
-        <div><strong>The DynaSteve</strong> def. Tucking DicK <span class="score">153.84 – 113.22</span></div>
-        <div class="matchup-topscorer">Jaxon Smith-Njigba · 25.4 pts (The DynaSteve)</div>
-        <div class="note">Jaxon Smith-Njigba put up 25.4 on Thursday night and Matthew Golden added 22.4 on Sunday night. That was plenty. Steve then went out on Monday and traded for two more running backs, because 11-1 apparently isn't enough. Joe didn't start a defense at all. Nobody point out that this counts as practice for December.</div>
-      </div>
-    </div>
-    <div class="matchup">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/10213.jpg" alt="Tre Tucker" onerror="this.style.visibility='hidden'">
-      <div class="matchup-body">
-        <div><strong>NeitherMoneyNorGoodPick</strong> def. Jaxson Eat My Dartbox <span class="score">120.14 – 110.44</span></div>
-        <div class="matchup-topscorer">Tre Tucker · 26.7 pts (Jaxson Eat My Dartbox)</div>
-        <div class="note">Wimmer left three starting spots empty and almost won anyway. Tre Tucker scored 26.7 for a team that was trying to lose, DK Metcalf added 20.3, and the Bears defense put up 13. Will needed Isaiah Likely's 23.9 to beat a lineup with holes in it. Wimmer's tank survived by 9.7 points.</div>
+        <div><strong>The DynaSteve</strong> def. Bowers Deep in Ass Jr. <span class="score">174.92 – 0</span></div>
+        <div class="matchup-topscorer">Jaxon Smith-Njigba · 31.3 pts (The DynaSteve)</div>
+        <div class="note">Same deal over here: Ryan started nobody. Christian McCaffrey debuted for Steve with 22.0, Jaxon Smith-Njigba put up 31.3 on Sunday night, and the kicker was Jason Myers, whom Ryan cut on Wednesday. Myers scored 8 against his old team. Steve even started a Baltimore defense that went for -3 and still won by 175.</div>
       </div>
     </div>
   </section>
@@ -560,45 +563,45 @@
   <section class="sec-green">
     <h2>🔥 Top Performances</h2>
     <div class="player-card">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/11632.jpg" alt="Malik Nabers" onerror="this.style.visibility='hidden'">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/5967.jpg" alt="Tony Pollard" onerror="this.style.visibility='hidden'">
       <div class="player-info">
-        <div class="player-name-line"><strong>Malik Nabers</strong><span>28.5</span></div>
+        <div class="player-name-line"><strong>Tony Pollard</strong><span>36.5</span></div>
+        <div class="player-meta">Fuck RIT · in a 61-point win over the team Nick traded with last week</div>
+      </div>
+    </div>
+    <div class="player-card">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/9488.jpg" alt="Jaxon Smith-Njigba" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Jaxon Smith-Njigba</strong><span>31.3</span></div>
+        <div class="player-meta">The DynaSteve</div>
+      </div>
+    </div>
+    <div class="player-card">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/9997.jpg" alt="Zay Flowers" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Zay Flowers</strong><span>27.7</span></div>
+        <div class="player-meta">Dianna's DoubleDeez</div>
+      </div>
+    </div>
+    <div class="player-card">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/11564.jpg" alt="Drake Maye" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Drake Maye</strong><span>27.44</span></div>
+        <div class="player-meta">Ashton Bottom Jeantys</div>
+      </div>
+    </div>
+    <div class="player-card">
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/8130.jpg" alt="Trey McBride" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Trey McBride</strong><span>27.1</span></div>
         <div class="player-meta">In Puka & Egbuka We Trust</div>
       </div>
     </div>
-    <div class="player-card">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/8151.jpg" alt="Kenneth Walker" onerror="this.style.visibility='hidden'">
-      <div class="player-info">
-        <div class="player-name-line"><strong>Kenneth Walker</strong><span>27.9</span></div>
-        <div class="player-meta">Ashton Bottom Jeantys</div>
-      </div>
-    </div>
-    <div class="player-card">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/7523.jpg" alt="Trevor Lawrence" onerror="this.style.visibility='hidden'">
-      <div class="player-info">
-        <div class="player-name-line"><strong>Trevor Lawrence</strong><span>27.34</span></div>
-        <div class="player-meta">Ashton Bottom Jeantys</div>
-      </div>
-    </div>
-    <div class="player-card">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/10213.jpg" alt="Tre Tucker" onerror="this.style.visibility='hidden'">
-      <div class="player-info">
-        <div class="player-name-line"><strong>Tre Tucker</strong><span>26.7</span></div>
-        <div class="player-meta">Jaxson Eat My Dartbox · for a team that was trying to lose</div>
-      </div>
-    </div>
-    <div class="player-card">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/13274.jpg" alt="Germie Bernard" onerror="this.style.visibility='hidden'">
-      <div class="player-info">
-        <div class="player-name-line"><strong>Germie Bernard</strong><span>25.7</span></div>
-        <div class="player-meta">Ashton Bottom Jeantys · rookie, 18th pick in this year's draft</div>
-      </div>
-    </div>
     <div class="player-card" style="margin-top:4px; padding-top:12px; border-top:1px dashed var(--border);">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/12524.jpg" alt="Shedeur Sanders" onerror="this.style.visibility='hidden'">
+      <img class="player-photo" src="https://a.espncdn.com/i/teamlogos/leagues/500/nfl.png" alt="NFL" onerror="this.style.visibility='hidden'">
       <div class="player-info">
-        <div class="player-name-line"><strong>Bowers Deep in Ass Jr.'s lineup</strong> <span class="move-down">7</span></div>
-        <div class="player-meta">Dud of the week. Shedeur Sanders, a kicker, and ten empty slots. The kicker scored all 7.</div>
+        <div class="player-name-line"><strong>Jaxson Eat My Dartbox &amp; Bowers Deep in Ass Jr.</strong> <span class="move-down">0</span></div>
+        <div class="player-meta">Dud of the week. 24 starting spots between them, 24 left empty.</div>
       </div>
     </div>
   </section>
@@ -606,42 +609,191 @@
   <section class="sec-purple">
     <h2>🔄 Notable Moves</h2>
     <div class="player-card">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/4034.jpg" alt="Christian McCaffrey + Josh Jacobs" onerror="this.style.visibility='hidden'">
+      <img class="player-photo" src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Pittsburgh Steelers" onerror="this.style.visibility='hidden'">
       <div class="player-info">
-        <div class="player-name-line"><strong>Christian McCaffrey + Josh Jacobs</strong><span>Trade</span></div>
-        <div class="player-meta">Jaxson Eat My Dartbox → The DynaSteve, for DynaSteve's 2027 1st, 2027 2nd and 2028 1st. The 11-1 team got richer. Wimmer turns two veteran backs into two firsts and a second. They'll probably be late picks, since they belong to the best team in the league, but it's more ammo than Wimmer had on Sunday.</div>
+        <div class="player-name-line"><strong>Ryan's defense collection</strong><span>Pickups</span></div>
+        <div class="player-meta">Bowers Deep in Ass Jr. added five defenses this week (Raiders, Giants, Panthers, Bills, Colts) and now has ten of them on the roster. He started none. This one's about December, not this week. The 1.01 goes to whoever loses the toilet bowl, and a tanker with a deep bench of bad defenses has options. To make room, Ryan cut Shedeur Sanders, Jason Myers, and the Steelers defense. He's a Steelers fan.</div>
       </div>
     </div>
     <div class="player-card">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/5859.jpg" alt="A.J. Brown + Bucky Irving" onerror="this.style.visibility='hidden'">
+      <img class="player-photo" src="https://a.espncdn.com/i/teamlogos/nfl/500/tb.png" alt="Tampa Bay Buccaneers" onerror="this.style.visibility='hidden'">
       <div class="player-info">
-        <div class="player-name-line"><strong>A.J. Brown + Bucky Irving</strong><span>Trade</span></div>
-        <div class="player-meta">Bowers Deep in Ass Jr. → Love on the Spectrum, along with In Puka's 2027 3rd and Ryan's own 2028 3rd. Ryan gets Marvin Harrison Jr., Jordyn Tyson, Love's 2028 2nd and Wimmer's 2027 2nd. Love gets two guys who start now. Ryan gets two young receivers, one of whom (Tyson) Love took 3rd overall in this year's rookie draft and hasn't scored a point yet.</div>
-      </div>
-    </div>
-    <div class="player-card">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/8144.jpg" alt="Chris Olave" onerror="this.style.visibility='hidden'">
-      <div class="player-info">
-        <div class="player-name-line"><strong>Chris Olave</strong><span>Trade</span></div>
-        <div class="player-meta">Bowers Deep in Ass Jr. → Love on the Spectrum, with Tucking DicK's and Ashton's 2027 4ths. Ryan gets Love's 2027 1st, rookie QB Ty Simpson and Jameson Williams. Their second deal of the week. Olave started the next morning and scored 14.3.</div>
-      </div>
-    </div>
-    <div class="player-card">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/11646.jpg" alt="Jalen Coker" onerror="this.style.visibility='hidden'">
-      <div class="player-info">
-        <div class="player-name-line"><strong>Jalen Coker</strong><span>Trade</span></div>
-        <div class="player-meta">NeitherMoneyNorGoodPick → Love on the Spectrum, for Love's 2028 1st. Coker scored 15.7 in a game Love won by 1.82. Add it up and Love moved both the 2027 and 2028 firsts in the same week. If this run ends without a title, Ryan and Will are the ones holding those picks.</div>
-      </div>
-    </div>
-    <div class="player-card">
-      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/12526.jpg" alt="Tetairoa McMillan" onerror="this.style.visibility='hidden'">
-      <div class="player-info">
-        <div class="player-name-line"><strong>Tetairoa McMillan</strong><span>Trade</span></div>
-        <div class="player-meta">Fuck RIT → Ashton Bottom Jeantys, for Javonte Williams and Ashton's 2027 3rd. A 9-3 team cashing in a second-year receiver for a running back who helps right now. Also a Cowboys fan trading for a Cowboy, a few days before the Cowboys lost to Green Bay. Javonte scored 13 in that game. McMillan scored 14.6 for his new team.</div>
+        <div class="player-name-line"><strong>Buccaneers DEF</strong><span>Free agent</span></div>
+        <div class="player-meta">Fuck RIT picked up Tampa's defense Wednesday night, cut kicker Cameron Dicker to do it, and got 26 points out of it four days later.</div>
       </div>
     </div>
     <div class="recap" style="margin-top:12px;">
-      <p>The commissioner led the league with ten roster moves, seven of them in one Wednesday waiver run. Highlights: the Giants defense got picked up and dropped one minute later, and then the commissioner started Carolina's defense against Will's Eagles. Ashton added Tommy DeVito, dropped him for Tanner McKee, then picked DeVito back up on Sunday morning. Love swapped Joe Milton for Cole Payton on Thursday and back again on Saturday. Ryan made five more moves on top of his two trades, none of which ended up in his lineup.</p>
+      <p>Not much else. Steve grabbed Jason Myers on Friday and started him against the guy who cut him. Nick also swapped Isaiah Davis for Zonovan Knight and Joe Flacco for Darius Cooper. Wimmer's only move was cutting Isaiah Williams on Sunday.</p>
+    </div>
+  </section>
+
+  <section class="sec-up">
+    <h2>📈 Best Pickups</h2>
+    <p class="subtitle" style="margin:0 0 10px;">Season to date. Waiver and free-agent adds only (QB/RB/WR/TE), ranked by points scored while on the team that added him, bench included.</p>
+    <div class="player-card ww-row">
+      <span class="ww-rank">1</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/4017.jpg" alt="Deshaun Watson" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Deshaun Watson</strong><span>106.78</span></div>
+        <div class="player-meta">QB · Diddy Loves Coke</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">2</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/7600.jpg" alt="Pat Freiermuth" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Pat Freiermuth</strong><span>67.4</span></div>
+        <div class="player-meta">TE · Bowers Deep in Ass Jr.</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">3</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/9482.jpg" alt="Michael Mayer" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Michael Mayer</strong><span>66.8</span></div>
+        <div class="player-meta">TE · Ashton Bottom Jeantys</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">4</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/11435.jpg" alt="Emanuel Wilson" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Emanuel Wilson</strong><span>65.3</span></div>
+        <div class="player-meta">RB · NeitherMoneyNorGoodPick</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">5</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/11783.jpg" alt="Ryan Flournoy" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Ryan Flournoy</strong><span>63.4</span></div>
+        <div class="player-meta">WR · Dianna's DoubleDeez</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">6</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/2505.jpg" alt="Darren Waller" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Darren Waller</strong><span>51.8</span></div>
+        <div class="player-meta">TE · Jaxson Eat My Dartbox</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">7</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/1479.jpg" alt="Keenan Allen" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Keenan Allen</strong><span>50.1</span></div>
+        <div class="player-meta">WR · Dianna's DoubleDeez</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">8</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/12495.jpg" alt="Ollie Gordon" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Ollie Gordon</strong><span>50.1</span></div>
+        <div class="player-meta">RB · Diddy Loves Coke</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">9</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/5001.jpg" alt="Dalton Schultz" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Dalton Schultz</strong><span>48.4</span></div>
+        <div class="player-meta">TE · NeitherMoneyNorGoodPick · now on Dianna's DoubleDeez</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">10</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/7571.jpg" alt="Rashod Bateman" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Rashod Bateman</strong><span>45.3</span></div>
+        <div class="player-meta">WR · Bowers Deep in Ass Jr. · now a free agent</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-down">
+    <h2>📉 Worst Drops</h2>
+    <p class="subtitle" style="margin:0 0 10px;">Season to date. Points a player scored after a team cut him, wherever he ended up, including free agency.</p>
+    <div class="player-card ww-row">
+      <span class="ww-rank">1</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/4017.jpg" alt="Deshaun Watson" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Deshaun Watson</strong><span>106.78</span></div>
+        <div class="player-meta">QB · cut by Ashton Bottom Jeantys · now on Diddy Loves Coke</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">2</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/11435.jpg" alt="Emanuel Wilson" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Emanuel Wilson</strong><span>74.8</span></div>
+        <div class="player-meta">RB · cut by Bowers Deep in Ass Jr. · now on NeitherMoneyNorGoodPick</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">3</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/12495.jpg" alt="Ollie Gordon" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Ollie Gordon</strong><span>65.3</span></div>
+        <div class="player-meta">RB · cut by Fuck RIT · now on Diddy Loves Coke</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">4</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/5001.jpg" alt="Dalton Schultz" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Dalton Schultz</strong><span>65.2</span></div>
+        <div class="player-meta">TE · cut by Tucking DicK · now on Dianna's DoubleDeez</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">5</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/4993.jpg" alt="Mike Gesicki" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Mike Gesicki</strong><span>59.5</span></div>
+        <div class="player-meta">TE · cut by Diddy Loves Coke · now on Jaxson Eat My Dartbox</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">6</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/9501.jpg" alt="DeMario Douglas" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>DeMario Douglas</strong><span>57.6</span></div>
+        <div class="player-meta">WR · cut by Diddy Loves Coke · now on Ashton Bottom Jeantys</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">7</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/2505.jpg" alt="Darren Waller" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Darren Waller</strong><span>51.8</span></div>
+        <div class="player-meta">TE · cut by Dianna's DoubleDeez · now on Jaxson Eat My Dartbox</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">8</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/7571.jpg" alt="Rashod Bateman" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Rashod Bateman</strong><span>50.6</span></div>
+        <div class="player-meta">WR · cut by Fuck RIT · still a free agent</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">9</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/1479.jpg" alt="Keenan Allen" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Keenan Allen</strong><span>50.1</span></div>
+        <div class="player-meta">WR · cut by NeitherMoneyNorGoodPick · now on Dianna's DoubleDeez</div>
+      </div>
+    </div>
+    <div class="player-card ww-row">
+      <span class="ww-rank">10</span>
+      <img class="player-photo" src="https://sleepercdn.com/content/nfl/players/5001.jpg" alt="Dalton Schultz" onerror="this.style.visibility='hidden'">
+      <div class="player-info">
+        <div class="player-name-line"><strong>Dalton Schultz</strong><span>48.4</span></div>
+        <div class="player-meta">TE · cut by Dianna's DoubleDeez · since re-added</div>
+      </div>
     </div>
   </section>
 
@@ -653,61 +805,61 @@
       <div class="fan-body">
         <div class="team-line"><span>Bills</span><span class="record">5-1</span></div>
         <div class="who">Tucking DicK</div>
-        <div class="note">Won 33-30 in Las Vegas. Joe's fantasy team lost, but between the Bills and 49ers that's 11-1 in real life.</div>
+        <div class="note">Bye week. Joe still got a win out of the weekend, against a team that started nobody.</div>
       </div>
     </div>
 
     <div class="fan-group" style="--fan-color:#aa0000">
       <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/sf.png" alt="San Francisco 49ers logo" width="28" height="28"></div>
       <div class="fan-body">
-        <div class="team-line"><span>49ers</span><span class="record">6-0</span></div>
+        <div class="team-line"><span>49ers</span><span class="record">6-1</span></div>
         <div class="who">Tucking DicK</div>
-        <div class="note">Beat Washington 23-17 on Monday night and are still the only unbeaten team in football.</div>
+        <div class="note">Lost 29-20 in Atlanta. That's the first loss of the season, so nobody in the NFL is unbeaten anymore.</div>
       </div>
     </div>
 
     <div class="fan-group" style="--fan-color:#002a5c">
       <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" alt="Dallas Cowboys logo" width="28" height="28"></div>
       <div class="fan-body">
-        <div class="team-line"><span>Cowboys</span><span class="record">2-4</span></div>
+        <div class="team-line"><span>Cowboys</span><span class="record">3-4</span></div>
         <div class="who">Fuck RIT</div>
-        <div class="note">Lost 23-13 at Green Bay on Sunday night. Nick traded for a Cowboy on Thursday. Not ideal timing.</div>
+        <div class="note">Won 38-21 in Philadelphia on Monday night. CeeDee Lamb and Javonte Williams were both in Nick's lineup for it.</div>
       </div>
     </div>
 
     <div class="fan-group" style="--fan-color:#002a5c">
       <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png" alt="New England Patriots logo" width="28" height="28"></div>
       <div class="fan-body">
-        <div class="team-line"><span>Patriots</span><span class="record">4-2</span></div>
-        <div class="who">Love on the Spectrum · Ashton Bottom Jeantys · The DynaSteve</div>
-        <div class="note">Beat the Jets 26-19. All three Patriots fans in this league won their fantasy games too, which never happens.</div>
+        <div class="team-line"><span>Patriots</span><span class="record">4-3</span></div>
+        <div class="who">Diddy Loves Coke · Ashton Bottom Jeantys · The DynaSteve</div>
+        <div class="note">Lost 30-24 in Chicago on Thursday night. Only one of the three Patriots fans here won in fantasy this week. It was Steve, obviously.</div>
       </div>
     </div>
 
     <div class="fan-group" style="--fan-color:#000000">
       <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Pittsburgh Steelers logo" width="28" height="28"></div>
       <div class="fan-body">
-        <div class="team-line"><span>Steelers</span><span class="record">4-2</span></div>
+        <div class="team-line"><span>Steelers</span><span class="record">5-2</span></div>
         <div class="who">Bowers Deep in Ass Jr.</div>
-        <div class="note">Won 26-19 in Tampa. The Steelers at least showed up on Sunday, which is more than Ryan's lineup did.</div>
+        <div class="note">Won 16-10 in New Orleans. Ryan cut their defense on Friday.</div>
       </div>
     </div>
 
     <div class="fan-group" style="--fan-color:#06424d">
       <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" alt="Philadelphia Eagles logo" width="28" height="28"></div>
       <div class="fan-body">
-        <div class="team-line"><span>Eagles</span><span class="record">2-4</span></div>
+        <div class="team-line"><span>Eagles</span><span class="record">2-5</span></div>
         <div class="who">NeitherMoneyNorGoodPick</div>
-        <div class="note">Lost 25-14 at home to Carolina. The commissioner started the Carolina defense this week. Will noticed.</div>
+        <div class="note">Lost 38-21 at home to Dallas on Monday night. Will at least took care of business against Diddy.</div>
       </div>
     </div>
 
     <div class="fan-group" style="--fan-color:#003c7f">
       <div class="team-logo-wrap"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png" alt="New York Giants logo" width="28" height="28"></div>
       <div class="fan-body">
-        <div class="team-line"><span>Giants</span><span class="record">3-2-1</span></div>
+        <div class="team-line"><span>Giants</span><span class="record">4-2-1</span></div>
         <div class="who">Dianna's DoubleDeez · In Puka & Egbuka We Trust · Jaxson Eat My Dartbox</div>
-        <div class="note">Lost 34-27 to the Saints at home. Wimmer is the only Giants fan here who's okay with losing right now.</div>
+        <div class="note">Won 27-21 in Houston. Two of the three Giants fans here played each other, and In Puka won that one. The third was Wimmer, who didn't start anybody.</div>
       </div>
     </div>
   </section>
@@ -722,6 +874,7 @@
         <li><a href="#" onclick="return false;">Week 3</a> — The DynaSteve holds #1; Vladimir Tuten the biggest riser (8→5); biggest blowout: DynaSteve over NeitherMoneyNorGoodPick</li>
         <li><a href="#" onclick="return false;">Week 4</a> — The DynaSteve takes its first loss, still holds #1; NeitherMoneyNorGoodPick and Dianna's DoubleDeez both the biggest risers; biggest blowout: Fuck RIT over Jaxson Eat My Dartbox</li>
         <li><a href="#" onclick="return false;">Week 5</a> — The DynaSteve back to 9-1 at #1; In Puka & Egbuka We Trust and Love on the Spectrum the biggest risers; biggest blowout: In Puka & Egbuka We Trust over Tucking DicK</li>
+        <li><a href="#" onclick="return false;">Week 6</a> — The DynaSteve 11-1 at #1; Love on the Spectrum the biggest riser (8→4) after three trades; biggest blowout: Fuck RIT over Bowers Deep in Ass Jr. (120.68–7.0)</li>
       </ul>
     </details>
   </section>
